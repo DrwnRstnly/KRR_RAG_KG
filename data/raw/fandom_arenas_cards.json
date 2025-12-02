@@ -1,0 +1,5772 @@
+{
+  "0": {
+    "arena_name": "Training Camp",
+    "cards": [
+      {
+        "name": "Arrows",
+        "url": "https://clashroyale.fandom.com/wiki/Arrows",
+        "elixir": 3.0,
+        "rarity": "Common",
+        "type": "Spell",
+        "arena_text": "Training Camp",
+        "unit_attributes": {
+          "Cost": "3",
+          "Radius": "3.5",
+          "Target": "Air & Ground",
+          "Type": "Spell",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Area Damage": "122 x3 (366)",
+          "Crown Tower Damage": "31 x3 (93)"
+        },
+        "damage": 122.0,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Minions",
+        "url": "https://clashroyale.fandom.com/wiki/Minions",
+        "elixir": 3.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Training Camp",
+        "unit_attributes": {
+          "Cost": "3",
+          "Hit Speed": "1.1 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Fast",
+          "Deploy Time": "1 sec",
+          "Range": "2.5",
+          "Projectile Speed": "1000",
+          "Target": "Air & Ground",
+          "Count": "x3",
+          "Transport": "Air",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "230",
+          "Damage": "107",
+          "Damage Per Second": "97"
+        },
+        "damage": 107.0,
+        "hitpoints": 230.0,
+        "damage_per_second": null,
+        "transport": "air"
+      },
+      {
+        "name": "Archers",
+        "url": "https://clashroyale.fandom.com/wiki/Archers",
+        "elixir": 3.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Training Camp",
+        "unit_attributes": {
+          "Cost": "3",
+          "Hit Speed": "0.9 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "5",
+          "Projectile Speed": "600",
+          "Target": "Air & Ground",
+          "Count": "x2",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "304",
+          "Damage": "112",
+          "Damage Per Second": "124"
+        },
+        "damage": 112.0,
+        "hitpoints": 304.0,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Knight",
+        "url": "https://clashroyale.fandom.com/wiki/Knight",
+        "elixir": 3.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Training Camp",
+        "unit_attributes": {
+          "Cost": "3",
+          "Hit Speed": "1.2 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Medium",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,766",
+          "Damage": "202",
+          "Damage Per Second": "168"
+        },
+        "damage": 202.0,
+        "hitpoints": 1766.0,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Fireball",
+        "url": "https://clashroyale.fandom.com/wiki/Fireball",
+        "elixir": 4.0,
+        "rarity": "Rare",
+        "type": "Spell",
+        "arena_text": "Training Camp",
+        "unit_attributes": {
+          "Cost": "4",
+          "Radius": "2.5",
+          "Target": "Air & Ground",
+          "Type": "Spell",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Area Damage": "688",
+          "Crown Tower Damage": "207"
+        },
+        "damage": 688.0,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Mini P.E.K.K.A.",
+        "url": "https://clashroyale.fandom.com/wiki/Mini_P.E.K.K.A.",
+        "elixir": 4.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Training Camp",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1.6 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Fast",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,433",
+          "Damage": "755",
+          "Damage Per Second": "471"
+        },
+        "damage": 755.0,
+        "hitpoints": 1433.0,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Musketeer",
+        "url": "https://clashroyale.fandom.com/wiki/Musketeer",
+        "elixir": 4.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Training Camp",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1 sec",
+          "First Hit Speed": "0.7 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "6",
+          "Projectile Speed": "1000",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "721",
+          "Damage": "217",
+          "Damage per second": "217"
+        },
+        "damage": 217.0,
+        "hitpoints": 721.0,
+        "damage_per_second": 217.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Giant",
+        "url": "https://clashroyale.fandom.com/wiki/Giant",
+        "elixir": 5.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Training Camp",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "1.5 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Slow",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Medium",
+          "Target": "Buildings",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "4,090",
+          "Damage": "253",
+          "Damage Per Second": "168"
+        },
+        "damage": 253.0,
+        "hitpoints": 4090.0,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Tower Princess",
+        "url": "https://clashroyale.fandom.com/wiki/Tower_Princess",
+        "elixir": null,
+        "rarity": "Common",
+        "type": "Tower Troop",
+        "arena_text": "Training Camp",
+        "unit_attributes": {
+          "Attack Period": "0.8 sec",
+          "First Attack Period": "0.8 sec",
+          "Range": "7.5",
+          "Target": "Air & Ground",
+          "Type": "Tower Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "3,052",
+          "Damage": "109",
+          "Damage Per Second": "136"
+        },
+        "damage": 109.0,
+        "hitpoints": 3052.0,
+        "damage_per_second": null,
+        "transport": null
+      }
+    ]
+  },
+  "1": {
+    "arena_name": "Goblin Stadium",
+    "cards": [
+      {
+        "name": "Spear Goblins",
+        "url": "https://clashroyale.fandom.com/wiki/Spear_Goblins",
+        "elixir": 2.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Goblin Stadium",
+        "unit_attributes": {
+          "Cost": "2",
+          "Hit Speed": "1.7 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Very Fast",
+          "Deploy Time": "1 sec",
+          "Range": "5",
+          "Projectile Speed": "500",
+          "Target": "Air & Ground",
+          "Count": "x3",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "133",
+          "Damage": "81",
+          "Damage per second": "47"
+        },
+        "damage": 81.0,
+        "hitpoints": 133.0,
+        "damage_per_second": 47.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Goblins",
+        "url": "https://clashroyale.fandom.com/wiki/Goblins",
+        "elixir": 2.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Goblin Stadium",
+        "unit_attributes": {
+          "Cost": "2",
+          "Hit Speed": "1.1 sec",
+          "First Hit Speed": "0.6 sec",
+          "Speed": "Very Fast",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Ground",
+          "Count": "x4",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "202",
+          "Damage": "120",
+          "Damage per second": "109"
+        },
+        "damage": 120.0,
+        "hitpoints": 202.0,
+        "damage_per_second": 109.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Goblin Cage",
+        "url": "https://clashroyale.fandom.com/wiki/Goblin_Cage",
+        "elixir": 4.0,
+        "rarity": "Rare",
+        "type": "Building",
+        "arena_text": "Goblin Stadium",
+        "unit_attributes": {
+          "Cost": "4",
+          "Deploy Time": "1 sec",
+          "Lifetime": "20 sec",
+          "Type": "Building",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Goblin Cage Hitpoints": "780",
+          "Goblin Cage Hitpoints lost per second": "39",
+          "Goblin Brawler Hitpoints": "1,080",
+          "Goblin Brawler Damage": "337",
+          "Goblin Brawler Damage per second": "306"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Goblin Hut",
+        "url": "https://clashroyale.fandom.com/wiki/Goblin_Hut",
+        "elixir": 4.0,
+        "rarity": "Rare",
+        "type": "Building",
+        "arena_text": "Goblin Stadium",
+        "unit_attributes": {
+          "Cost": "4",
+          "Spawn Speed": "1.9 sec",
+          "Spawn Delay": "0.5 sec",
+          "Spawn Range": "6",
+          "Deploy Time": "1 sec",
+          "Lifetime": "30 sec",
+          "Type": "Building",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Goblin Hut Hitpoints": "1,228",
+          "Goblin Hut Hitpoints lost per second": "29.2",
+          "Spear Goblin Hitpoints": "133",
+          "Spear Goblin Damage": "81",
+          "Spear Goblin Damage per second": "47"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Goblins",
+        "url": "https://clashroyale.fandom.com/wiki/Goblins",
+        "elixir": 2.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Goblin Stadium",
+        "unit_attributes": {
+          "Cost": "2",
+          "Hit Speed": "1.1 sec",
+          "First Hit Speed": "0.6 sec",
+          "Speed": "Very Fast",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Ground",
+          "Count": "x4",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "202",
+          "Damage": "120",
+          "Damage per second": "109"
+        },
+        "damage": 120.0,
+        "hitpoints": 202.0,
+        "damage_per_second": 109.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Spear Goblins",
+        "url": "https://clashroyale.fandom.com/wiki/Spear_Goblins",
+        "elixir": 2.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Goblin Stadium",
+        "unit_attributes": {
+          "Cost": "2",
+          "Hit Speed": "1.7 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Very Fast",
+          "Deploy Time": "1 sec",
+          "Range": "5",
+          "Projectile Speed": "500",
+          "Target": "Air & Ground",
+          "Count": "x3",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "133",
+          "Damage": "81",
+          "Damage per second": "47"
+        },
+        "damage": 81.0,
+        "hitpoints": 133.0,
+        "damage_per_second": 47.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Goblin Cage",
+        "url": "https://clashroyale.fandom.com/wiki/Goblin_Cage",
+        "elixir": 4.0,
+        "rarity": "Rare",
+        "type": "Building",
+        "arena_text": "Goblin Stadium",
+        "unit_attributes": {
+          "Cost": "4",
+          "Deploy Time": "1 sec",
+          "Lifetime": "20 sec",
+          "Type": "Building",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Goblin Cage Hitpoints": "780",
+          "Goblin Cage Hitpoints lost per second": "39",
+          "Goblin Brawler Hitpoints": "1,080",
+          "Goblin Brawler Damage": "337",
+          "Goblin Brawler Damage per second": "306"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Goblin Hut",
+        "url": "https://clashroyale.fandom.com/wiki/Goblin_Hut",
+        "elixir": 4.0,
+        "rarity": "Rare",
+        "type": "Building",
+        "arena_text": "Goblin Stadium",
+        "unit_attributes": {
+          "Cost": "4",
+          "Spawn Speed": "1.9 sec",
+          "Spawn Delay": "0.5 sec",
+          "Spawn Range": "6",
+          "Deploy Time": "1 sec",
+          "Lifetime": "30 sec",
+          "Type": "Building",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Goblin Hut Hitpoints": "1,228",
+          "Goblin Hut Hitpoints lost per second": "29.2",
+          "Spear Goblin Hitpoints": "133",
+          "Spear Goblin Damage": "81",
+          "Spear Goblin Damage per second": "47"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      }
+    ]
+  },
+  "2": {
+    "arena_name": "Bone Pit",
+    "cards": [
+      {
+        "name": "Bomber",
+        "url": "https://clashroyale.fandom.com/wiki/Bomber",
+        "elixir": 2.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Bone Pit",
+        "unit_attributes": {
+          "Cost": "2",
+          "Hit Speed": "1.8 sec",
+          "First Hit Speed": "0.2 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "4.5",
+          "Splash Radius": "1.5",
+          "Projectile Speed": "400",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "304",
+          "Area Damage": "225",
+          "Damage per second": "125"
+        },
+        "damage": 225.0,
+        "hitpoints": 304.0,
+        "damage_per_second": 125.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Skeletons",
+        "url": "https://clashroyale.fandom.com/wiki/Skeletons",
+        "elixir": 1.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Bone Pit",
+        "unit_attributes": {
+          "Cost": "1",
+          "Hit Speed": "1.1 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Fast",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Ground",
+          "Count": "x3",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "81",
+          "Damage": "81",
+          "Damage per second": "81"
+        },
+        "damage": 81.0,
+        "hitpoints": 81.0,
+        "damage_per_second": 81.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Tombstone",
+        "url": "https://clashroyale.fandom.com/wiki/Tombstone",
+        "elixir": 3.0,
+        "rarity": "Rare",
+        "type": "Building",
+        "arena_text": "Bone Pit",
+        "unit_attributes": {
+          "Cost": "3",
+          "Spawn Speed": "4 sec",
+          "Deploy Time": "1 sec",
+          "Lifetime": "30 sec",
+          "Type": "Building",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Tombstone Hitpoints": "529",
+          "Tombstone Hitpoints lost per second": "17.6",
+          "Skeleton Hitpoints": "81",
+          "Skeleton Damage": "81",
+          "Skeleton Damage per second": "81"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Valkyrie",
+        "url": "https://clashroyale.fandom.com/wiki/Valkyrie",
+        "elixir": 4.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Bone Pit",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1.5 sec",
+          "First Hit Speed": "0.1 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Medium",
+          "Splash Radius": "2",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,907",
+          "Area Damage": "266",
+          "Damage per second": "177"
+        },
+        "damage": 266.0,
+        "hitpoints": 1907.0,
+        "damage_per_second": 177.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Skeletons",
+        "url": "https://clashroyale.fandom.com/wiki/Skeletons",
+        "elixir": 1.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Bone Pit",
+        "unit_attributes": {
+          "Cost": "1",
+          "Hit Speed": "1.1 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Fast",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Ground",
+          "Count": "x3",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "81",
+          "Damage": "81",
+          "Damage per second": "81"
+        },
+        "damage": 81.0,
+        "hitpoints": 81.0,
+        "damage_per_second": 81.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Bomber",
+        "url": "https://clashroyale.fandom.com/wiki/Bomber",
+        "elixir": 2.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Bone Pit",
+        "unit_attributes": {
+          "Cost": "2",
+          "Hit Speed": "1.8 sec",
+          "First Hit Speed": "0.2 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "4.5",
+          "Splash Radius": "1.5",
+          "Projectile Speed": "400",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "304",
+          "Area Damage": "225",
+          "Damage per second": "125"
+        },
+        "damage": 225.0,
+        "hitpoints": 304.0,
+        "damage_per_second": 125.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Tombstone",
+        "url": "https://clashroyale.fandom.com/wiki/Tombstone",
+        "elixir": 3.0,
+        "rarity": "Rare",
+        "type": "Building",
+        "arena_text": "Bone Pit",
+        "unit_attributes": {
+          "Cost": "3",
+          "Spawn Speed": "4 sec",
+          "Deploy Time": "1 sec",
+          "Lifetime": "30 sec",
+          "Type": "Building",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Tombstone Hitpoints": "529",
+          "Tombstone Hitpoints lost per second": "17.6",
+          "Skeleton Hitpoints": "81",
+          "Skeleton Damage": "81",
+          "Skeleton Damage per second": "81"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Valkyrie",
+        "url": "https://clashroyale.fandom.com/wiki/Valkyrie",
+        "elixir": 4.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Bone Pit",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1.5 sec",
+          "First Hit Speed": "0.1 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Medium",
+          "Splash Radius": "2",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,907",
+          "Area Damage": "266",
+          "Damage per second": "177"
+        },
+        "damage": 266.0,
+        "hitpoints": 1907.0,
+        "damage_per_second": 177.0,
+        "transport": "ground"
+      }
+    ]
+  },
+  "3": {
+    "arena_name": "Barbarian Bowl",
+    "cards": [
+      {
+        "name": "Cannon",
+        "url": "https://clashroyale.fandom.com/wiki/Cannon",
+        "elixir": 3.0,
+        "rarity": "Common",
+        "type": "Building",
+        "arena_text": "Barbarian Bowl",
+        "unit_attributes": {
+          "Cost": "3",
+          "Hit Speed": "1 sec",
+          "First Hit Speed": "1 sec",
+          "Deploy Time": "1 sec",
+          "Lifetime": "30 sec",
+          "Range": "5.5",
+          "Projectile Speed": "1000",
+          "Target": "Ground",
+          "Type": "Building",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "824",
+          "Hitpoints lost per second": "27.4",
+          "Damage": "212",
+          "Damage per second": "212"
+        },
+        "damage": 212.0,
+        "hitpoints": 824.0,
+        "damage_per_second": 212.0,
+        "transport": null
+      },
+      {
+        "name": "Barbarians",
+        "url": "https://clashroyale.fandom.com/wiki/Barbarians",
+        "elixir": 5.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Barbarian Bowl",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "1.3 sec",
+          "First Hit Speed": "0.4 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Ground",
+          "Count": "x5",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "670",
+          "Damage": "192",
+          "Damage per second": "147"
+        },
+        "damage": 192.0,
+        "hitpoints": 670.0,
+        "damage_per_second": 147.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Mega Minion",
+        "url": "https://clashroyale.fandom.com/wiki/Mega_Minion",
+        "elixir": 3.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Barbarian Bowl",
+        "unit_attributes": {
+          "Cost": "3",
+          "Hit Speed": "1.5 sec",
+          "First Hit Speed": "0.4 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Long",
+          "Projectile Speed": "1000",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Air",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "837",
+          "Damage": "312",
+          "Damage per second": "208"
+        },
+        "damage": 312.0,
+        "hitpoints": 837.0,
+        "damage_per_second": 208.0,
+        "transport": "air"
+      },
+      {
+        "name": "Battle Ram",
+        "url": "https://clashroyale.fandom.com/wiki/Battle_Ram",
+        "elixir": 4.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Barbarian Bowl",
+        "unit_attributes": {
+          "Cost": "4",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Buildings",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Battle Ram Hitpoints": "967",
+          "Battle Ram Damage": "286",
+          "Battle Ram Charge Damage": "573",
+          "Barbarian Hitpoints": "670",
+          "Barbarian Damage": "192",
+          "Barbarian Damage per second": "147"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Barbarians",
+        "url": "https://clashroyale.fandom.com/wiki/Barbarians",
+        "elixir": 5.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Barbarian Bowl",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "1.3 sec",
+          "First Hit Speed": "0.4 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Ground",
+          "Count": "x5",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "670",
+          "Damage": "192",
+          "Damage per second": "147"
+        },
+        "damage": 192.0,
+        "hitpoints": 670.0,
+        "damage_per_second": 147.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Cannon",
+        "url": "https://clashroyale.fandom.com/wiki/Cannon",
+        "elixir": 3.0,
+        "rarity": "Common",
+        "type": "Building",
+        "arena_text": "Barbarian Bowl",
+        "unit_attributes": {
+          "Cost": "3",
+          "Hit Speed": "1 sec",
+          "First Hit Speed": "1 sec",
+          "Deploy Time": "1 sec",
+          "Lifetime": "30 sec",
+          "Range": "5.5",
+          "Projectile Speed": "1000",
+          "Target": "Ground",
+          "Type": "Building",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "824",
+          "Hitpoints lost per second": "27.4",
+          "Damage": "212",
+          "Damage per second": "212"
+        },
+        "damage": 212.0,
+        "hitpoints": 824.0,
+        "damage_per_second": 212.0,
+        "transport": null
+      },
+      {
+        "name": "Battle Ram",
+        "url": "https://clashroyale.fandom.com/wiki/Battle_Ram",
+        "elixir": 4.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Barbarian Bowl",
+        "unit_attributes": {
+          "Cost": "4",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Buildings",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Battle Ram Hitpoints": "967",
+          "Battle Ram Damage": "286",
+          "Battle Ram Charge Damage": "573",
+          "Barbarian Hitpoints": "670",
+          "Barbarian Damage": "192",
+          "Barbarian Damage per second": "147"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Mega Minion",
+        "url": "https://clashroyale.fandom.com/wiki/Mega_Minion",
+        "elixir": 3.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Barbarian Bowl",
+        "unit_attributes": {
+          "Cost": "3",
+          "Hit Speed": "1.5 sec",
+          "First Hit Speed": "0.4 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Long",
+          "Projectile Speed": "1000",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Air",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "837",
+          "Damage": "312",
+          "Damage per second": "208"
+        },
+        "damage": 312.0,
+        "hitpoints": 837.0,
+        "damage_per_second": 208.0,
+        "transport": "air"
+      }
+    ]
+  },
+  "4": {
+    "arena_name": "Spell Valley",
+    "cards": [
+      {
+        "name": "Electro Spirit",
+        "url": "https://clashroyale.fandom.com/wiki/Electro_Spirit",
+        "elixir": 1.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Spell Valley",
+        "unit_attributes": {
+          "Cost": "1",
+          "Stun Duration": "0.5 sec",
+          "Speed": "Very Fast",
+          "Deploy Time": "1 sec",
+          "Range": "2.5",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "230",
+          "Damage": "99 x9"
+        },
+        "damage": 99.0,
+        "hitpoints": 230.0,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Skeleton Dragons",
+        "url": "https://clashroyale.fandom.com/wiki/Skeleton_Dragons",
+        "elixir": 4.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Spell Valley",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1.9 sec",
+          "First Hit Speed": "0.4 sec",
+          "Speed": "Fast",
+          "Deploy Time": "1 sec",
+          "Range": "3.5",
+          "Splash Radius": "0.8",
+          "Projectile Speed": "500",
+          "Target": "Air & Ground",
+          "Count": "x2",
+          "Transport": "Air",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "560",
+          "Area Damage": "161",
+          "Damage per second": "84"
+        },
+        "damage": 161.0,
+        "hitpoints": 560.0,
+        "damage_per_second": 84.0,
+        "transport": "air"
+      },
+      {
+        "name": "Fire Spirit",
+        "url": "https://clashroyale.fandom.com/wiki/Fire_Spirit",
+        "elixir": 1.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Spell Valley",
+        "unit_attributes": {
+          "Cost": "1",
+          "Speed": "Very Fast",
+          "Deploy Time": "1 sec",
+          "Range": "2.5",
+          "Splash Radius": "2.3",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "230",
+          "Area Damage": "207"
+        },
+        "damage": 207.0,
+        "hitpoints": 230.0,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Bomb Tower",
+        "url": "https://clashroyale.fandom.com/wiki/Bomb_Tower",
+        "elixir": 4.0,
+        "rarity": "Rare",
+        "type": "Building",
+        "arena_text": "Spell Valley",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1.8 sec",
+          "First Hit Speed": "0.5 sec",
+          "Deploy Time": "1 sec",
+          "Lifetime": "30 sec",
+          "Range": "6",
+          "Splash Radius": "1.5",
+          "Projectile Speed": "500",
+          "Target": "Ground",
+          "Type": "Building",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,356",
+          "Area Damage": "222",
+          "Damage per second": "123",
+          "Death Damage": "222",
+          "Hitpoints lost per second": "45.2"
+        },
+        "damage": 222.0,
+        "hitpoints": 1356.0,
+        "damage_per_second": 123.0,
+        "transport": null
+      },
+      {
+        "name": "Inferno Tower",
+        "url": "https://clashroyale.fandom.com/wiki/Inferno_Tower",
+        "elixir": 5.0,
+        "rarity": "Rare",
+        "type": "Building",
+        "arena_text": "Spell Valley",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "0.4 sec",
+          "Deploy Time": "1 sec",
+          "Lifetime": "30 sec",
+          "Range": "6",
+          "Target": "Air & Ground",
+          "Type": "Building",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,748",
+          "Hitpoints lost per second": "58.3",
+          "Damage (Stage 1)": "43",
+          "Damage (Stage 2)": "158",
+          "Damage (Stage 3)": "847",
+          "Damage per second (Stage 1)": "107",
+          "Damage per second (Stage 2)": "395",
+          "Damage per second (Stage 3)": "2117"
+        },
+        "damage": null,
+        "hitpoints": 1748.0,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Wizard",
+        "url": "https://clashroyale.fandom.com/wiki/Wizard",
+        "elixir": 5.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Spell Valley",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "1.4 sec",
+          "First Hit Speed": "0.4 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "5.5",
+          "Splash Radius": "1.5",
+          "Projectile Speed": "600",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "755",
+          "Area Damage": "281",
+          "Damage per second": "200"
+        },
+        "damage": 281.0,
+        "hitpoints": 755.0,
+        "damage_per_second": 200.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Inferno Tower",
+        "url": "https://clashroyale.fandom.com/wiki/Inferno_Tower",
+        "elixir": 5.0,
+        "rarity": "Rare",
+        "type": "Building",
+        "arena_text": "Spell Valley",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "0.4 sec",
+          "Deploy Time": "1 sec",
+          "Lifetime": "30 sec",
+          "Range": "6",
+          "Target": "Air & Ground",
+          "Type": "Building",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,748",
+          "Hitpoints lost per second": "58.3",
+          "Damage (Stage 1)": "43",
+          "Damage (Stage 2)": "158",
+          "Damage (Stage 3)": "847",
+          "Damage per second (Stage 1)": "107",
+          "Damage per second (Stage 2)": "395",
+          "Damage per second (Stage 3)": "2117"
+        },
+        "damage": null,
+        "hitpoints": 1748.0,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Wizard",
+        "url": "https://clashroyale.fandom.com/wiki/Wizard",
+        "elixir": 5.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Spell Valley",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "1.4 sec",
+          "First Hit Speed": "0.4 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "5.5",
+          "Splash Radius": "1.5",
+          "Projectile Speed": "600",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "755",
+          "Area Damage": "281",
+          "Damage per second": "200"
+        },
+        "damage": 281.0,
+        "hitpoints": 755.0,
+        "damage_per_second": 200.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Fire Spirit",
+        "url": "https://clashroyale.fandom.com/wiki/Fire_Spirit",
+        "elixir": 1.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Spell Valley",
+        "unit_attributes": {
+          "Cost": "1",
+          "Speed": "Very Fast",
+          "Deploy Time": "1 sec",
+          "Range": "2.5",
+          "Splash Radius": "2.3",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "230",
+          "Area Damage": "207"
+        },
+        "damage": 207.0,
+        "hitpoints": 230.0,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Electro Spirit",
+        "url": "https://clashroyale.fandom.com/wiki/Electro_Spirit",
+        "elixir": 1.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Spell Valley",
+        "unit_attributes": {
+          "Cost": "1",
+          "Stun Duration": "0.5 sec",
+          "Speed": "Very Fast",
+          "Deploy Time": "1 sec",
+          "Range": "2.5",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "230",
+          "Damage": "99 x9"
+        },
+        "damage": 99.0,
+        "hitpoints": 230.0,
+        "damage_per_second": null,
+        "transport": "ground"
+      }
+    ]
+  },
+  "5": {
+    "arena_name": "Builder's Workshop",
+    "cards": [
+      {
+        "name": "Zap",
+        "url": "https://clashroyale.fandom.com/wiki/Zap",
+        "elixir": 2.0,
+        "rarity": "Common",
+        "type": "Spell",
+        "arena_text": "Builder's Workshop",
+        "unit_attributes": {
+          "Cost": "2",
+          "Radius": "2.5",
+          "Stun Duration": "0.5 sec",
+          "Target": "Air & Ground",
+          "Type": "Spell",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Area Damage": "192",
+          "Crown Tower Damage": "58"
+        },
+        "damage": 192.0,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Mortar",
+        "url": "https://clashroyale.fandom.com/wiki/Mortar",
+        "elixir": 4.0,
+        "rarity": "Common",
+        "type": "Building",
+        "arena_text": "Builder's Workshop",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "5 sec",
+          "First Hit Speed": "1 sec",
+          "Deploy Time": "3.5 sec",
+          "Lifetime": "30 sec",
+          "Range": "3.5-11.5",
+          "Splash Radius": "2",
+          "Projectile Speed": "300",
+          "Target": "Ground",
+          "Type": "Building",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,369",
+          "Area Damage": "266",
+          "Damage per second": "53",
+          "Hitpoints lost per second": "45.6"
+        },
+        "damage": 266.0,
+        "hitpoints": 1369.0,
+        "damage_per_second": 53.0,
+        "transport": null
+      },
+      {
+        "name": "Bats",
+        "url": "https://clashroyale.fandom.com/wiki/Bats",
+        "elixir": 2.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Builder's Workshop",
+        "unit_attributes": {
+          "Cost": "2",
+          "Hit Speed": "1.3 sec",
+          "First Hit Speed": "0.6 sec",
+          "Speed": "Very Fast",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Medium",
+          "Target": "Air & Ground",
+          "Count": "x5",
+          "Transport": "Air",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "81",
+          "Damage": "81",
+          "Damage per second": "62"
+        },
+        "damage": 81.0,
+        "hitpoints": 81.0,
+        "damage_per_second": 62.0,
+        "transport": "air"
+      },
+      {
+        "name": "Rocket",
+        "url": "https://clashroyale.fandom.com/wiki/Rocket",
+        "elixir": 6.0,
+        "rarity": "Rare",
+        "type": "Spell",
+        "arena_text": "Builder's Workshop",
+        "unit_attributes": {
+          "Cost": "6",
+          "Radius": "2",
+          "Target": "Air & Ground",
+          "Type": "Spell",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Area Damage": "1,484",
+          "Crown Tower Damage": "371"
+        },
+        "damage": 1484.0,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Flying Machine",
+        "url": "https://clashroyale.fandom.com/wiki/Flying_Machine",
+        "elixir": 4.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Builder's Workshop",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1.1 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Fast",
+          "Deploy Time": "1 sec",
+          "Range": "6",
+          "Projectile Speed": "800",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Air",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "614",
+          "Damage": "171",
+          "Damage per second": "155"
+        },
+        "damage": 171.0,
+        "hitpoints": 614.0,
+        "damage_per_second": 155.0,
+        "transport": "air"
+      },
+      {
+        "name": "Hog Rider",
+        "url": "https://clashroyale.fandom.com/wiki/Hog_Rider",
+        "elixir": 4.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Builder's Workshop",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1.6 sec",
+          "First Hit Speed": "0.6 sec",
+          "Speed": "Very Fast",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Buildings",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,697",
+          "Damage": "317",
+          "Damage per second": "198"
+        },
+        "damage": 317.0,
+        "hitpoints": 1697.0,
+        "damage_per_second": 198.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Zap",
+        "url": "https://clashroyale.fandom.com/wiki/Zap",
+        "elixir": 2.0,
+        "rarity": "Common",
+        "type": "Spell",
+        "arena_text": "Builder's Workshop",
+        "unit_attributes": {
+          "Cost": "2",
+          "Radius": "2.5",
+          "Stun Duration": "0.5 sec",
+          "Target": "Air & Ground",
+          "Type": "Spell",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Area Damage": "192",
+          "Crown Tower Damage": "58"
+        },
+        "damage": 192.0,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Bats",
+        "url": "https://clashroyale.fandom.com/wiki/Bats",
+        "elixir": 2.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Builder's Workshop",
+        "unit_attributes": {
+          "Cost": "2",
+          "Hit Speed": "1.3 sec",
+          "First Hit Speed": "0.6 sec",
+          "Speed": "Very Fast",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Medium",
+          "Target": "Air & Ground",
+          "Count": "x5",
+          "Transport": "Air",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "81",
+          "Damage": "81",
+          "Damage per second": "62"
+        },
+        "damage": 81.0,
+        "hitpoints": 81.0,
+        "damage_per_second": 62.0,
+        "transport": "air"
+      },
+      {
+        "name": "Hog Rider",
+        "url": "https://clashroyale.fandom.com/wiki/Hog_Rider",
+        "elixir": 4.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Builder's Workshop",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1.6 sec",
+          "First Hit Speed": "0.6 sec",
+          "Speed": "Very Fast",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Buildings",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,697",
+          "Damage": "317",
+          "Damage per second": "198"
+        },
+        "damage": 317.0,
+        "hitpoints": 1697.0,
+        "damage_per_second": 198.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Flying Machine",
+        "url": "https://clashroyale.fandom.com/wiki/Flying_Machine",
+        "elixir": 4.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Builder's Workshop",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1.1 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Fast",
+          "Deploy Time": "1 sec",
+          "Range": "6",
+          "Projectile Speed": "800",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Air",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "614",
+          "Damage": "171",
+          "Damage per second": "155"
+        },
+        "damage": 171.0,
+        "hitpoints": 614.0,
+        "damage_per_second": 155.0,
+        "transport": "air"
+      }
+    ]
+  },
+  "6": {
+    "arena_name": "P.E.K.K.A.'s Playhouse",
+    "cards": [
+      {
+        "name": "Goblin Barrel",
+        "url": "https://clashroyale.fandom.com/wiki/Goblin_Barrel",
+        "elixir": 3.0,
+        "rarity": "Epic",
+        "type": "Spell",
+        "arena_text": "P.E.K.K.A.'s Playhouse",
+        "unit_attributes": {
+          "Cost": "3",
+          "Radius": "1.5",
+          "Type": "Spell",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Goblin Hitpoints": "202",
+          "Goblin Damage": "120",
+          "Goblin Damage per second": "109"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Guards",
+        "url": "https://clashroyale.fandom.com/wiki/Guards",
+        "elixir": 3.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "P.E.K.K.A.'s Playhouse",
+        "unit_attributes": {
+          "Cost": "3",
+          "Hit Speed": "1 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Fast",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Long",
+          "Target": "Ground",
+          "Count": "x3",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "81",
+          "Shield Hitpoints": "256",
+          "Damage": "117",
+          "Damage per second": "117"
+        },
+        "damage": 117.0,
+        "hitpoints": 81.0,
+        "damage_per_second": 117.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Baby Dragon",
+        "url": "https://clashroyale.fandom.com/wiki/Baby_Dragon",
+        "elixir": 4.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "P.E.K.K.A.'s Playhouse",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1.5 sec",
+          "First Hit Speed": "0.3 sec",
+          "Speed": "Fast",
+          "Deploy Time": "1 sec",
+          "Range": "3.5",
+          "Splash Radius": "1.5",
+          "Projectile Speed": "500",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Air",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,152",
+          "Area Damage": "161",
+          "Damage per second": "107"
+        },
+        "damage": 161.0,
+        "hitpoints": 1152.0,
+        "damage_per_second": 107.0,
+        "transport": "air"
+      },
+      {
+        "name": "Skeleton Army",
+        "url": "https://clashroyale.fandom.com/wiki/Skeleton_Army",
+        "elixir": 3.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "P.E.K.K.A.'s Playhouse",
+        "unit_attributes": {
+          "Cost": "3",
+          "Hit Speed": "1.1 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Fast",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Ground",
+          "Count": "x15",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "81",
+          "Damage": "81",
+          "Damage per second": "81"
+        },
+        "damage": 81.0,
+        "hitpoints": 81.0,
+        "damage_per_second": 81.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Witch",
+        "url": "https://clashroyale.fandom.com/wiki/Witch",
+        "elixir": 5.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "P.E.K.K.A.'s Playhouse",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "1.1 sec",
+          "First Hit Speed": "0.7 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Spawn Speed": "7 sec",
+          "Range": "5.5",
+          "Splash Radius": "1.5",
+          "Projectile Speed": "600",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "839",
+          "Area Damage": "135",
+          "Damage per second": "122",
+          "Skeleton Hitpoints": "81",
+          "Skeleton Damage": "81",
+          "Skeleton Damage per second": "81"
+        },
+        "damage": 135.0,
+        "hitpoints": 839.0,
+        "damage_per_second": 122.0,
+        "transport": "ground"
+      },
+      {
+        "name": "P.E.K.K.A.",
+        "url": "https://clashroyale.fandom.com/wiki/P.E.K.K.A.",
+        "elixir": 7.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "P.E.K.K.A.'s Playhouse",
+        "unit_attributes": {
+          "Cost": "7",
+          "Hit Speed": "1.8 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Slow",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Medium",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "3,760",
+          "Damage": "816",
+          "Damage per second": "453"
+        },
+        "damage": 816.0,
+        "hitpoints": 3760.0,
+        "damage_per_second": 453.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Skeleton Army",
+        "url": "https://clashroyale.fandom.com/wiki/Skeleton_Army",
+        "elixir": 3.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "P.E.K.K.A.'s Playhouse",
+        "unit_attributes": {
+          "Cost": "3",
+          "Hit Speed": "1.1 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Fast",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Ground",
+          "Count": "x15",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "81",
+          "Damage": "81",
+          "Damage per second": "81"
+        },
+        "damage": 81.0,
+        "hitpoints": 81.0,
+        "damage_per_second": 81.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Witch",
+        "url": "https://clashroyale.fandom.com/wiki/Witch",
+        "elixir": 5.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "P.E.K.K.A.'s Playhouse",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "1.1 sec",
+          "First Hit Speed": "0.7 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Spawn Speed": "7 sec",
+          "Range": "5.5",
+          "Splash Radius": "1.5",
+          "Projectile Speed": "600",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "839",
+          "Area Damage": "135",
+          "Damage per second": "122",
+          "Skeleton Hitpoints": "81",
+          "Skeleton Damage": "81",
+          "Skeleton Damage per second": "81"
+        },
+        "damage": 135.0,
+        "hitpoints": 839.0,
+        "damage_per_second": 122.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Goblin Barrel",
+        "url": "https://clashroyale.fandom.com/wiki/Goblin_Barrel",
+        "elixir": 3.0,
+        "rarity": "Epic",
+        "type": "Spell",
+        "arena_text": "P.E.K.K.A.'s Playhouse",
+        "unit_attributes": {
+          "Cost": "3",
+          "Radius": "1.5",
+          "Type": "Spell",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Goblin Hitpoints": "202",
+          "Goblin Damage": "120",
+          "Goblin Damage per second": "109"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Guards",
+        "url": "https://clashroyale.fandom.com/wiki/Guards",
+        "elixir": 3.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "P.E.K.K.A.'s Playhouse",
+        "unit_attributes": {
+          "Cost": "3",
+          "Hit Speed": "1 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Fast",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Long",
+          "Target": "Ground",
+          "Count": "x3",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "81",
+          "Shield Hitpoints": "256",
+          "Damage": "117",
+          "Damage per second": "117"
+        },
+        "damage": 117.0,
+        "hitpoints": 81.0,
+        "damage_per_second": 117.0,
+        "transport": "ground"
+      }
+    ]
+  },
+  "7": {
+    "arena_name": "Royal Arena",
+    "cards": [
+      {
+        "name": "Royal Recruits",
+        "url": "https://clashroyale.fandom.com/wiki/Royal_Recruits",
+        "elixir": 7.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Royal Arena",
+        "unit_attributes": {
+          "Cost": "7",
+          "Hit Speed": "1.3 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Long",
+          "Target": "Ground",
+          "Count": "x6",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "547",
+          "Shield Hitpoints": "240",
+          "Damage": "133",
+          "Damage per second": "102"
+        },
+        "damage": 133.0,
+        "hitpoints": 547.0,
+        "damage_per_second": 102.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Royal Giant",
+        "url": "https://clashroyale.fandom.com/wiki/Royal_Giant",
+        "elixir": 6.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Royal Arena",
+        "unit_attributes": {
+          "Cost": "6",
+          "Hit Speed": "1.7 sec",
+          "First Hit Speed": "0.9 sec",
+          "Speed": "Slow",
+          "Deploy Time": "1 sec",
+          "Range": "5",
+          "Projectile Speed": "1000",
+          "Target": "Buildings",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "3,164",
+          "Damage": "307",
+          "Damage per second": "180"
+        },
+        "damage": 307.0,
+        "hitpoints": 3164.0,
+        "damage_per_second": 180.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Royal Hogs",
+        "url": "https://clashroyale.fandom.com/wiki/Royal_Hogs",
+        "elixir": 5.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Royal Arena",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "1.2 sec",
+          "First Hit Speed": "0.4 sec",
+          "Speed": "Very Fast",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Buildings",
+          "Count": "x4",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "837",
+          "Damage": "74",
+          "Damage per second": "61"
+        },
+        "damage": 74.0,
+        "hitpoints": 837.0,
+        "damage_per_second": 61.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Three Musketeers",
+        "url": "https://clashroyale.fandom.com/wiki/Three_Musketeers",
+        "elixir": 9.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Royal Arena",
+        "unit_attributes": {
+          "Cost": "9",
+          "Hit Speed": "1 sec",
+          "First Hit Speed": "0.7 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "6",
+          "Projectile Speed": "1000",
+          "Target": "Air & Ground",
+          "Count": "x3",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "721",
+          "Damage": "217",
+          "Damage per second": "217"
+        },
+        "damage": 217.0,
+        "hitpoints": 721.0,
+        "damage_per_second": 217.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Dark Prince",
+        "url": "https://clashroyale.fandom.com/wiki/Dark_Prince",
+        "elixir": 4.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "Royal Arena",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1.3 sec",
+          "First Hit Speed": "0.4 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Medium",
+          "Splash Radius": "1.1",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,200",
+          "Shield Hitpoints": "240",
+          "Area Damage": "266",
+          "Charge Damage": "532",
+          "Damage per second": "204"
+        },
+        "damage": 266.0,
+        "hitpoints": 1200.0,
+        "damage_per_second": 204.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Prince",
+        "url": "https://clashroyale.fandom.com/wiki/Prince",
+        "elixir": 5.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "Royal Arena",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "1.4 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Long",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,920",
+          "Damage": "391",
+          "Charge Damage": "783",
+          "Damage per second": "279"
+        },
+        "damage": 391.0,
+        "hitpoints": 1920.0,
+        "damage_per_second": 279.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Balloon",
+        "url": "https://clashroyale.fandom.com/wiki/Balloon",
+        "elixir": 5.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "Royal Arena",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "2 sec",
+          "First Hit Speed": "0.2 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Buildings",
+          "Count": "x1",
+          "Transport": "Air",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,679",
+          "Damage": "640",
+          "Damage per second": "320",
+          "Death Damage": "240"
+        },
+        "damage": 640.0,
+        "hitpoints": 1679.0,
+        "damage_per_second": 320.0,
+        "transport": "air"
+      },
+      {
+        "name": "Royal Giant",
+        "url": "https://clashroyale.fandom.com/wiki/Royal_Giant",
+        "elixir": 6.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Royal Arena",
+        "unit_attributes": {
+          "Cost": "6",
+          "Hit Speed": "1.7 sec",
+          "First Hit Speed": "0.9 sec",
+          "Speed": "Slow",
+          "Deploy Time": "1 sec",
+          "Range": "5",
+          "Projectile Speed": "1000",
+          "Target": "Buildings",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "3,164",
+          "Damage": "307",
+          "Damage per second": "180"
+        },
+        "damage": 307.0,
+        "hitpoints": 3164.0,
+        "damage_per_second": 180.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Royal Recruits",
+        "url": "https://clashroyale.fandom.com/wiki/Royal_Recruits",
+        "elixir": 7.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Royal Arena",
+        "unit_attributes": {
+          "Cost": "7",
+          "Hit Speed": "1.3 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Long",
+          "Target": "Ground",
+          "Count": "x6",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "547",
+          "Shield Hitpoints": "240",
+          "Damage": "133",
+          "Damage per second": "102"
+        },
+        "damage": 133.0,
+        "hitpoints": 547.0,
+        "damage_per_second": 102.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Three Musketeers",
+        "url": "https://clashroyale.fandom.com/wiki/Three_Musketeers",
+        "elixir": 9.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Royal Arena",
+        "unit_attributes": {
+          "Cost": "9",
+          "Hit Speed": "1 sec",
+          "First Hit Speed": "0.7 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "6",
+          "Projectile Speed": "1000",
+          "Target": "Air & Ground",
+          "Count": "x3",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "721",
+          "Damage": "217",
+          "Damage per second": "217"
+        },
+        "damage": 217.0,
+        "hitpoints": 721.0,
+        "damage_per_second": 217.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Royal Hogs",
+        "url": "https://clashroyale.fandom.com/wiki/Royal_Hogs",
+        "elixir": 5.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Royal Arena",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "1.2 sec",
+          "First Hit Speed": "0.4 sec",
+          "Speed": "Very Fast",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Buildings",
+          "Count": "x4",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "837",
+          "Damage": "74",
+          "Damage per second": "61"
+        },
+        "damage": 74.0,
+        "hitpoints": 837.0,
+        "damage_per_second": 61.0,
+        "transport": "ground"
+      }
+    ]
+  },
+  "8": {
+    "arena_name": "Frozen Peak",
+    "cards": [
+      {
+        "name": "Giant Snowball",
+        "url": "https://clashroyale.fandom.com/wiki/Giant_Snowball",
+        "elixir": 2.0,
+        "rarity": "Common",
+        "type": "Spell",
+        "arena_text": "Frozen Peak",
+        "unit_attributes": {
+          "Cost": "2",
+          "Radius": "2.5",
+          "Slow Duration": "3 sec",
+          "Slowdown": "-30%",
+          "Target": "Air & Ground",
+          "Type": "Spell",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Area Damage": "179",
+          "Crown Tower Damage": "54"
+        },
+        "damage": 179.0,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Ice Spirit",
+        "url": "https://clashroyale.fandom.com/wiki/Ice_Spirit",
+        "elixir": 1.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Frozen Peak",
+        "unit_attributes": {
+          "Cost": "1",
+          "Speed": "Very Fast",
+          "Deploy Time": "1 sec",
+          "Range": "2.5",
+          "Splash Radius": "1.5",
+          "Target": "Air & Ground",
+          "Freeze Duration": "1.2 sec",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "230",
+          "Area Damage": "110"
+        },
+        "damage": 110.0,
+        "hitpoints": 230.0,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Battle Healer",
+        "url": "https://clashroyale.fandom.com/wiki/Battle_Healer",
+        "elixir": 4.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Frozen Peak",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1.5 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Long",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,717",
+          "Damage": "148",
+          "Damage per second": "98",
+          "Spawn healing per pulse": "50.5",
+          "Spawn healing per second": "202",
+          "Active healing per pulse": "25.5",
+          "Active healing per second": "102"
+        },
+        "damage": 148.0,
+        "hitpoints": 1717.0,
+        "damage_per_second": 98.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Ice Golem",
+        "url": "https://clashroyale.fandom.com/wiki/Ice_Golem",
+        "elixir": 2.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Frozen Peak",
+        "unit_attributes": {
+          "Cost": "2",
+          "Hit Speed": "2.5 sec",
+          "First Hit Speed": "1 sec",
+          "Speed": "Slow",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Buildings",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,198",
+          "Damage": "84",
+          "Damage per second": "33",
+          "Death Damage": "84"
+        },
+        "damage": 84.0,
+        "hitpoints": 1198.0,
+        "damage_per_second": 33.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Vines",
+        "url": "https://clashroyale.fandom.com/wiki/Vines",
+        "elixir": 3.0,
+        "rarity": "Epic",
+        "type": "Spell",
+        "arena_text": "Frozen Peak",
+        "unit_attributes": {
+          "Cost": "3",
+          "Radius": "2.5",
+          "Duration": "2 sec",
+          "Count": "3",
+          "Target": "Air & Ground",
+          "Type": "Spell",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Damage per second": "153 x2 (306)",
+          "Crown Tower Damage": "38 x2 (76)"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": 153.0,
+        "transport": null
+      },
+      {
+        "name": "Lightning",
+        "url": "https://clashroyale.fandom.com/wiki/Lightning",
+        "elixir": 6.0,
+        "rarity": "Epic",
+        "type": "Spell",
+        "arena_text": "Frozen Peak",
+        "unit_attributes": {
+          "Cost": "6",
+          "Radius": "3.5",
+          "Duration": "1.5 sec",
+          "Stun Duration": "0.5 sec",
+          "Count": "x3",
+          "Target": "Air & Ground",
+          "Type": "Spell",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Damage": "1,057",
+          "Crown Tower Damage": "286"
+        },
+        "damage": 1057.0,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Freeze",
+        "url": "https://clashroyale.fandom.com/wiki/Freeze",
+        "elixir": 4.0,
+        "rarity": "Epic",
+        "type": "Spell",
+        "arena_text": "Frozen Peak",
+        "unit_attributes": {
+          "Cost": "4",
+          "Radius": "3",
+          "Freeze Duration": "4 sec",
+          "Target": "Air & Ground",
+          "Type": "Spell",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Area Damage": "115",
+          "Crown Tower Damage": "35"
+        },
+        "damage": 115.0,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Giant Skeleton",
+        "url": "https://clashroyale.fandom.com/wiki/Giant_Skeleton",
+        "elixir": 6.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "Frozen Peak",
+        "unit_attributes": {
+          "Cost": "6",
+          "Hit Speed": "1.4 sec",
+          "First Hit Speed": "0.3 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "3,617",
+          "Damage": "266",
+          "Damage per second": "190",
+          "Death Damage": "535",
+          "Crown Tower Death Damage": "1,068"
+        },
+        "damage": 266.0,
+        "hitpoints": 3617.0,
+        "damage_per_second": 190.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Cannoneer",
+        "url": "https://clashroyale.fandom.com/wiki/Cannoneer",
+        "elixir": null,
+        "rarity": "Epic",
+        "type": "Tower Troop",
+        "arena_text": "Frozen Peak",
+        "unit_attributes": {
+          "Hit Speed": "2.2 sec",
+          "First Hit Speed": "0.8 sec",
+          "Range": "7.5",
+          "Target": "Air & Ground",
+          "Type": "Tower Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "2,616",
+          "Damage": "320",
+          "Damage per second": "145"
+        },
+        "damage": 320.0,
+        "hitpoints": 2616.0,
+        "damage_per_second": 145.0,
+        "transport": null
+      },
+      {
+        "name": "Ice Spirit",
+        "url": "https://clashroyale.fandom.com/wiki/Ice_Spirit",
+        "elixir": 1.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Frozen Peak",
+        "unit_attributes": {
+          "Cost": "1",
+          "Speed": "Very Fast",
+          "Deploy Time": "1 sec",
+          "Range": "2.5",
+          "Splash Radius": "1.5",
+          "Target": "Air & Ground",
+          "Freeze Duration": "1.2 sec",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "230",
+          "Area Damage": "110"
+        },
+        "damage": 110.0,
+        "hitpoints": 230.0,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Giant Snowball",
+        "url": "https://clashroyale.fandom.com/wiki/Giant_Snowball",
+        "elixir": 2.0,
+        "rarity": "Common",
+        "type": "Spell",
+        "arena_text": "Frozen Peak",
+        "unit_attributes": {
+          "Cost": "2",
+          "Radius": "2.5",
+          "Slow Duration": "3 sec",
+          "Slowdown": "-30%",
+          "Target": "Air & Ground",
+          "Type": "Spell",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Area Damage": "179",
+          "Crown Tower Damage": "54"
+        },
+        "damage": 179.0,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Freeze",
+        "url": "https://clashroyale.fandom.com/wiki/Freeze",
+        "elixir": 4.0,
+        "rarity": "Epic",
+        "type": "Spell",
+        "arena_text": "Frozen Peak",
+        "unit_attributes": {
+          "Cost": "4",
+          "Radius": "3",
+          "Freeze Duration": "4 sec",
+          "Target": "Air & Ground",
+          "Type": "Spell",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Area Damage": "115",
+          "Crown Tower Damage": "35"
+        },
+        "damage": 115.0,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Lightning",
+        "url": "https://clashroyale.fandom.com/wiki/Lightning",
+        "elixir": 6.0,
+        "rarity": "Epic",
+        "type": "Spell",
+        "arena_text": "Frozen Peak",
+        "unit_attributes": {
+          "Cost": "6",
+          "Radius": "3.5",
+          "Duration": "1.5 sec",
+          "Stun Duration": "0.5 sec",
+          "Count": "x3",
+          "Target": "Air & Ground",
+          "Type": "Spell",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Damage": "1,057",
+          "Crown Tower Damage": "286"
+        },
+        "damage": 1057.0,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      }
+    ]
+  },
+  "9": {
+    "arena_name": "Jungle Arena",
+    "cards": [
+      {
+        "name": "Berserker",
+        "url": "https://clashroyale.fandom.com/wiki/Berserker",
+        "elixir": 2.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Jungle Arena",
+        "unit_attributes": {
+          "Cost": "2",
+          "Hit Speed": "0.6 sec",
+          "First Hit Speed": "0.2 sec",
+          "Speed": "Fast",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "896",
+          "Damage": "102",
+          "Damage per second": "170"
+        },
+        "damage": 102.0,
+        "hitpoints": 896.0,
+        "damage_per_second": 170.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Skeleton Barrel",
+        "url": "https://clashroyale.fandom.com/wiki/Skeleton_Barrel",
+        "elixir": 3.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Jungle Arena",
+        "unit_attributes": {
+          "Cost": "3",
+          "Speed": "Fast",
+          "Range": "Melee: Short",
+          "Deploy Time": "1 sec",
+          "Target": "Buildings",
+          "Transport": "Air",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Skeleton Barrel Hitpoints": "532",
+          "Skeleton Barrel Death Damage": "145",
+          "Skeleton Hitpoints": "81",
+          "Skeleton Damage": "81",
+          "Skeleton Damage per second": "81"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": "air"
+      },
+      {
+        "name": "Goblin Gang",
+        "url": "https://clashroyale.fandom.com/wiki/Goblin_Gang",
+        "elixir": 3.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Jungle Arena",
+        "unit_attributes": {
+          "Hit Speed": "1.1 sec",
+          "First Hit Speed": "0.6 sec",
+          "Speed": "Very Fast",
+          "Range": "Melee: Short",
+          "Target": "Ground",
+          "Count": "x3",
+          "Transport": "Ground"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Goblin Hitpoints": "202",
+          "Goblin Damage": "120",
+          "Goblin Damage per second": "109",
+          "Spear Goblin Hitpoints": "133",
+          "Spear Goblin Damage": "81",
+          "Spear Goblin Damage per second": "47"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Barbarian Hut",
+        "url": "https://clashroyale.fandom.com/wiki/Barbarian_Hut",
+        "elixir": 6.0,
+        "rarity": "Rare",
+        "type": "Building",
+        "arena_text": "Jungle Arena",
+        "unit_attributes": {
+          "Cost": "6",
+          "Spawn Speed": "15 sec",
+          "Deploy Time": "1 sec",
+          "Lifetime": "30 sec",
+          "Type": "Building",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Barbarian Hut Hitpoints": "1,164",
+          "Barbarian Hut Hitpoints lost per second": "38.8",
+          "Barbarian Hitpoints": "670",
+          "Barbarian Damage": "192",
+          "Barbarian Damage per second": "147"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Dart Goblin",
+        "url": "https://clashroyale.fandom.com/wiki/Dart_Goblin",
+        "elixir": 3.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Jungle Arena",
+        "unit_attributes": {
+          "Cost": "3",
+          "Hit Speed": "0.8 sec",
+          "First Hit Speed": "0.35 sec",
+          "Speed": "Very Fast",
+          "Deploy Time": "1 sec",
+          "Range": "6.5",
+          "Projectile Speed": "800",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "261",
+          "Damage": "156",
+          "Damage per second": "195"
+        },
+        "damage": 156.0,
+        "hitpoints": 261.0,
+        "damage_per_second": 195.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Barbarian Barrel",
+        "url": "https://clashroyale.fandom.com/wiki/Barbarian_Barrel",
+        "elixir": 2.0,
+        "rarity": "Epic",
+        "type": "Spell",
+        "arena_text": "Jungle Arena",
+        "unit_attributes": {
+          "Cost": "2",
+          "Range": "4.5",
+          "Width": "2.6",
+          "Target": "Ground",
+          "Type": "Spell",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Barbarian Barrel Area Damage": "240",
+          "Barbarian Hitpoints": "670",
+          "Barbarian Damage": "192",
+          "Barbarian Damage per second": "147"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Poison",
+        "url": "https://clashroyale.fandom.com/wiki/Poison",
+        "elixir": 4.0,
+        "rarity": "Epic",
+        "type": "Spell",
+        "arena_text": "Jungle Arena",
+        "unit_attributes": {
+          "Cost": "4",
+          "Radius": "3.5",
+          "Duration": "8 sec",
+          "Slowdown": "-15%",
+          "Target": "Air & Ground",
+          "Type": "Spell",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Damage per second": "92 x8 (736)",
+          "Crown Tower Damage": "23 x8 (184)"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": 92.0,
+        "transport": null
+      },
+      {
+        "name": "Rune Giant",
+        "url": "https://clashroyale.fandom.com/wiki/Rune_Giant",
+        "elixir": 4.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "Jungle Arena",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1.5 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Medium",
+          "Target": "Buildings",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "2,662",
+          "Damage": "120",
+          "Damage per Second": "80",
+          "Bonus Damage": "220"
+        },
+        "damage": 120.0,
+        "hitpoints": 2662.0,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Goblin Giant",
+        "url": "https://clashroyale.fandom.com/wiki/Goblin_Giant",
+        "elixir": 6.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "Jungle Arena",
+        "unit_attributes": {
+          "Cost": "6",
+          "Hit Speed": "1.5 sec",
+          "First Hit Speed": "0.8 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Medium",
+          "Target": "Buildings",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Goblin Giant Hitpoints": "3,022",
+          "Goblin Giant Damage": "176",
+          "Goblin Giant Damage per Second": "117",
+          "Spear Goblin Hitpoints": "133",
+          "Spear Goblin Damage": "81",
+          "Spear Goblin Damage per Second": "47"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Dart Goblin",
+        "url": "https://clashroyale.fandom.com/wiki/Dart_Goblin",
+        "elixir": 3.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Jungle Arena",
+        "unit_attributes": {
+          "Cost": "3",
+          "Hit Speed": "0.8 sec",
+          "First Hit Speed": "0.35 sec",
+          "Speed": "Very Fast",
+          "Deploy Time": "1 sec",
+          "Range": "6.5",
+          "Projectile Speed": "800",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "261",
+          "Damage": "156",
+          "Damage per second": "195"
+        },
+        "damage": 156.0,
+        "hitpoints": 261.0,
+        "damage_per_second": 195.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Barbarian Hut",
+        "url": "https://clashroyale.fandom.com/wiki/Barbarian_Hut",
+        "elixir": 6.0,
+        "rarity": "Rare",
+        "type": "Building",
+        "arena_text": "Jungle Arena",
+        "unit_attributes": {
+          "Cost": "6",
+          "Spawn Speed": "15 sec",
+          "Deploy Time": "1 sec",
+          "Lifetime": "30 sec",
+          "Type": "Building",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Barbarian Hut Hitpoints": "1,164",
+          "Barbarian Hut Hitpoints lost per second": "38.8",
+          "Barbarian Hitpoints": "670",
+          "Barbarian Damage": "192",
+          "Barbarian Damage per second": "147"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Goblin Giant",
+        "url": "https://clashroyale.fandom.com/wiki/Goblin_Giant",
+        "elixir": 6.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "Jungle Arena",
+        "unit_attributes": {
+          "Cost": "6",
+          "Hit Speed": "1.5 sec",
+          "First Hit Speed": "0.8 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Medium",
+          "Target": "Buildings",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Goblin Giant Hitpoints": "3,022",
+          "Goblin Giant Damage": "176",
+          "Goblin Giant Damage per Second": "117",
+          "Spear Goblin Hitpoints": "133",
+          "Spear Goblin Damage": "81",
+          "Spear Goblin Damage per Second": "47"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Poison",
+        "url": "https://clashroyale.fandom.com/wiki/Poison",
+        "elixir": 4.0,
+        "rarity": "Epic",
+        "type": "Spell",
+        "arena_text": "Jungle Arena",
+        "unit_attributes": {
+          "Cost": "4",
+          "Radius": "3.5",
+          "Duration": "8 sec",
+          "Slowdown": "-15%",
+          "Target": "Air & Ground",
+          "Type": "Spell",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Damage per second": "92 x8 (736)",
+          "Crown Tower Damage": "23 x8 (184)"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": 92.0,
+        "transport": null
+      }
+    ]
+  },
+  "10": {
+    "arena_name": "Hog Mountain",
+    "cards": [
+      {
+        "name": "Tesla",
+        "url": "https://clashroyale.fandom.com/wiki/Tesla",
+        "elixir": 4.0,
+        "rarity": "Common",
+        "type": "Building",
+        "arena_text": "Hog Mountain",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1.1 sec",
+          "First Hit Speed": "0.5 sec",
+          "Deploy Time": "1 sec",
+          "Lifetime": "30 sec",
+          "Range": "5.5",
+          "Target": "Air & Ground",
+          "Type": "Building",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,152",
+          "Damage": "220",
+          "Damage per second": "199",
+          "Hitpoints lost per second": "38.4"
+        },
+        "damage": 220.0,
+        "hitpoints": 1152.0,
+        "damage_per_second": 199.0,
+        "transport": null
+      },
+      {
+        "name": "Elite Barbarians",
+        "url": "https://clashroyale.fandom.com/wiki/Elite_Barbarians",
+        "elixir": 6.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Hog Mountain",
+        "unit_attributes": {
+          "Cost": "6",
+          "Hit Speed": "1.4 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Fast",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Medium",
+          "Target": "Ground",
+          "Count": "x2",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,341",
+          "Damage": "384",
+          "Damage per second": "274"
+        },
+        "damage": 384.0,
+        "hitpoints": 1341.0,
+        "damage_per_second": 274.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Minion Horde",
+        "url": "https://clashroyale.fandom.com/wiki/Minion_Horde",
+        "elixir": 5.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Hog Mountain",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "1 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Fast",
+          "Deploy Time": "1 sec",
+          "Range": "2.5",
+          "Projectile Speed": "1000",
+          "Target": "Air & Ground",
+          "Count": "x6",
+          "Transport": "Air",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "230",
+          "Damage": "117",
+          "Damage per second": "117"
+        },
+        "damage": 117.0,
+        "hitpoints": 230.0,
+        "damage_per_second": 117.0,
+        "transport": "air"
+      },
+      {
+        "name": "Furnace",
+        "url": "https://clashroyale.fandom.com/wiki/Furnace",
+        "elixir": 4.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Hog Mountain",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1.8 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Spawn Speed": "7 sec",
+          "Range": "6",
+          "Target": "Air & Ground",
+          "Count": "1x",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Furnace Hitpoints": "727",
+          "Furnace Damage": "179",
+          "Furnace Damage per second": "99",
+          "Fire Spirit Hitpoints": "230",
+          "Fire Spirit Area Damage": "207"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Zappies",
+        "url": "https://clashroyale.fandom.com/wiki/Zappies",
+        "elixir": 4.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Hog Mountain",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "2.1 sec",
+          "First Hit Speed": "0.8 sec",
+          "Stun Duration": "0.5 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "4.5",
+          "Target": "Air & Ground",
+          "Count": "x3",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "529",
+          "Damage": "117",
+          "Damage per second": "55"
+        },
+        "damage": 117.0,
+        "hitpoints": 529.0,
+        "damage_per_second": 55.0,
+        "transport": "ground"
+      },
+      {
+        "name": "X-Bow",
+        "url": "https://clashroyale.fandom.com/wiki/X-Bow",
+        "elixir": 6.0,
+        "rarity": "Epic",
+        "type": "Building",
+        "arena_text": "Hog Mountain",
+        "unit_attributes": {
+          "Cost": "6",
+          "Hit Speed": "0.3 sec",
+          "First Hit Speed": "0.3 sec",
+          "Deploy Time": "3.5 sec",
+          "Lifetime": "30 sec",
+          "Range": "11.5",
+          "Target": "Ground",
+          "Type": "Building",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,600",
+          "Damage": "43",
+          "Damage per second": "143",
+          "Hitpoints lost per second": "53.3"
+        },
+        "damage": 43.0,
+        "hitpoints": 1600.0,
+        "damage_per_second": 143.0,
+        "transport": null
+      },
+      {
+        "name": "Hunter",
+        "url": "https://clashroyale.fandom.com/wiki/Hunter",
+        "elixir": 4.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "Hog Mountain",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "2.2 sec",
+          "First Hit Speed": "0.7 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "4",
+          "Projectile Range": "6.5",
+          "Projectile Speed": "550",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "885",
+          "Damage": "84 x10 (840)",
+          "Damage per second": "381"
+        },
+        "damage": 84.0,
+        "hitpoints": 885.0,
+        "damage_per_second": 381.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Golem",
+        "url": "https://clashroyale.fandom.com/wiki/Golem",
+        "elixir": 8.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "Hog Mountain",
+        "unit_attributes": {
+          "Cost": "8",
+          "Hit Speed": "2.5 sec",
+          "First Hit Speed": "1 sec",
+          "Speed": "Slow",
+          "Deploy Time": "3 sec",
+          "Range": "Melee: Short",
+          "Death Damage Splash Radius": "2",
+          "Target": "Buildings",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Golem Hitpoints": "5,120",
+          "Golem Damage": "312",
+          "Golem Damage per second": "124",
+          "Golem Death Damage": "225",
+          "Golemite Hitpoints": "1,039",
+          "Golemite Damage": "84",
+          "Golemite Damage per second": "33",
+          "Golemite Death Damage": "99"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Elite Barbarians",
+        "url": "https://clashroyale.fandom.com/wiki/Elite_Barbarians",
+        "elixir": 6.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Hog Mountain",
+        "unit_attributes": {
+          "Cost": "6",
+          "Hit Speed": "1.4 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Fast",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Medium",
+          "Target": "Ground",
+          "Count": "x2",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,341",
+          "Damage": "384",
+          "Damage per second": "274"
+        },
+        "damage": 384.0,
+        "hitpoints": 1341.0,
+        "damage_per_second": 274.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Minion Horde",
+        "url": "https://clashroyale.fandom.com/wiki/Minion_Horde",
+        "elixir": 5.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Hog Mountain",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "1 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Fast",
+          "Deploy Time": "1 sec",
+          "Range": "2.5",
+          "Projectile Speed": "1000",
+          "Target": "Air & Ground",
+          "Count": "x6",
+          "Transport": "Air",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "230",
+          "Damage": "117",
+          "Damage per second": "117"
+        },
+        "damage": 117.0,
+        "hitpoints": 230.0,
+        "damage_per_second": 117.0,
+        "transport": "air"
+      },
+      {
+        "name": "Golem",
+        "url": "https://clashroyale.fandom.com/wiki/Golem",
+        "elixir": 8.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "Hog Mountain",
+        "unit_attributes": {
+          "Cost": "8",
+          "Hit Speed": "2.5 sec",
+          "First Hit Speed": "1 sec",
+          "Speed": "Slow",
+          "Deploy Time": "3 sec",
+          "Range": "Melee: Short",
+          "Death Damage Splash Radius": "2",
+          "Target": "Buildings",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Golem Hitpoints": "5,120",
+          "Golem Damage": "312",
+          "Golem Damage per second": "124",
+          "Golem Death Damage": "225",
+          "Golemite Hitpoints": "1,039",
+          "Golemite Damage": "84",
+          "Golemite Damage per second": "33",
+          "Golemite Death Damage": "99"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Hunter",
+        "url": "https://clashroyale.fandom.com/wiki/Hunter",
+        "elixir": 4.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "Hog Mountain",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "2.2 sec",
+          "First Hit Speed": "0.7 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "4",
+          "Projectile Range": "6.5",
+          "Projectile Speed": "550",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "885",
+          "Damage": "84 x10 (840)",
+          "Damage per second": "381"
+        },
+        "damage": 84.0,
+        "hitpoints": 885.0,
+        "damage_per_second": 381.0,
+        "transport": "ground"
+      }
+    ]
+  },
+  "11": {
+    "arena_name": "Electro Valley",
+    "cards": [
+      {
+        "name": "The Log",
+        "url": "https://clashroyale.fandom.com/wiki/The_Log",
+        "elixir": 2.0,
+        "rarity": "Legendary",
+        "type": "Spell",
+        "arena_text": "Electro Valley",
+        "unit_attributes": {
+          "Cost": "2",
+          "Range": "10.1",
+          "Width": "3.9",
+          "Target": "Ground",
+          "Type": "Spell",
+          "Rarity": "Legendary"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Area Damage": "266",
+          "Crown Tower Damage": "40"
+        },
+        "damage": 266.0,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Mega Knight",
+        "url": "https://clashroyale.fandom.com/wiki/Mega_Knight",
+        "elixir": 7.0,
+        "rarity": "Legendary",
+        "type": "Troop",
+        "arena_text": "Electro Valley",
+        "unit_attributes": {
+          "Cost": "7",
+          "Hit Speed": "1.7 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Medium",
+          "Splash Radius": "1.3",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Legendary"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "3,993",
+          "Area Damage": "268",
+          "Spawn Damage": "430",
+          "Jump Damage": "537",
+          "Damage per second": "157"
+        },
+        "damage": 268.0,
+        "hitpoints": 3993.0,
+        "damage_per_second": 157.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Ram Rider",
+        "url": "https://clashroyale.fandom.com/wiki/Ram_Rider",
+        "elixir": 5.0,
+        "rarity": "Legendary",
+        "type": "Troop",
+        "arena_text": "Electro Valley",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "1.8 sec",
+          "First Hit Speed": "0.6 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Buildings",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Legendary"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,697",
+          "Ram Damage": "250",
+          "Ram Charge Damage": "501",
+          "Ram Damage per second": "138",
+          "Rider Damage": "104",
+          "Rider Damage per second": "94"
+        },
+        "damage": null,
+        "hitpoints": 1697.0,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Electro Wizard",
+        "url": "https://clashroyale.fandom.com/wiki/Electro_Wizard",
+        "elixir": 4.0,
+        "rarity": "Legendary",
+        "type": "Troop",
+        "arena_text": "Electro Valley",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1.8 sec",
+          "First Hit Speed": "0.6 sec",
+          "Stun Duration": "0.5 sec",
+          "Speed": "Fast",
+          "Deploy Time": "1 sec",
+          "Range": "5",
+          "Target": "Air & Ground",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Legendary"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "714",
+          "Damage": "115 x2 (230)",
+          "Zap Damage": "192",
+          "Damage per second": "127"
+        },
+        "damage": 115.0,
+        "hitpoints": 714.0,
+        "damage_per_second": 127.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Inferno Dragon",
+        "url": "https://clashroyale.fandom.com/wiki/Inferno_Dragon",
+        "elixir": 4.0,
+        "rarity": "Legendary",
+        "type": "Troop",
+        "arena_text": "Electro Valley",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "0.4 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "3.5",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Air",
+          "Type": "Troop",
+          "Rarity": "Legendary"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,295",
+          "Damage (Stage 1)": "35",
+          "Damage (Stage 2)": "120",
+          "Damage (Stage 3)": "422",
+          "Damage per second (Stage 1)": "87",
+          "Damage per second (Stage 2)": "300",
+          "Damage per second (Stage 3)": "1055"
+        },
+        "damage": null,
+        "hitpoints": 1295.0,
+        "damage_per_second": null,
+        "transport": "air"
+      },
+      {
+        "name": "Sparky",
+        "url": "https://clashroyale.fandom.com/wiki/Sparky",
+        "elixir": 6.0,
+        "rarity": "Legendary",
+        "type": "Troop",
+        "arena_text": "Electro Valley",
+        "unit_attributes": {
+          "Cost": "6",
+          "Hit Speed": "4 sec",
+          "First Hit Speed": "1 sec",
+          "Speed": "Slow",
+          "Deploy Time": "1 sec",
+          "Range": "5",
+          "Splash Radius": "1.8",
+          "Projectile Speed": "1400",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Legendary"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,451",
+          "Area Damage": "1,331",
+          "Damage per second": "332"
+        },
+        "damage": 1331.0,
+        "hitpoints": 1451.0,
+        "damage_per_second": 332.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Miner",
+        "url": "https://clashroyale.fandom.com/wiki/Miner",
+        "elixir": 3.0,
+        "rarity": "Legendary",
+        "type": "Troop",
+        "arena_text": "Electro Valley",
+        "unit_attributes": {
+          "Cost": "3",
+          "Hit Speed": "1.3 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Fast",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Medium",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Legendary"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,210",
+          "Damage": "194",
+          "Damage per second": "149",
+          "Crown Tower Damage": "48",
+          "Crown Tower Damage per second": "36"
+        },
+        "damage": 194.0,
+        "hitpoints": 1210.0,
+        "damage_per_second": 149.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Princess",
+        "url": "https://clashroyale.fandom.com/wiki/Princess",
+        "elixir": 3.0,
+        "rarity": "Legendary",
+        "type": "Troop",
+        "arena_text": "Electro Valley",
+        "unit_attributes": {
+          "Cost": "3",
+          "Hit Speed": "3 sec",
+          "First Hit Speed": "0.3 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1.2 sec",
+          "Range": "9",
+          "Splash Radius": "2",
+          "Projectile Speed": "600",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Legendary"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "261",
+          "Area Damage": "168",
+          "Damage per second": "56"
+        },
+        "damage": 168.0,
+        "hitpoints": 261.0,
+        "damage_per_second": 56.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Dagger Duchess",
+        "url": "https://clashroyale.fandom.com/wiki/Dagger_Duchess",
+        "elixir": null,
+        "rarity": "Legendary",
+        "type": "Tower Troop",
+        "arena_text": "Electro Valley",
+        "unit_attributes": {
+          "Hit Speed": "0.5 sec",
+          "Range": "7.5",
+          "Projectile Speed": "1000",
+          "Target": "Air & Ground",
+          "Type": "Tower Troop",
+          "Rarity": "Legendary"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "2,768",
+          "Damage": "107",
+          "Damage per second": "214",
+          "0 Dagger Damage per second": "76"
+        },
+        "damage": 107.0,
+        "hitpoints": 2768.0,
+        "damage_per_second": 214.0,
+        "transport": null
+      }
+    ]
+  },
+  "12": {
+    "arena_name": "Spooky Town",
+    "cards": [
+      {
+        "name": "Firecracker",
+        "url": "https://clashroyale.fandom.com/wiki/Firecracker",
+        "elixir": 3.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Spooky Town",
+        "unit_attributes": {
+          "Cost": "3",
+          "Hit Speed": "3 sec",
+          "First Hit Speed": "0.65 sec",
+          "Speed": "Fast",
+          "Deploy Time": "1 sec",
+          "Range": "6",
+          "Projectile Range": "11",
+          "Projectile Radius": "0.4",
+          "Projectile Speed": "550",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "304",
+          "Area Damage": "64 x5 (320)",
+          "Damage per second": "106"
+        },
+        "damage": 64.0,
+        "hitpoints": 304.0,
+        "damage_per_second": 106.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Earthquake",
+        "url": "https://clashroyale.fandom.com/wiki/Earthquake",
+        "elixir": 3.0,
+        "rarity": "Rare",
+        "type": "Spell",
+        "arena_text": "Spooky Town",
+        "unit_attributes": {
+          "Cost": "3",
+          "Radius": "3.5",
+          "Duration": "3 sec",
+          "Slowdown": "-50%",
+          "Target": "Ground",
+          "Type": "Spell",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Damage": "84 x3 (252)",
+          "Building Damage": "287 x3 (861)",
+          "Crown Tower Damage": "53 x3 (159)"
+        },
+        "damage": 84.0,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Goblin Demolisher",
+        "url": "https://clashroyale.fandom.com/wiki/Goblin_Demolisher",
+        "elixir": 4.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Spooky Town",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1.2 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "5",
+          "Splash Radius": "1.5",
+          "Projectile Speed": "400",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,300",
+          "Area Damage": "186",
+          "Damage Per Second": "155",
+          "Kamikaze Goblin Demolisher Hitpoints lost per second": "65",
+          "Death Damage": "404"
+        },
+        "damage": 186.0,
+        "hitpoints": 1300.0,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Electro Dragon",
+        "url": "https://clashroyale.fandom.com/wiki/Electro_Dragon",
+        "elixir": 5.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "Spooky Town",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "2.1 sec",
+          "First Hit Speed": "0.7 sec",
+          "Stun Duration": "0.5 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "3.5",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Air",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "949",
+          "Damage": "192 x3",
+          "Damage per second": "91"
+        },
+        "damage": 192.0,
+        "hitpoints": 949.0,
+        "damage_per_second": 91.0,
+        "transport": "air"
+      },
+      {
+        "name": "Wall Breakers",
+        "url": "https://clashroyale.fandom.com/wiki/Wall_Breakers",
+        "elixir": 2.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "Spooky Town",
+        "unit_attributes": {
+          "Cost": "2",
+          "Speed": "Very Fast",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Splash Radius": "1.5",
+          "Target": "Buildings",
+          "Count": "x2",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "330",
+          "Area Damage": "391"
+        },
+        "damage": 391.0,
+        "hitpoints": 330.0,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Graveyard",
+        "url": "https://clashroyale.fandom.com/wiki/Graveyard",
+        "elixir": 5.0,
+        "rarity": "Legendary",
+        "type": "Spell",
+        "arena_text": "Spooky Town",
+        "unit_attributes": {
+          "Cost": "5",
+          "Radius": "4",
+          "Duration": "9 sec",
+          "Spawn Speed": "0.5 sec",
+          "Type": "Spell",
+          "Rarity": "Legendary"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Skeleton Hitpoints": "81",
+          "Skeleton Damage": "81",
+          "Skeleton Damage per second": "81"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Phoenix",
+        "url": "https://clashroyale.fandom.com/wiki/Phoenix",
+        "elixir": 4.0,
+        "rarity": "Legendary",
+        "type": "Troop",
+        "arena_text": "Spooky Town",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Spawn Speed": "4.3 sec",
+          "Range": "Melee: Long",
+          "Death Damage Splash Radius": "1.5",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Air",
+          "Type": "Troop",
+          "Rarity": "Legendary"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,052",
+          "Damage": "217",
+          "Damage per second": "217",
+          "Death Damage": "163",
+          "Phoenix Egg Hitpoints": "240",
+          "Reborn Phoenix Hitpoints": "842",
+          "Reborn Phoenix Damage": "174",
+          "Reborn Damage per second": "174"
+        },
+        "damage": 217.0,
+        "hitpoints": 1052.0,
+        "damage_per_second": 217.0,
+        "transport": "air"
+      },
+      {
+        "name": "Royal Ghost",
+        "url": "https://clashroyale.fandom.com/wiki/Royal_Ghost",
+        "elixir": 3.0,
+        "rarity": "Legendary",
+        "type": "Troop",
+        "arena_text": "Spooky Town",
+        "unit_attributes": {
+          "Cost": "3",
+          "Hit Speed": "1.8 sec",
+          "First Hit Speed": "0.6 sec",
+          "Speed": "Fast",
+          "Deploy Time": "1 sec",
+          "Invisibility Time": "1.8 sec",
+          "Range": "Melee: Medium",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Legendary"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,210",
+          "Area Damage": "261",
+          "Damage per second": "145"
+        },
+        "damage": 261.0,
+        "hitpoints": 1210.0,
+        "damage_per_second": 145.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Ice Wizard",
+        "url": "https://clashroyale.fandom.com/wiki/Ice_Wizard",
+        "elixir": 3.0,
+        "rarity": "Legendary",
+        "type": "Troop",
+        "arena_text": "Spooky Town",
+        "unit_attributes": {
+          "Cost": "3",
+          "Hit Speed": "1.7 sec",
+          "First Hit Speed": "0.5 sec",
+          "Slow Duration": "2.5 sec",
+          "Slowdown": "-30%",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "5.5",
+          "Splash Radius": "1.5",
+          "Projectile Speed": "700",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Legendary"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "688",
+          "Area Damage": "89",
+          "Spawn Damage": "84",
+          "Damage per second": "52"
+        },
+        "damage": 89.0,
+        "hitpoints": 688.0,
+        "damage_per_second": 52.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Wall Breakers",
+        "url": "https://clashroyale.fandom.com/wiki/Wall_Breakers",
+        "elixir": 2.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "Spooky Town",
+        "unit_attributes": {
+          "Cost": "2",
+          "Speed": "Very Fast",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Splash Radius": "1.5",
+          "Target": "Buildings",
+          "Count": "x2",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "330",
+          "Area Damage": "391"
+        },
+        "damage": 391.0,
+        "hitpoints": 330.0,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Electro Dragon",
+        "url": "https://clashroyale.fandom.com/wiki/Electro_Dragon",
+        "elixir": 5.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "Spooky Town",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "2.1 sec",
+          "First Hit Speed": "0.7 sec",
+          "Stun Duration": "0.5 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "3.5",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Air",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "949",
+          "Damage": "192 x3",
+          "Damage per second": "91"
+        },
+        "damage": 192.0,
+        "hitpoints": 949.0,
+        "damage_per_second": 91.0,
+        "transport": "air"
+      },
+      {
+        "name": "Firecracker",
+        "url": "https://clashroyale.fandom.com/wiki/Firecracker",
+        "elixir": 3.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Spooky Town",
+        "unit_attributes": {
+          "Cost": "3",
+          "Hit Speed": "3 sec",
+          "First Hit Speed": "0.65 sec",
+          "Speed": "Fast",
+          "Deploy Time": "1 sec",
+          "Range": "6",
+          "Projectile Range": "11",
+          "Projectile Radius": "0.4",
+          "Projectile Speed": "550",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "304",
+          "Area Damage": "64 x5 (320)",
+          "Damage per second": "106"
+        },
+        "damage": 64.0,
+        "hitpoints": 304.0,
+        "damage_per_second": 106.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Rascals",
+        "url": "https://clashroyale.fandom.com/wiki/Rascals",
+        "elixir": 5.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Rascal's Hideout",
+        "unit_attributes": {
+          "Hit Speed": "1.5 sec",
+          "First Hit Speed": "0.4 sec",
+          "Speed": "Medium",
+          "Range": "Melee: Short",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Rascal Boy Hitpoints": "1,940",
+          "Rascal Boy Damage": "204",
+          "Rascal Boy Damage per second": "136",
+          "Rascal Girl Hitpoints": "261",
+          "Rascal Girl Damage": "125",
+          "Rascal Girl Damage per second": "125"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": "ground"
+      }
+    ]
+  },
+  "13": {
+    "arena_name": "Rascal's Hideout",
+    "cards": [
+      {
+        "name": "Rascals",
+        "url": "https://clashroyale.fandom.com/wiki/Rascals",
+        "elixir": 5.0,
+        "rarity": "Common",
+        "type": "Troop",
+        "arena_text": "Rascal's Hideout",
+        "unit_attributes": {
+          "Hit Speed": "1.5 sec",
+          "First Hit Speed": "0.4 sec",
+          "Speed": "Medium",
+          "Range": "Melee: Short",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Rascal Boy Hitpoints": "1,940",
+          "Rascal Boy Damage": "204",
+          "Rascal Boy Damage per second": "136",
+          "Rascal Girl Hitpoints": "261",
+          "Rascal Girl Damage": "125",
+          "Rascal Girl Damage per second": "125"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Heal Spirit",
+        "url": "https://clashroyale.fandom.com/wiki/Heal_Spirit",
+        "elixir": 1.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Rascal's Hideout",
+        "unit_attributes": {
+          "Cost": "1",
+          "Speed": "Very Fast",
+          "Deploy Time": "1 sec",
+          "Range": "2.5",
+          "Splash Radius": "1.5",
+          "Target": "Air & Ground",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "230",
+          "Area Damage": "110",
+          "Healing Per Pulse": "100.25",
+          "Healing Per Second": "401"
+        },
+        "damage": 110.0,
+        "hitpoints": 230.0,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Suspicious Bush",
+        "url": "https://clashroyale.fandom.com/wiki/Suspicious_Bush",
+        "elixir": 2.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Rascal's Hideout",
+        "unit_attributes": {
+          "Cost": "2",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Buildings",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Bush Hitpoints": "81",
+          "Bush Goblin Hitpoints": "304",
+          "Bush Goblin Damage": "256",
+          "Bush Goblin Damage per second": "182"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Electro Giant",
+        "url": "https://clashroyale.fandom.com/wiki/Electro_Giant",
+        "elixir": 7.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "Rascal's Hideout",
+        "unit_attributes": {
+          "Cost": "7",
+          "Hit Speed": "2.1 sec",
+          "First Hit Speed": "1.5 sec",
+          "Speed": "Slow",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Medium",
+          "Target": "Buildings",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "3,855",
+          "Damage": "163",
+          "Damage per second": "77",
+          "Reflected Damage": "192",
+          "Reflected Tower Damage": "128"
+        },
+        "damage": 163.0,
+        "hitpoints": 3855.0,
+        "damage_per_second": 77.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Bowler",
+        "url": "https://clashroyale.fandom.com/wiki/Bowler",
+        "elixir": 5.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "Rascal's Hideout",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "2.5 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Slow",
+          "Deploy Time": "1 sec",
+          "Range": "4",
+          "Projectile Range": "7.5",
+          "Projectile Width": "3.6",
+          "Projectile Speed": "170",
+          "Target": "Ground",
+          "Count": "1x",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "2,081",
+          "Area Damage": "289",
+          "Damage per second": "115"
+        },
+        "damage": 289.0,
+        "hitpoints": 2081.0,
+        "damage_per_second": 115.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Magic Archer",
+        "url": "https://clashroyale.fandom.com/wiki/Magic_Archer",
+        "elixir": 4.0,
+        "rarity": "Legendary",
+        "type": "Troop",
+        "arena_text": "Rascal's Hideout",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1.1 sec",
+          "First Hit Speed": "0.7 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "7",
+          "Projectile Range": "11",
+          "Projectile Width": "0.5",
+          "Projectile Speed": "1000",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Legendary"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "529",
+          "Area Damage": "133",
+          "Damage per second": "120"
+        },
+        "damage": 133.0,
+        "hitpoints": 529.0,
+        "damage_per_second": 120.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Bandit",
+        "url": "https://clashroyale.fandom.com/wiki/Bandit",
+        "elixir": 3.0,
+        "rarity": "Legendary",
+        "type": "Troop",
+        "arena_text": "Rascal's Hideout",
+        "unit_attributes": {
+          "Cost": "3",
+          "Hit Speed": "1 sec",
+          "First Hit Speed": "0.4 sec",
+          "Speed": "Fast",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Legendary"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "906",
+          "Damage": "194",
+          "Dash Damage": "389",
+          "Damage per second": "194"
+        },
+        "damage": 194.0,
+        "hitpoints": 906.0,
+        "damage_per_second": 194.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Lava Hound",
+        "url": "https://clashroyale.fandom.com/wiki/Lava_Hound",
+        "elixir": 7.0,
+        "rarity": "Legendary",
+        "type": "Troop",
+        "arena_text": "Rascal's Hideout",
+        "unit_attributes": {
+          "Cost": "7",
+          "Hit Speed": "1.3 sec",
+          "First Hit Speed": "1 sec",
+          "Speed": "Slow",
+          "Deploy Time": "1 sec",
+          "Range": "3.5",
+          "Projectile Speed": "400",
+          "Target": "Buildings",
+          "Count": "x1",
+          "Transport": "Air",
+          "Type": "Troop",
+          "Rarity": "Legendary"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Lava Hound Hitpoints": "3,581",
+          "Lava Hound Damage": "53",
+          "Lava Hound Damage per second": "40",
+          "Lava Pup Hitpoints": "217",
+          "Lava Pup Damage": "81",
+          "Lava Pup Damage per second": "47"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": "air"
+      },
+      {
+        "name": "Royal Chef",
+        "url": "https://clashroyale.fandom.com/wiki/Royal_Chef",
+        "elixir": null,
+        "rarity": "Legendary",
+        "type": "Tower Troop",
+        "arena_text": "Rascal's Hideout",
+        "unit_attributes": {
+          "Hit Speed": "1 sec",
+          "First Hit Speed": "0.8 sec",
+          "Range": "7.5",
+          "Target": "Air & Ground",
+          "Type": "Tower Troop",
+          "Rarity": "Legendary"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "2,703",
+          "Damage": "109",
+          "Damage per second": "109"
+        },
+        "damage": 109.0,
+        "hitpoints": 2703.0,
+        "damage_per_second": 109.0,
+        "transport": null
+      },
+      {
+        "name": "Bowler",
+        "url": "https://clashroyale.fandom.com/wiki/Bowler",
+        "elixir": 5.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "Rascal's Hideout",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "2.5 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Slow",
+          "Deploy Time": "1 sec",
+          "Range": "4",
+          "Projectile Range": "7.5",
+          "Projectile Width": "3.6",
+          "Projectile Speed": "170",
+          "Target": "Ground",
+          "Count": "1x",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "2,081",
+          "Area Damage": "289",
+          "Damage per second": "115"
+        },
+        "damage": 289.0,
+        "hitpoints": 2081.0,
+        "damage_per_second": 115.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Electro Giant",
+        "url": "https://clashroyale.fandom.com/wiki/Electro_Giant",
+        "elixir": 7.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "Rascal's Hideout",
+        "unit_attributes": {
+          "Cost": "7",
+          "Hit Speed": "2.1 sec",
+          "First Hit Speed": "1.5 sec",
+          "Speed": "Slow",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Medium",
+          "Target": "Buildings",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "3,855",
+          "Damage": "163",
+          "Damage per second": "77",
+          "Reflected Damage": "192",
+          "Reflected Tower Damage": "128"
+        },
+        "damage": 163.0,
+        "hitpoints": 3855.0,
+        "damage_per_second": 77.0,
+        "transport": "ground"
+      }
+    ]
+  },
+  "14": {
+    "arena_name": "Serenity Peak",
+    "cards": [
+      {
+        "name": "Royal Delivery",
+        "url": "https://clashroyale.fandom.com/wiki/Royal_Delivery",
+        "elixir": 3.0,
+        "rarity": "Common",
+        "type": "Spell",
+        "arena_text": "Serenity Peak",
+        "unit_attributes": {
+          "Cost": "3",
+          "Radius": "3",
+          "Deploy Time": "3 sec",
+          "Target": "Air & Ground",
+          "Type": "Spell",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Royal Delivery Area Damage": "437",
+          "Royal Recruit Hitpoints": "547",
+          "Royal Recruit Shield Hitpoints": "240",
+          "Royal Recruit Damage": "133",
+          "Royal Recruit Damage per second": "102"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Elixir Golem",
+        "url": "https://clashroyale.fandom.com/wiki/Elixir_Golem",
+        "elixir": 3.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Serenity Peak",
+        "unit_attributes": {
+          "Cost": "3",
+          "Hit Speed": "1.1 sec",
+          "First Hit Speed": "0.8 sec",
+          "Speed": "Slow",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Buildings",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Elixir Golem Hitpoints": "1,569",
+          "Elixir Golem Damage": "253",
+          "Elixir Golem Damage per second": "229",
+          "Elixir Golemite Hitpoints": "762",
+          "Elixir Golemite Damage": "128",
+          "Elixir Golemite Damage per second": "116",
+          "Elixir Blob Hitpoints": "360",
+          "Elixir Blob Damage": "64",
+          "Elixir Blob Damage per second": "58"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Goblin Curse",
+        "url": "https://clashroyale.fandom.com/wiki/Goblin_Curse",
+        "elixir": 2.0,
+        "rarity": "Epic",
+        "type": "Spell",
+        "arena_text": "Serenity Peak",
+        "unit_attributes": {
+          "Cost": "2",
+          "Radius": "3",
+          "Duration": "6 sec",
+          "Target": "Air & Ground",
+          "Type": "Spell",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Damage per second": "30 X 6 (180)",
+          "Crown Tower Damage": "6 X 6 (36)",
+          "Goblin Hitpoints": "202",
+          "Goblin Damage": "120",
+          "Goblin Damage per second": "109"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": 30.0,
+        "transport": null
+      },
+      {
+        "name": "Rage",
+        "url": "https://clashroyale.fandom.com/wiki/Rage",
+        "elixir": 2.0,
+        "rarity": "Epic",
+        "type": "Spell",
+        "arena_text": "Serenity Peak",
+        "unit_attributes": {
+          "Cost": "2",
+          "Radius": "3",
+          "Deploy Time": "0.5 sec",
+          "Duration": "4.5 sec",
+          "Boost": "+30%",
+          "Target": "Friendly Troops & Buildings",
+          "Type": "Spell",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Area Damage": "179",
+          "Crown Tower Damage": "54"
+        },
+        "damage": 179.0,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Goblin Drill",
+        "url": "https://clashroyale.fandom.com/wiki/Goblin_Drill",
+        "elixir": 4.0,
+        "rarity": "Epic",
+        "type": "Building",
+        "arena_text": "Serenity Peak",
+        "unit_attributes": {
+          "Cost": "4",
+          "Spawn Speed": "3 sec",
+          "Deploy Time": "1 sec",
+          "Lifetime": "10 sec",
+          "Type": "Building",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Goblin Drill Hitpoints": "1,313",
+          "Goblin Drill Spawn Damage": "84",
+          "Goblin Drill Spawn Tower Damage": "26",
+          "Goblin Drill Hitpoints lost per second": "131.2",
+          "Goblin Hitpoints": "202",
+          "Goblin Damage": "120",
+          "Goblin Damage per second": "109"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Executioner",
+        "url": "https://clashroyale.fandom.com/wiki/Executioner",
+        "elixir": 5.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "Serenity Peak",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "0.9 sec",
+          "First Hit Speed": "0.5 sec",
+          "Axe Time": "1.5 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "4.5",
+          "Projectile Range": "7.5",
+          "Projectile Width": "2",
+          "Projectile Speed": "550",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,280",
+          "Area Damage": "168 x2 (336)",
+          "Damage per second": "140"
+        },
+        "damage": 168.0,
+        "hitpoints": 1280.0,
+        "damage_per_second": 140.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Night Witch",
+        "url": "https://clashroyale.fandom.com/wiki/Night_Witch",
+        "elixir": 4.0,
+        "rarity": "Legendary",
+        "type": "Troop",
+        "arena_text": "Serenity Peak",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1.3 sec",
+          "First Hit Speed": "0.75 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Spawn Speed": "5 sec",
+          "Range": "Melee: Long",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Legendary"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Night Witch Hitpoints": "906",
+          "Night Witch Damage": "314",
+          "Night Witch Damage per second": "241",
+          "Bat Hitpoints": "81",
+          "Bat Damage": "81",
+          "Bat Damage per second": "62"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Lumberjack",
+        "url": "https://clashroyale.fandom.com/wiki/Lumberjack",
+        "elixir": 4.0,
+        "rarity": "Legendary",
+        "type": "Troop",
+        "arena_text": "Serenity Peak",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "0.8 sec",
+          "First Hit Speed": "0.4 sec",
+          "Speed": "Very Fast",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Ground",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Legendary"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,282",
+          "Lumberjack Damage": "256",
+          "Lumberjack Damage per second": "320",
+          "Rage Damage": "179",
+          "Rage Crown Tower Damage": "54"
+        },
+        "damage": null,
+        "hitpoints": 1282.0,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Goblin Drill",
+        "url": "https://clashroyale.fandom.com/wiki/Goblin_Drill",
+        "elixir": 4.0,
+        "rarity": "Epic",
+        "type": "Building",
+        "arena_text": "Serenity Peak",
+        "unit_attributes": {
+          "Cost": "4",
+          "Spawn Speed": "3 sec",
+          "Deploy Time": "1 sec",
+          "Lifetime": "10 sec",
+          "Type": "Building",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Goblin Drill Hitpoints": "1,313",
+          "Goblin Drill Spawn Damage": "84",
+          "Goblin Drill Spawn Tower Damage": "26",
+          "Goblin Drill Hitpoints lost per second": "131.2",
+          "Goblin Hitpoints": "202",
+          "Goblin Damage": "120",
+          "Goblin Damage per second": "109"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Executioner",
+        "url": "https://clashroyale.fandom.com/wiki/Executioner",
+        "elixir": 5.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "Serenity Peak",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "0.9 sec",
+          "First Hit Speed": "0.5 sec",
+          "Axe Time": "1.5 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "4.5",
+          "Projectile Range": "7.5",
+          "Projectile Width": "2",
+          "Projectile Speed": "550",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,280",
+          "Area Damage": "168 x2 (336)",
+          "Damage per second": "140"
+        },
+        "damage": 168.0,
+        "hitpoints": 1280.0,
+        "damage_per_second": 140.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Goblin Curse",
+        "url": "https://clashroyale.fandom.com/wiki/Goblin_Curse",
+        "elixir": 2.0,
+        "rarity": "Epic",
+        "type": "Spell",
+        "arena_text": "Serenity Peak",
+        "unit_attributes": {
+          "Cost": "2",
+          "Radius": "3",
+          "Duration": "6 sec",
+          "Target": "Air & Ground",
+          "Type": "Spell",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Damage per second": "30 X 6 (180)",
+          "Crown Tower Damage": "6 X 6 (36)",
+          "Goblin Hitpoints": "202",
+          "Goblin Damage": "120",
+          "Goblin Damage per second": "109"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": 30.0,
+        "transport": null
+      },
+      {
+        "name": "Rage",
+        "url": "https://clashroyale.fandom.com/wiki/Rage",
+        "elixir": 2.0,
+        "rarity": "Epic",
+        "type": "Spell",
+        "arena_text": "Serenity Peak",
+        "unit_attributes": {
+          "Cost": "2",
+          "Radius": "3",
+          "Deploy Time": "0.5 sec",
+          "Duration": "4.5 sec",
+          "Boost": "+30%",
+          "Target": "Friendly Troops & Buildings",
+          "Type": "Spell",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Area Damage": "179",
+          "Crown Tower Damage": "54"
+        },
+        "damage": 179.0,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Royal Delivery",
+        "url": "https://clashroyale.fandom.com/wiki/Royal_Delivery",
+        "elixir": 3.0,
+        "rarity": "Common",
+        "type": "Spell",
+        "arena_text": "Serenity Peak",
+        "unit_attributes": {
+          "Cost": "3",
+          "Radius": "3",
+          "Deploy Time": "3 sec",
+          "Target": "Air & Ground",
+          "Type": "Spell",
+          "Rarity": "Common"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Royal Delivery Area Damage": "437",
+          "Royal Recruit Hitpoints": "547",
+          "Royal Recruit Shield Hitpoints": "240",
+          "Royal Recruit Damage": "133",
+          "Royal Recruit Damage per second": "102"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Night Witch",
+        "url": "https://clashroyale.fandom.com/wiki/Night_Witch",
+        "elixir": 4.0,
+        "rarity": "Legendary",
+        "type": "Troop",
+        "arena_text": "Serenity Peak",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1.3 sec",
+          "First Hit Speed": "0.75 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Spawn Speed": "5 sec",
+          "Range": "Melee: Long",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Legendary"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Night Witch Hitpoints": "906",
+          "Night Witch Damage": "314",
+          "Night Witch Damage per second": "241",
+          "Bat Hitpoints": "81",
+          "Bat Damage": "81",
+          "Bat Damage per second": "62"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Mother Witch",
+        "url": "https://clashroyale.fandom.com/wiki/Mother_Witch",
+        "elixir": 4.0,
+        "rarity": "Legendary",
+        "type": "Troop",
+        "arena_text": "Miner's Mine",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1 sec",
+          "First Hit Speed": "0.3 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Curse Duration": "5 sec",
+          "Range": "5.5",
+          "Projectile Speed": "600",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Legendary"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Mother Witch Hitpoints": "529",
+          "Mother Witch Damage": "133",
+          "Mother Witch Damage per second": "133",
+          "Cursed Hog Hitpoints": "629",
+          "Cursed Hog Damage": "53",
+          "Cursed Hog Damage per second": "44"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Elixir Golem",
+        "url": "https://clashroyale.fandom.com/wiki/Elixir_Golem",
+        "elixir": 3.0,
+        "rarity": "Rare",
+        "type": "Troop",
+        "arena_text": "Serenity Peak",
+        "unit_attributes": {
+          "Cost": "3",
+          "Hit Speed": "1.1 sec",
+          "First Hit Speed": "0.8 sec",
+          "Speed": "Slow",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Buildings",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Elixir Golem Hitpoints": "1,569",
+          "Elixir Golem Damage": "253",
+          "Elixir Golem Damage per second": "229",
+          "Elixir Golemite Hitpoints": "762",
+          "Elixir Golemite Damage": "128",
+          "Elixir Golemite Damage per second": "116",
+          "Elixir Blob Hitpoints": "360",
+          "Elixir Blob Damage": "64",
+          "Elixir Blob Damage per second": "58"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Elixir Collector",
+        "url": "https://clashroyale.fandom.com/wiki/Elixir_Collector",
+        "elixir": 6.0,
+        "rarity": "Rare",
+        "type": "Building",
+        "arena_text": "Miner's Mine",
+        "unit_attributes": {
+          "Cost": "6",
+          "Production Speed": "12 sec",
+          "Deploy Time": "1 sec",
+          "Lifetime": "1 min 26 sec",
+          "Type": "Building",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,070",
+          "Hitpoints lost per second": "12.4"
+        },
+        "damage": null,
+        "hitpoints": 1070.0,
+        "damage_per_second": null,
+        "transport": null
+      }
+    ]
+  },
+  "15": {
+    "arena_name": "Miner's Mine",
+    "cards": [
+      {
+        "name": "Elixir Collector",
+        "url": "https://clashroyale.fandom.com/wiki/Elixir_Collector",
+        "elixir": 6.0,
+        "rarity": "Rare",
+        "type": "Building",
+        "arena_text": "Miner's Mine",
+        "unit_attributes": {
+          "Cost": "6",
+          "Production Speed": "12 sec",
+          "Deploy Time": "1 sec",
+          "Lifetime": "1 min 26 sec",
+          "Type": "Building",
+          "Rarity": "Rare"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,070",
+          "Hitpoints lost per second": "12.4"
+        },
+        "damage": null,
+        "hitpoints": 1070.0,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Void",
+        "url": "https://clashroyale.fandom.com/wiki/Void",
+        "elixir": 3.0,
+        "rarity": "Epic",
+        "type": "Spell",
+        "arena_text": "Miner's Mine",
+        "unit_attributes": {
+          "Cost": "3",
+          "Radius": "2.5",
+          "Duration": "4 sec",
+          "Target": "Air & Ground",
+          "Type": "Spell",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Single Target Damage": "320 x3 (960)",
+          "Single Target Crown Tower Damage": "48 x3 (144)",
+          "2-4 Targets Damage": "160 x3 (480)",
+          "2-4 Targets Crown Tower Damage": "25 x3 (75)",
+          "5 Or More Targets Damage": "76 x3 (228)",
+          "5 Or More Targets Crown Tower Damage": "17 x3 (51)"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Clone",
+        "url": "https://clashroyale.fandom.com/wiki/Clone",
+        "elixir": 3.0,
+        "rarity": "Epic",
+        "type": "Spell",
+        "arena_text": "Miner's Mine",
+        "unit_attributes": {
+          "Cost": "3",
+          "Clone Hitpoints": "1",
+          "Clone Shield Hitpoints": "1",
+          "Radius": "3",
+          "Target": "Friendly Troops",
+          "Type": "Spell",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Cloned Common Level": "11",
+          "Cloned Rare Level": "11",
+          "Cloned Epic Level": "11",
+          "Cloned Legendary Level": "11",
+          "Cloned Champion Level": "11"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Tornado",
+        "url": "https://clashroyale.fandom.com/wiki/Tornado",
+        "elixir": 3.0,
+        "rarity": "Epic",
+        "type": "Spell",
+        "arena_text": "Miner's Mine",
+        "unit_attributes": {
+          "Cost": "3",
+          "Radius": "5.5",
+          "Duration": "1.05 sec",
+          "Target": "Air & Ground",
+          "Type": "Spell",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Damage": "84",
+          "Crown Tower Damage": "29"
+        },
+        "damage": 84.0,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Mirror",
+        "url": "https://clashroyale.fandom.com/wiki/Mirror",
+        "elixir": null,
+        "rarity": "Epic",
+        "type": "Spell",
+        "arena_text": "Miner's Mine",
+        "unit_attributes": {
+          "Cost": "Cost of previous card played +1",
+          "Type": "Spell",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Mirrored Common Level": "12",
+          "Mirrored Rare Level": "12",
+          "Mirrored Epic Level": "12",
+          "Mirrored Legendary Level": "12"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Cannon Cart",
+        "url": "https://clashroyale.fandom.com/wiki/Cannon_Cart",
+        "elixir": 5.0,
+        "rarity": "Epic",
+        "type": "Troop",
+        "arena_text": "Miner's Mine",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "0.9 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "5.5",
+          "Projectile Speed": "1000",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,809",
+          "Damage": "212",
+          "Damage per Second": "235",
+          "Broken Cannon Cart Hitpoints Lost per Second": "30.15"
+        },
+        "damage": 212.0,
+        "hitpoints": 1809.0,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Spirit Empress",
+        "url": "https://clashroyale.fandom.com/wiki/Spirit_Empress",
+        "elixir": 6.0,
+        "rarity": "Legendary",
+        "type": "Troop",
+        "arena_text": "Miner's Mine",
+        "unit_attributes": {
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Count": "1",
+          "Type": "Troop",
+          "First Hit Speed": "0.3 sec"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Air Hitpoints": "1.318",
+          "Ground Hitpoints": "1.134",
+          "Damage": "307",
+          "Air Damage per second": "219",
+          "Ground Damage per second": "279"
+        },
+        "damage": 307.0,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Goblin Machine",
+        "url": "https://clashroyale.fandom.com/wiki/Goblin_Machine",
+        "elixir": 5.0,
+        "rarity": "Legendary",
+        "type": "Troop",
+        "arena_text": "Miner's Mine",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "1.2 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Medium",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Legendary"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "2,150",
+          "Damage": "212",
+          "Damage per Second": "176",
+          "Rocket Launcher Damage": "304",
+          "Rocket Launcher Crown Tower Damage": "152",
+          "Rocket Launcher Damage per Second": "86"
+        },
+        "damage": 212.0,
+        "hitpoints": 2150.0,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Mother Witch",
+        "url": "https://clashroyale.fandom.com/wiki/Mother_Witch",
+        "elixir": 4.0,
+        "rarity": "Legendary",
+        "type": "Troop",
+        "arena_text": "Miner's Mine",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1 sec",
+          "First Hit Speed": "0.3 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Curse Duration": "5 sec",
+          "Range": "5.5",
+          "Projectile Speed": "600",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Legendary"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Mother Witch Hitpoints": "529",
+          "Mother Witch Damage": "133",
+          "Mother Witch Damage per second": "133",
+          "Cursed Hog Hitpoints": "629",
+          "Cursed Hog Damage": "53",
+          "Cursed Hog Damage per second": "44"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Fisherman",
+        "url": "https://clashroyale.fandom.com/wiki/Fisherman",
+        "elixir": 3.0,
+        "rarity": "Legendary",
+        "type": "Troop",
+        "arena_text": "Miner's Mine",
+        "unit_attributes": {
+          "Cost": "3",
+          "Hit Speed": "1.3 sec",
+          "First Hit Speed": "0.1 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Medium",
+          "Target": "Ground",
+          "Count": "1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Legendary"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "870",
+          "Damage": "194",
+          "Damage per second": "149"
+        },
+        "damage": 194.0,
+        "hitpoints": 870.0,
+        "damage_per_second": 149.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Clone",
+        "url": "https://clashroyale.fandom.com/wiki/Clone",
+        "elixir": 3.0,
+        "rarity": "Epic",
+        "type": "Spell",
+        "arena_text": "Miner's Mine",
+        "unit_attributes": {
+          "Cost": "3",
+          "Clone Hitpoints": "1",
+          "Clone Shield Hitpoints": "1",
+          "Radius": "3",
+          "Target": "Friendly Troops",
+          "Type": "Spell",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Cloned Common Level": "11",
+          "Cloned Rare Level": "11",
+          "Cloned Epic Level": "11",
+          "Cloned Legendary Level": "11",
+          "Cloned Champion Level": "11"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Mirror",
+        "url": "https://clashroyale.fandom.com/wiki/Mirror",
+        "elixir": null,
+        "rarity": "Epic",
+        "type": "Spell",
+        "arena_text": "Miner's Mine",
+        "unit_attributes": {
+          "Cost": "Cost of previous card played +1",
+          "Type": "Spell",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Mirrored Common Level": "12",
+          "Mirrored Rare Level": "12",
+          "Mirrored Epic Level": "12",
+          "Mirrored Legendary Level": "12"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Tornado",
+        "url": "https://clashroyale.fandom.com/wiki/Tornado",
+        "elixir": 3.0,
+        "rarity": "Epic",
+        "type": "Spell",
+        "arena_text": "Miner's Mine",
+        "unit_attributes": {
+          "Cost": "3",
+          "Radius": "5.5",
+          "Duration": "1.05 sec",
+          "Target": "Air & Ground",
+          "Type": "Spell",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Damage": "84",
+          "Crown Tower Damage": "29"
+        },
+        "damage": 84.0,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      },
+      {
+        "name": "Void",
+        "url": "https://clashroyale.fandom.com/wiki/Void",
+        "elixir": 3.0,
+        "rarity": "Epic",
+        "type": "Spell",
+        "arena_text": "Miner's Mine",
+        "unit_attributes": {
+          "Cost": "3",
+          "Radius": "2.5",
+          "Duration": "4 sec",
+          "Target": "Air & Ground",
+          "Type": "Spell",
+          "Rarity": "Epic"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Single Target Damage": "320 x3 (960)",
+          "Single Target Crown Tower Damage": "48 x3 (144)",
+          "2-4 Targets Damage": "160 x3 (480)",
+          "2-4 Targets Crown Tower Damage": "25 x3 (75)",
+          "5 Or More Targets Damage": "76 x3 (228)",
+          "5 Or More Targets Crown Tower Damage": "17 x3 (51)"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": null
+      }
+    ]
+  },
+  "16": {
+    "arena_name": "Executioner's Kitchen",
+    "cards": [
+      {
+        "name": "Golden Knight",
+        "url": "https://clashroyale.fandom.com/wiki/Golden_Knight",
+        "elixir": 4.0,
+        "rarity": "Champion",
+        "type": "Troop",
+        "arena_text": "Executioner's Kitchen",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "0.9 sec",
+          "First Hit Speed": "0.2 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Medium",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Champion"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,799",
+          "Damage": "161",
+          "Damage per second": "178",
+          "Dashing Dash Damage": "335"
+        },
+        "damage": 161.0,
+        "hitpoints": 1799.0,
+        "damage_per_second": 178.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Skeleton King",
+        "url": "https://clashroyale.fandom.com/wiki/Skeleton_King",
+        "elixir": 4.0,
+        "rarity": "Champion",
+        "type": "Troop",
+        "arena_text": "Executioner's Kitchen",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "1.6 sec",
+          "First Hit Speed": "0.3 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Medium",
+          "Splash Radius": "1.3",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Champion"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Skeleton King Hitpoints": "2,298",
+          "Skeleton King Damage": "204",
+          "Skeleton King Damage per second": "127",
+          "Skeleton Damage": "81",
+          "Skeleton Damage per second": "81"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": "ground"
+      }
+    ]
+  },
+  "17": {
+    "arena_name": "Royal Crypt",
+    "cards": [
+      {
+        "name": "Boss Bandit",
+        "url": "https://clashroyale.fandom.com/wiki/Boss_Bandit",
+        "elixir": 6.0,
+        "rarity": "Champion",
+        "type": "Troop",
+        "arena_text": "Royal Crypt",
+        "unit_attributes": {
+          "Cost": "6",
+          "Hit Speed": "1.2 sec",
+          "First Hit Speed": "0.4 sec",
+          "Speed": "Fast",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Short",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Champion"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "2,624",
+          "Damage": "268",
+          "Dash Damage": "537",
+          "Damage per second": "223"
+        },
+        "damage": 268.0,
+        "hitpoints": 2624.0,
+        "damage_per_second": 223.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Archer Queen",
+        "url": "https://clashroyale.fandom.com/wiki/Archer_Queen",
+        "elixir": 5.0,
+        "rarity": "Champion",
+        "type": "Troop",
+        "arena_text": "Royal Crypt",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "1.2 sec",
+          "First Hit Speed": "0.3 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "5",
+          "Projectile Speed": "800",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Champion"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "1,000",
+          "Damage": "225",
+          "Damage per second": "187",
+          "Damage per second (with Cloaking Cape)": "525"
+        },
+        "damage": 225.0,
+        "hitpoints": 1000.0,
+        "damage_per_second": 187.0,
+        "transport": "ground"
+      },
+      {
+        "name": "Mighty Miner",
+        "url": "https://clashroyale.fandom.com/wiki/Mighty_Miner",
+        "elixir": 4.0,
+        "rarity": "Champion",
+        "type": "Troop",
+        "arena_text": "Royal Crypt",
+        "unit_attributes": {
+          "Cost": "4",
+          "Hit Speed": "0.4 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Long",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Champion"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "2,250",
+          "Damage (Stage 1)": "40",
+          "Damage (Stage 2)": "204",
+          "Damage (Stage 3)": "409",
+          "Damage per second (Stage 1)": "100",
+          "Damage per second (Stage 2)": "510",
+          "Damage per second (Stage 3)": "1022",
+          "Explosive Escape Damage": "332"
+        },
+        "damage": null,
+        "hitpoints": 2250.0,
+        "damage_per_second": null,
+        "transport": "ground"
+      }
+    ]
+  },
+  "18": {
+    "arena_name": "Silent Sanctuary",
+    "cards": [
+      {
+        "name": "Goblinstein",
+        "url": "https://clashroyale.fandom.com/wiki/Goblinstein",
+        "elixir": 5.0,
+        "rarity": "Champion",
+        "type": "Troop",
+        "arena_text": "Silent Sanctuary",
+        "unit_attributes": {
+          "Hit Speed": "1.8 sec",
+          "First Hit Speed": "0.5 sec",
+          "Speed": "Medium",
+          "Stun Duration": "0.5 sec",
+          "Range": "5.5",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Doctor Hitpoints": "721",
+          "Doctor Damage": "92",
+          "Doctor Damage per Second": "51",
+          "Monster Hitpoints": "2,393",
+          "Monster Damage": "128",
+          "Monster Damage per Second": "85",
+          "Lightning Link Damage": "107",
+          "Lightning Link Crown Tower Damage": "23"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Little Prince",
+        "url": "https://clashroyale.fandom.com/wiki/Little_Prince",
+        "elixir": 3.0,
+        "rarity": "Champion",
+        "type": "Troop",
+        "arena_text": "Silent Sanctuary",
+        "unit_attributes": {
+          "Cost": "3",
+          "Hit Speed (Stage 1)": "1.2 sec",
+          "Hit Speed (Stage 2)": "0.8 sec",
+          "Hit Speed (Stage 3)": "0.4 sec",
+          "First Hit Speed": "0.4 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "5.5",
+          "Projectile Speed": "800",
+          "Target": "Air & Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Champion"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Little Prince Hitpoints": "698",
+          "Little Prince Damage": "99",
+          "Little Prince Damage per Second (Stage 1)": "82",
+          "Little Prince Damage per Second (Stage 2)": "123",
+          "Little Prince Damage per Second (Stage 3)": "247",
+          "Royal Rescue Damage": "256",
+          "Guardienne Hitpoints": "1,600",
+          "Guardienne Damage": "202",
+          "Guardienne Damage per Second": "168"
+        },
+        "damage": null,
+        "hitpoints": null,
+        "damage_per_second": null,
+        "transport": "ground"
+      },
+      {
+        "name": "Monk",
+        "url": "https://clashroyale.fandom.com/wiki/Monk",
+        "elixir": 5.0,
+        "rarity": "Champion",
+        "type": "Troop",
+        "arena_text": "Silent Sanctuary",
+        "unit_attributes": {
+          "Cost": "5",
+          "Hit Speed": "0.8 sec",
+          "First Hit Speed": "0.2 sec",
+          "Speed": "Medium",
+          "Deploy Time": "1 sec",
+          "Range": "Melee: Medium",
+          "Target": "Ground",
+          "Count": "x1",
+          "Transport": "Ground",
+          "Type": "Troop",
+          "Rarity": "Champion"
+        },
+        "level_11_stats": {
+          "Level": "11",
+          "Hitpoints": "2,150",
+          "Damage": "140",
+          "Damage per second": "175",
+          "Combo Damage": "422"
+        },
+        "damage": 140.0,
+        "hitpoints": 2150.0,
+        "damage_per_second": 175.0,
+        "transport": "ground"
+      }
+    ]
+  }
+}
