@@ -1,7 +1,10 @@
 import json
 import re
 import os
+import dotenv
 from neo4j import GraphDatabase
+
+dotenv.load_dotenv()
 
 def to_number_maybe(x):
     if x is None:

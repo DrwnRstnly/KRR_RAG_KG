@@ -10,6 +10,7 @@ Use the provided Graph Data to answer the User Question.
 - If the data is empty, state that you don't know the answer.
 - The data contains stats like Hitpoints (HP), Damage, and DPS (Damage Per Second).
 - Format the stats clearly.
+- Keep the answer SHORT and CONCISE. Avoid unnecessary chatter.
 
 User Question:
 {question}
@@ -31,7 +32,12 @@ def answerer_fn(inputs: dict):
         data=json.dumps(data, indent=2)
     )
     
-    result = llm(prompt)[0]["generated_text"]
+    result = llm.invoke(prompt)
+
+    if hasattr(result, 'content'):
+        result = result.content
+    else:
+        result = str(result)
     
     if "Answer:" in result:
         result = result.split("Answer:")[-1].strip()

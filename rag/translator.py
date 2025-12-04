@@ -48,7 +48,7 @@ Cypher:
 
 def translator_fn(question: str):
     prompt = translator_prompt.format(question=question, schema=schema_context)
-    result = llm(prompt)[0]["generated_text"]
+    result = llm.invoke(prompt)
     
     clean_result = result.replace("```cypher", "").replace("```", "").strip()
     if "Cypher:" in clean_result:

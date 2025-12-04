@@ -1,13 +1,5 @@
-import os
-import sys
+from rag.pipeline import answer_question
 
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
-
-try:
-    from rag.pipeline import answer_question
-except ImportError:
-    print("Error: Could not import 'rag.pipeline'. Ensure you are in the project root.")
-    sys.exit(1)
 
 def main():
     print("=== Clash Royale Knowledge Graph ===")
