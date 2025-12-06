@@ -79,7 +79,7 @@ multiprocess==0.70.18
 mypy_extensions==1.1.0
 neo4j==6.0.3
 nest-asyncio==1.6.0
-networkx==3.5
+networkx==3.4.2
 nltk==3.9.2
 numpy==2.1.1
 orjson==3.11.4
@@ -117,6 +117,7 @@ pyzmq==26.2.0
 regex==2025.11.3
 requests==2.32.5
 requests-toolbelt==1.0.0
+rich==13.7.0
 rsa==4.9.1
 safetensors==0.6.2
 scikit-learn==1.5.2
@@ -155,7 +156,7 @@ uvicorn==0.38.0
 wcwidth==0.2.13
 webdriver-manager==4.0.2
 websocket-client==1.8.0
-wheel @ file:///opt/homebrew/Cellar/python%403.12/3.12.9/libexec/wheel-0.45.1-py3-none-any.whl#sha256=9e1d46c70b64e17215059896fbdf70ed1c4ab6696302458ffd8d4932dd04bb7c
+wheel==0.45.1
 wordcloud==1.9.3
 wrapt==2.0.1
 wsproto==1.2.0
