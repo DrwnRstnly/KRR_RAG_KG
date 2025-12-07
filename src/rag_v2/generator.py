@@ -34,6 +34,10 @@ class AnswerGenerator:
 4. Be concise but complete
 5. If the data includes relationships (counters, synergies), mention them naturally
 6. Cite specific numbers and facts from the data
+7. **IMPORTANT for Champions**: If a card has rarity='champion', check the 'stats' or 'level11_stats' field for ability information
+   - Look for stats with pattern "stat_name (with Ability Name)": value
+   - Extract and explain the ability name and its effect on stats
+   - Example: If you see "Damage per second (with Cloaking Cape)": "525", explain that the champion has a "Cloaking Cape" ability that increases DPS to 525
 
 ## User Question:
 {question}
@@ -124,7 +128,6 @@ Provide a clear, concise answer based strictly on the graph data above."""
 
     def _clean_answer(self, raw_answer: str) -> str:
         """Clean up LLM-generated answer"""
-        # Remove common prefixes
         answer = raw_answer.strip()
 
         prefixes_to_remove = [
@@ -190,7 +193,6 @@ Provide a clear, concise answer based strictly on the graph data above."""
             question = inputs.get("question", "")
             query_result = inputs.get("query_result")
             if not query_result:
-                # Fallback: create QueryResult from inputs
                 query_result = QueryResult(
                     data=inputs.get("data", []),
                     cypher_query=inputs.get("cypher", ""),
@@ -201,7 +203,6 @@ Provide a clear, concise answer based strictly on the graph data above."""
         return RunnableLambda(generate_fn)
 
 
-# Factory function
 def create_generator(llm) -> AnswerGenerator:
     """Create an answer generator instance"""
     return AnswerGenerator(llm)

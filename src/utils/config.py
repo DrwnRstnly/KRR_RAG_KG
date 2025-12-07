@@ -1,5 +1,3 @@
-"""Configuration management"""
-
 import os
 from dotenv import load_dotenv
 from dataclasses import dataclass
@@ -9,7 +7,6 @@ load_dotenv()
 
 @dataclass
 class Neo4jConfig:
-    """Neo4j database configuration"""
     uri: str
     user: str
     password: str
@@ -25,7 +22,6 @@ class Neo4jConfig:
 
 @dataclass
 class LLMConfig:
-    """Language model configuration"""
     model_name: str
     device: str
     max_tokens: int
@@ -43,7 +39,6 @@ class LLMConfig:
 
 @dataclass
 class AppConfig:
-    """Application configuration"""
     neo4j: Neo4jConfig
     llm: LLMConfig
     verbose: bool

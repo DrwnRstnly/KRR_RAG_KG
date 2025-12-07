@@ -94,7 +94,6 @@ class Card:
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "Card":
         """Create a Card from dictionary"""
-        # Convert string enums to enum types
         card_type = CardType(data.get("type", "troop"))
         rarity = Rarity(data.get("rarity", "common"))
 

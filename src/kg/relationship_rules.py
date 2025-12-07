@@ -36,7 +36,6 @@ class RelationshipExtractor:
     def _evaluate_counter(card: Card, target: Card) -> Dict | None:
         """Evaluate if card counters target, return properties if true"""
 
-        # Spells counter swarms
         if card.card_type == CardType.SPELL and card.damage:
             if hasattr(target, 'count') or (target.hitpoints and target.hitpoints < 500):
                 return {
@@ -44,7 +43,6 @@ class RelationshipExtractor:
                     "reason": "Spell damage effective against low HP units"
                 }
 
-        # Anti-air counters air units
         if target.transport == Transport.AIR:
             if TargetType.AIR in card.targets and card.dps:
                 if card.dps > 150:
@@ -58,7 +56,6 @@ class RelationshipExtractor:
                         "reason": "Can target air units"
                     }
 
-        # Buildings counter building-targeting troops
         if card.card_type == CardType.BUILDING:
             if TargetType.BUILDINGS in target.targets:
                 return {
@@ -66,7 +63,6 @@ class RelationshipExtractor:
                     "reason": "Distracts building-targeting units"
                 }
 
-        # High damage counters high HP (tanks)
         if card.damage and target.hitpoints:
             if card.damage > 500 and target.hitpoints > 2000:
                 return {
@@ -74,8 +70,6 @@ class RelationshipExtractor:
                     "reason": "High damage effective against tanks"
                 }
 
-        # Splash counters swarms (inferred from Prolog rules)
-        # Note: We'd need splash property from card data
 
         return None
 
@@ -91,7 +85,6 @@ class RelationshipExtractor:
             for card2 in all_cards[i + 1:]:
                 synergy_info = RelationshipExtractor._evaluate_synergy(card1, card2)
                 if synergy_info:
-                    # Add bidirectional synergy
                     synergies.append((card1.name, card2.name, synergy_info))
                     synergies.append((card2.name, card1.name, synergy_info))
 

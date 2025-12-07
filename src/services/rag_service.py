@@ -179,7 +179,6 @@ class RAGService:
         self.pipeline.close()
 
 
-# Factory function
 def create_rag_service(llm, verbose: bool = False) -> RAGService:
     """Create a RAG service instance"""
     return RAGService(llm, verbose=verbose)
