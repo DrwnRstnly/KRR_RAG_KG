@@ -192,12 +192,49 @@ KNOWN_COUNTERS = [
 # Define known synergies from meta decks
 KNOWN_SYNERGIES = [
     # (card1, card2, synergy_type, strength)
+    # Giant synergies
     ("Giant", "Musketeer", "tank-support", "strong"),
+    ("Giant", "Witch", "tank-support", "strong"),
+    ("Giant", "Mini P.E.K.K.A", "tank-support", "strong"),
+    ("Giant", "Prince", "tank-support", "strong"),
+    ("Giant", "Mega Minion", "tank-support", "strong"),
+
+    # Golem synergies
     ("Golem", "Night Witch", "tank-support", "strong"),
+    ("Golem", "Baby Dragon", "tank-support", "strong"),
+    ("Golem", "Mega Minion", "tank-support", "strong"),
+
+    # Hog Rider synergies
     ("Hog Rider", "Fireball", "push-spell", "strong"),
+    ("Hog Rider", "Valkyrie", "push-support", "strong"),
+    ("Hog Rider", "Musketeer", "push-support", "moderate"),
+
+    # Bait synergies
     ("Goblin Barrel", "Princess", "spell-bait", "strong"),
+    ("Goblin Barrel", "Skeleton Army", "spell-bait", "strong"),
+    ("Goblin Gang", "Goblin Barrel", "spell-bait", "strong"),
+
+    # Siege synergies
     ("X-Bow", "Tesla", "siege-defense", "strong"),
+    ("X-Bow", "Archers", "siege-support", "strong"),
+    ("Mortar", "Knight", "siege-tank", "strong"),
+
+    # Air synergies
     ("Balloon", "Lumberjack", "push-combo", "strong"),
+    ("Balloon", "Freeze", "push-spell", "strong"),
+    ("Lava Hound", "Balloon", "air-combo", "strong"),
+    ("Lava Hound", "Minions", "air-support", "strong"),
+
+    # Miner synergies
     ("Miner", "Poison", "chip-control", "strong"),
+    ("Miner", "Goblin Gang", "chip-pressure", "moderate"),
+
+    # Graveyard synergies
+    ("Graveyard", "Freeze", "spell-combo", "strong"),
+    ("Graveyard", "Knight", "tank-spell", "strong"),
+
+    # Other notable synergies
     ("Royal Giant", "Fisherman", "pull-combo", "moderate"),
+    ("P.E.K.K.A", "Battle Ram", "bridge-spam", "strong"),
+    ("Mega Knight", "Inferno Dragon", "control-defense", "moderate"),
 ]

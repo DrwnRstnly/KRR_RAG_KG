@@ -74,7 +74,7 @@ class CLIDisplay:
     @staticmethod
     def print_success(message: str):
         """Print success message"""
-        console.print(f"[bold green]✓[/bold green] {message}")
+        console.print(f"[bold green][OK][/bold green] {message}")
 
     @staticmethod
     def print_stats(stats: Dict[str, Any]):

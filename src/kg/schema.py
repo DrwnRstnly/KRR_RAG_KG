@@ -213,8 +213,8 @@ class KGSchema:
                 "cypher": "MATCH (c:Card)-[r:COUNTERS]->(target:Card {name: 'P.E.K.K.A'}) RETURN c.name AS card, r.effectiveness AS effectiveness, r.reason AS reason"
             },
             {
-                "question": "What cards synergize with Giant?",
-                "cypher": "MATCH (c:Card)-[s:SYNERGIZES_WITH]->(giant:Card {name: 'Giant'}) RETURN c.name AS card, s.synergy_type AS synergy, s.strength AS strength"
+                "question": "What cards synergize well with Giant?",
+                "cypher": "MATCH (giant:Card {name: 'Giant'})-[s:SYNERGIZES_WITH]->(c:Card) RETURN c.name AS card, s.synergy_type AS synergy, s.strength AS strength"
             },
             {
                 "question": "Which cards fit the Beatdown archetype?",

@@ -29,12 +29,15 @@ class AnswerGenerator:
 
 ## Instructions:
 1. Use ONLY the information provided in the Graph Data below
-2. If the data is empty or doesn't answer the question, say "I don't have information about that"
-3. Format card stats clearly (HP, Damage, DPS, Elixir cost, etc.)
-4. Be concise but complete
-5. If the data includes relationships (counters, synergies), mention them naturally
-6. Cite specific numbers and facts from the data
-7. **IMPORTANT for Champions**: If a card has rarity='champion', check the 'stats' or 'level11_stats' field for ability information
+2. If the data is empty, say "I don't have information about that"
+3. **IMPORTANT**: If the data contains alternative/suggested cards (not exact matches), acknowledge this and present the suggestions helpfully
+   - Example: "While there's no specific synergy data for Giant, here are some cards from the same archetype that work well together: ..."
+   - Be helpful and provide context for why these alternatives are relevant
+4. Format card stats clearly (HP, Damage, DPS, Elixir cost, etc.)
+5. Be concise but complete
+6. If the data includes relationships (counters, synergies), mention them naturally
+7. Cite specific numbers and facts from the data
+8. **IMPORTANT for Champions**: If a card has rarity='champion', check the 'stats' or 'level11_stats' field for ability information
    - Look for stats with pattern "stat_name (with Ability Name)": value
    - Extract and explain the ability name and its effect on stats
    - Example: If you see "Damage per second (with Cloaking Cape)": "525", explain that the champion has a "Cloaking Cape" ability that increases DPS to 525
@@ -46,7 +49,8 @@ class AnswerGenerator:
 {data}
 
 ## Your Answer:
-Provide a clear, concise answer based strictly on the graph data above."""
+Provide a clear, concise answer based strictly on the graph data above. If the data shows alternative suggestions, present them helpfully.
+Do NOT use markdown formatting (no **, ##, -, etc.). Use plain text only."""
 
         return PromptTemplate.from_template(template)
 

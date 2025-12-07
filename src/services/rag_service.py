@@ -1,20 +1,10 @@
-"""
-RAG Service Layer
-
-Provides clean request/response interface for RAG operations.
-This layer can be easily wrapped as REST API or gRPC service.
-"""
-
 from typing import Dict, Any, Optional, Generator
 from dataclasses import asdict
 import time
 
 from src.domain.models import RAGResponse
 from src.rag_v2.pipeline import RAGPipeline
-
-
 class RAGService:
-    """Service layer for RAG operations"""
 
     def __init__(self, llm, verbose: bool = False):
         self.pipeline = RAGPipeline(llm, verbose=verbose)
@@ -62,7 +52,6 @@ class RAGService:
 
             rag_response = self.pipeline.query(question)
 
-            # Build response
             response_data = {
                 "answer": rag_response.answer,
                 "sources": rag_response.sources,
@@ -87,16 +76,6 @@ class RAGService:
             }
 
     def query_stream(self, request: Dict[str, Any]) -> Generator[Dict[str, Any], None, None]:
-        """
-        Process query with streaming responses
-
-        Yields response chunks as they become available:
-        {
-            "type": "cypher" | "retrieval" | "generation" | "done" | "error",
-            "content": Any,
-            "timestamp": float
-        }
-        """
         question = request.get("question", "")
         if not question:
             yield {

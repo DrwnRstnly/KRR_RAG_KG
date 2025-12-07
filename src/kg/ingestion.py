@@ -199,9 +199,9 @@ class KnowledgeGraphIngestion:
                     card = self._convert_json_to_card(card_data, arena_name)
                     all_cards.append(card)
                     inserted = self.ingest_card(card)
-                    print(f"  ✓ {inserted}")
+                    print(f"  [OK] {inserted}")
                 except Exception as e:
-                    print(f"  ✗ Error ingesting {card_data.get('name', 'unknown')}: {e}")
+                    print(f"  [ERR] Error ingesting {card_data.get('name', 'unknown')}: {e}")
 
         # Phase 2: Extract and ingest relationships
         print("\n=== Phase 2: Creating Relationships ===")
@@ -211,26 +211,26 @@ class KnowledgeGraphIngestion:
         counter_rels = RelationshipExtractor.extract_counter_relationships(all_cards)
         for from_card, to_card, props in counter_rels[:50]:  # Limit to avoid too many
             if self.ingest_counter_relationship(from_card, to_card, props):
-                print(f"  ✓ {from_card} COUNTERS {to_card} ({props['effectiveness']})")
+                print(f"  [OK] {from_card} COUNTERS {to_card} ({props['effectiveness']})")
 
         # Known counters from meta knowledge
         for counter, target, eff, reason in KNOWN_COUNTERS:
             props = {"effectiveness": eff, "reason": reason}
             if self.ingest_counter_relationship(counter, target, props):
-                print(f"  ✓ {counter} COUNTERS {target} (known)")
+                print(f"  [OK] {counter} COUNTERS {target} (known)")
 
         # Synergy relationships
         print("\n--- Synergy Relationships ---")
         synergy_rels = RelationshipExtractor.extract_synergy_relationships(all_cards)
         for card1, card2, props in synergy_rels[:50]:  # Limit to avoid too many
             if self.ingest_synergy_relationship(card1, card2, props):
-                print(f"  ✓ {card1} SYNERGIZES_WITH {card2} ({props['synergy_type']})")
+                print(f"  [OK] {card1} SYNERGIZES_WITH {card2} ({props['synergy_type']})")
 
         # Known synergies from meta decks
         for c1, c2, syn_type, strength in KNOWN_SYNERGIES:
             props = {"synergy_type": syn_type, "strength": strength}
             if self.ingest_synergy_relationship(c1, c2, props):
-                print(f"  ✓ {c1} SYNERGIZES_WITH {c2} (known)")
+                print(f"  [OK] {c1} SYNERGIZES_WITH {c2} (known)")
 
         # Archetype assignments
         print("\n--- Archetype Assignments ---")
@@ -238,7 +238,7 @@ class KnowledgeGraphIngestion:
         for archetype_name, card_roles in archetype_assignments.items():
             for card_name, role in card_roles[:10]:  # Limit per archetype
                 if self.ingest_archetype_relationship(card_name, archetype_name, role):
-                    print(f"  ✓ {card_name} FITS_ARCHETYPE {archetype_name} as {role}")
+                    print(f"  [OK] {card_name} FITS_ARCHETYPE {archetype_name} as {role}")
 
         print("\n=== Ingestion Complete ===")
         print(f"Total cards ingested: {len(all_cards)}")
