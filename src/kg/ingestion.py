@@ -1,10 +1,3 @@
-"""
-Enhanced Knowledge Graph Ingestion System
-
-This module handles ingesting Clash Royale card data into Neo4j
-with enriched relationships (counters, synergies, archetypes)
-"""
-
 import json
 import re
 import os
@@ -19,7 +12,6 @@ load_dotenv()
 
 
 class KnowledgeGraphIngestion:
-    """Handles ingestion of cards and relationships into Neo4j"""
 
     def __init__(self, uri: str = None, user: str = None, password: str = None):
         self.uri = uri or os.getenv("NEO4J_URI", "bolt://localhost:7687")
@@ -253,13 +245,10 @@ class KnowledgeGraphIngestion:
 
     def _convert_json_to_card(self, card_data: Dict, arena_name: str) -> Card:
         """Convert JSON card data to Card domain model"""
-        # Extract combat stats
         hp, dmg, dps = self._extract_combat_stats(card_data)
 
-        # Extract targets
         targets = self._extract_targets(card_data)
 
-        # Extract transport
         transport = None
         transport_str = card_data.get("transport")
         if transport_str:
@@ -268,14 +257,12 @@ class KnowledgeGraphIngestion:
             except ValueError:
                 pass
 
-        # Card type
         card_type_str = card_data.get("type", "troop").lower()
         try:
             card_type = CardType(card_type_str)
         except ValueError:
             card_type = CardType.TROOP
 
-        # Rarity
         rarity_str = card_data.get("rarity", "common").lower()
         try:
             rarity = Rarity(rarity_str)
@@ -359,7 +346,6 @@ class KnowledgeGraphIngestion:
         if "building" in target_str_lower:
             targets.append(TargetType.BUILDINGS)
 
-        # Default to ground if none specified
         if not targets:
             targets.append(TargetType.GROUND)
 

@@ -203,7 +203,6 @@ def main():
             console.print(f"\n[red]Unexpected error in {name}: {e}[/red]")
             results.append((name, False))
 
-    # Summary
     console.print("\n[bold]═══ Test Summary ═══[/bold]\n")
 
     passed = sum(1 for _, success in results if success)

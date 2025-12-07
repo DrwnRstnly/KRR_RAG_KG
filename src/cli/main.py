@@ -11,7 +11,6 @@ Features:
 import sys
 import os
 
-# Add parent directory to path for imports
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
 
 from src.cli.display import CLIDisplay, console
@@ -36,7 +35,6 @@ class ClashRoyaleCLI:
         try:
             self.pipeline = RAGPipeline(llm, verbose=self.verbose)
 
-            # Test connection
             if not self.pipeline.test_connection():
                 self.display.print_error("Failed to connect to Neo4j database")
                 self.display.print_info("Please ensure Neo4j is running and credentials are correct in .env file")
@@ -94,7 +92,6 @@ class ClashRoyaleCLI:
         console.print()
 
         try:
-            # Use streaming for better UX
             self.process_question_streaming(question)
 
         except Exception as e:
@@ -106,7 +103,13 @@ class ClashRoyaleCLI:
         answer_text = ""
 
         for stage, content in self.pipeline.query_with_streaming(question):
-            if stage == "cypher":
+            if stage == "info":
+                # Display info messages (corrections, alternatives, etc.)
+                console.print()
+                console.print(f"[bold yellow]ℹ️  {content}[/bold yellow]")
+                console.print()
+
+            elif stage == "cypher":
                 if current_stage != "cypher":
                     if self.verbose:
                         self.display.print_info("🔧 Translating to Cypher...")
@@ -131,7 +134,7 @@ class ClashRoyaleCLI:
 
                 # Stream the answer word by word
                 if not content.startswith("Generating"):
-                    console.print(content, end="", flush=True)
+                    console.print(content, end="")
                     answer_text += content
 
             elif stage == "error":

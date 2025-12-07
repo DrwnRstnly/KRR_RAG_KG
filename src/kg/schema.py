@@ -61,9 +61,9 @@ class KGSchema:
                 "damage": "integer",
                 "dps": "integer",
                 "description": "string",
-                "level11_stats": "string",  # JSON string
+                "level11_stats": "string",  # JSON string containing detailed stats. For champions, includes ability information with format "stat_name (with Ability Name)": "value"
             },
-            description="Individual Clash Royale cards with stats"
+            description="Individual Clash Royale cards with stats. Champions (rarity='champion') have special abilities that enhance their stats when activated."
         ),
         "Rarity": NodeSchema(
             label="Rarity",
@@ -206,7 +206,7 @@ class KGSchema:
             },
             {
                 "question": "What are all Legendary cards?",
-                "cypher": "MATCH (c:Card)-[:HAS_RARITY]->(:Rarity {name: 'Legendary'}) RETURN c.name AS card ORDER BY c.elixir"
+                "cypher": "MATCH (c:Card)-[:HAS_RARITY]->(:Rarity {name: 'legendary'}) RETURN c.name AS card ORDER BY c.elixir"
             },
             {
                 "question": "Which cards counter P.E.K.K.A?",
@@ -226,6 +226,14 @@ class KGSchema:
             },
             {
                 "question": "What are the cheapest spell cards?",
-                "cypher": "MATCH (c:Card)-[:HAS_TYPE]->(:Type {name: 'Spell'}) RETURN c.name AS card, c.elixir AS cost ORDER BY c.elixir LIMIT 5"
+                "cypher": "MATCH (c:Card)-[:HAS_TYPE]->(:Type {name: 'spell'}) RETURN c.name AS card, c.elixir AS cost ORDER BY c.elixir LIMIT 5"
+            },
+            {
+                "question": "Tell me about the Archer Queen and her ability",
+                "cypher": "MATCH (c:Card {name: 'Archer Queen'}) RETURN c.name AS card, c.elixir AS cost, c.hitpoints AS hp, c.damage AS damage, c.dps AS dps, c.level11_stats AS stats, c.rarity AS rarity"
+            },
+            {
+                "question": "What are all the champion cards?",
+                "cypher": "MATCH (c:Card)-[:HAS_RARITY]->(:Rarity {name: 'champion'}) RETURN c.name AS card, c.elixir AS cost, c.level11_stats AS stats ORDER BY c.elixir"
             },
         ]

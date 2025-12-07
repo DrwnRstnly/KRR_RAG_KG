@@ -1,13 +1,3 @@
-"""
-Enhanced Query Translator: Natural Language -> Cypher
-
-Improvements over v1:
-- Better prompt engineering with more examples
-- Uses schema from KG schema module
-- Handles complex queries (multi-hop, aggregations)
-- Better error handling and query validation
-"""
-
 from typing import Optional
 from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import RunnableLambda
@@ -26,19 +16,21 @@ class QueryTranslator:
     def _build_prompt_template(self) -> PromptTemplate:
         """Build comprehensive prompt template"""
 
-        schema_desc = self.schema.get_schema_description()
+        raw_schema_desc = self.schema.get_schema_description()
+        schema_desc = raw_schema_desc.replace("{", "{{").replace("}", "}}")
+
         examples = self.schema.get_cypher_examples()
 
-        examples_text = "\n\n".join([
+        raw_examples_text = "\n\n".join([
             f"Question: {ex['question']}\nCypher: {ex['cypher']}"
             for ex in examples
         ])
+        examples_text = raw_examples_text.replace("{", "{{").replace("}", "}}")
 
-        template = f"""You are an expert Cypher query translator for a Clash Royale Knowledge Graph.
+        template = """You are an expert Cypher query translator for a Clash Royale Knowledge Graph.
 
-{schema_desc}
+""" + schema_desc + """
 
-## Important Guidelines:
 1. Use MATCH for querying nodes and relationships
 2. Use WHERE for filtering (prefer WHERE over inline {{}} for clarity)
 3. Use RETURN to specify what data to return
@@ -48,16 +40,17 @@ class QueryTranslator:
 7. For multi-hop queries, chain multiple MATCH patterns
 8. Order results when relevant using ORDER BY
 9. Limit results if asking for "top" or "best" using LIMIT
+10. **For Champion cards**: Always include c.level11_stats in RETURN clause to capture ability information
+11. **For Champion queries**: Include c.rarity to identify if card is a champion
 
-## Query Examples:
 
-{examples_text}
+""" + examples_text + """
 
 ## Your Task:
 Translate the following question into a valid Cypher query.
 Output ONLY the Cypher query, no explanations or markdown formatting.
 
-Question: {{question}}
+Question: {question}
 
 Cypher:"""
 
@@ -72,17 +65,16 @@ Cypher:"""
 
     def _clean_cypher_output(self, raw_output: str) -> str:
         """Clean LLM output to extract pure Cypher query"""
-        # Handle different response formats
         if hasattr(raw_output, 'content'):
             text = raw_output.content
         else:
             text = str(raw_output)
-        # Remove markdown code blocks
+
         text = text.replace("```cypher", "").replace("```", "").strip()
-        # Remove "Cypher:" prefix if present
+
         if "Cypher:" in text:
             text = text.split("Cypher:")[-1].strip()
-        # Remove any explanatory text after the query
+
         lines = text.split("\n")
         cypher_lines = []
         for line in lines:

@@ -176,7 +176,6 @@ class CLIDisplay:
         console.clear()
 
 
-# Convenience functions
 def print_header(title: str):
     CLIDisplay.print_header(title)
 

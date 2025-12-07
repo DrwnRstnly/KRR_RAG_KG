@@ -1,125 +1,79 @@
-import os
-import json
+﻿import os
+import requests
 
-MODEL_NAME = os.getenv("LLM_MODEL", "claude/haiku-4.5")
+MODEL_NAME = os.getenv("LLM_MODEL", "anthropic/claude-3.5-haiku")
+OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
-if "claude" in MODEL_NAME.lower():
-    try:
-        from anthropic import Anthropic
+if not OPENROUTER_API_KEY:
+    print("Warning: OPENROUTER_API_KEY not set. Set it via: $env:OPENROUTER_API_KEY='your_key'")
+    print("Get a free key at: https://openrouter.ai/")
 
-        API_KEY = os.getenv("ANTHROPIC_API_KEY")
-        if not API_KEY:
-            raise RuntimeError("ANTHROPIC_API_KEY not set")
+class OpenRouterLLM:
+    def __init__(self, api_key: str = None, model: str = None):
+        self.api_key = api_key or OPENROUTER_API_KEY
+        self.model = model or MODEL_NAME
+        self.base_url = "https://openrouter.ai/api/v1"
 
-        client = Anthropic(api_key=API_KEY)
-
-        class AnthropicLLM:
-            def __init__(self, client, model: str = None):
-                self.client = client
-                self.model = model or "claude-haiku-4.5"
-
-            def invoke(self, prompt: str):
-                resp = self.client.completions.create(
-                    model=self.model,
-                    prompt=prompt,
-                    max_tokens_to_sample=512,
-                    temperature=0.1
-                )
-
-                class Resp:
-                    def __init__(self, text):
-                        self.content = text
-
-                text = resp.completion if hasattr(resp, 'completion') else str(resp)
-                return Resp(text)
-
-        llm = AnthropicLLM(client, model=MODEL_NAME.split('/')[-1])
-        print(f"Using Anthropic model: {MODEL_NAME}")
-
-    except Exception as e:
-        print(f"Failed to initialize Anthropic client ({e}), falling back to HuggingFace pipeline")
-        MODEL_NAME = os.getenv("FALLBACK_MODEL", "Qwen/Qwen2.5-1.5B-Instruct")
+    def invoke(self, prompt: str):
+        if not self.api_key:
+            class R:
+                def __init__(self, text):
+                    self.content = text
+            return R("[No API key set. Please set OPENROUTER_API_KEY environment variable]")
 
         try:
-            from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
-            import torch
-            from langchain_huggingface import HuggingFacePipeline
+            headers = {
+                "Authorization": f"Bearer {self.api_key}",
+                "Content-Type": "application/json",
+            }
 
-            device = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
-            print(f"Using device: {device}")
-            print(f"Loading {MODEL_NAME}...")
+            data = {
+                "model": self.model,
+                "messages": [{"role": "user", "content": prompt}],
+                "max_tokens": 1024,  # Increased from 512
+                "temperature": 0.1,
+            }
 
-            tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-            model = AutoModelForCausalLM.from_pretrained(
-                MODEL_NAME,
-                dtype=torch.float16,
-                low_cpu_mem_usage=True
-            ).to(device)
-
-            hf_pipeline = pipeline(
-                "text-generation",
-                model=model,
-                tokenizer=tokenizer,
-                max_new_tokens=256,
-                temperature=0.1,
-                do_sample=True,
-                return_full_text=False,
-                device=device
+            resp = requests.post(
+                f"{self.base_url}/chat/completions",
+                headers=headers,
+                json=data,
+                timeout=30
             )
 
-            llm = HuggingFacePipeline(pipeline=hf_pipeline)
-            print("Fallback model loaded successfully")
-        except Exception as e2:
-            print(f"Failed to load fallback model: {e2}")
-            # Minimal stub to avoid crashes
-            class StubLLM:
-                def invoke(self, prompt: str):
-                    class R:
-                        def __init__(self, text):
-                            self.content = text
-                    return R("")
+            if not resp.ok:
+                error_detail = ""
+                try:
+                    error_json = resp.json()
+                    error_detail = f"\nAPI Error Details: {error_json}"
+                except:
+                    error_detail = f"\nResponse Text: {resp.text[:500]}"
 
-            llm = StubLLM()
+                print(f"OpenRouter API HTTP {resp.status_code} error{error_detail}")
+                raise requests.HTTPError(f"{resp.status_code} {resp.reason}{error_detail}")
 
-else:
-    # Non-Anthropic flow: try to load a HF model
-    try:
-        from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
-        import torch
-        from langchain_huggingface import HuggingFacePipeline
+            result = resp.json()
 
-        device = "cuda" if torch.cuda.is_available() else "mps" if torch.backends.mps.is_available() else "cpu"
-        print(f"Using device: {device}")
-        print(f"Loading {MODEL_NAME}...")
+            try:
+                text = result["choices"][0]["message"]["content"]
+            except (KeyError, IndexError, TypeError) as e:
+                print(f"OpenRouter response structure error: {e}")
+                print(f"Response: {result}")
+                raise ValueError(f"Invalid API response structure: {e}")
 
-        tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-        model = AutoModelForCausalLM.from_pretrained(
-            MODEL_NAME,
-            dtype=torch.float16,
-            low_cpu_mem_usage=True
-        ).to(device)
+            class R:
+                def __init__(self, content):
+                    self.content = content
 
-        hf_pipeline = pipeline(
-            "text-generation",
-            model=model,
-            tokenizer=tokenizer,
-            max_new_tokens=256,
-            temperature=0.1,
-            do_sample=True,
-            return_full_text=False,
-            device=device
-        )
+            return R(text)
 
-        llm = HuggingFacePipeline(pipeline=hf_pipeline)
-        print("Model loaded successfully!")
+        except Exception as e:
+            print(f"OpenRouter API error: {e}")
+            class R:
+                def __init__(self, content):
+                    self.content = content
+            return R(f"Error: {str(e)}")
 
-    except Exception as e:
-        print(f"Failed to load model {MODEL_NAME}: {e}")
-        class StubLLM:
-            def invoke(self, prompt: str):
-                class R:
-                    def __init__(self, text):
-                        self.content = text
-                return R("")
 
-        llm = StubLLM()
+llm = OpenRouterLLM(api_key=OPENROUTER_API_KEY, model=MODEL_NAME)
+print(f"Using OpenRouter model: {MODEL_NAME}")
