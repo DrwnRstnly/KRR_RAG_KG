@@ -14,7 +14,6 @@ from src.cli.main import main as cli_main
 
 
 def main():
-    """Main entry point"""
     parser = argparse.ArgumentParser(
         description="Clash Royale Knowledge Graph RAG System",
         formatter_class=argparse.RawDescriptionHelpFormatter,
@@ -36,12 +35,10 @@ For more information, see README.md
 
     args = parser.parse_args()
 
-    # Set verbose mode in environment if specified
     if args.verbose:
         import os
         os.environ["VERBOSE"] = "true"
 
-    # Run CLI
     try:
         cli_main()
     except KeyboardInterrupt:

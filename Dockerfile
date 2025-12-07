@@ -1,11 +1,5 @@
-# Dockerfile untuk Clash Royale RAG System
-
 FROM python:3.11-slim
 
-# Set working directory
-WORKDIR /app
-
-# Install system dependencies
 RUN apt-get update && apt-get install -y \
     gcc \
     g++ \
@@ -13,28 +7,24 @@ RUN apt-get update && apt-get install -y \
     curl \
     && rm -rf /var/lib/apt/lists/*
 
-# Copy requirements first for better caching
-COPY requirements.txt .
+COPY --from=ghcr.io/astral-sh/uv:latest /uv /bin/uv
 
-# Install Python dependencies
-RUN pip install --no-cache-dir -r requirements.txt
+WORKDIR /app
 
-# Copy application code
-COPY . .
-
-# Create directories
-RUN mkdir -p data/raw
-
-# Set environment variables
 ENV PYTHONUNBUFFERED=1
 ENV PYTHONPATH=/app
+ENV UV_SYSTEM_PYTHON=1
 
-# Expose port for future API (optional)
+COPY pyproject.toml .
+RUN uv pip install --system pyproject.toml
+
+COPY . .
+
+RUN mkdir -p data/raw
+
 EXPOSE 8000
 
-# Health check
-HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=3 \
+HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
     CMD python -c "import sys; sys.exit(0)"
 
-# Default command - run CLI
 CMD ["python", "main_v2.py"]

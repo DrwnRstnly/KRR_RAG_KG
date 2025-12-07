@@ -1,22 +1,15 @@
 services:
-  # Neo4j Database
   neo4j:
     image: neo4j:5.15-community
     container_name: clash-royale-neo4j
     ports:
-      - "7474:7474"  # HTTP
-      - "7687:7687"  # Bolt
+      - "7474:7474"
+      - "7687:7687"
     environment:
-      - NEO4J_AUTH=neo4j/clash_royale_kg_2025
-      - NEO4J_PLUGINS=["apoc"]
-      - NEO4J_server_memory_pagecache_size=512M
-      - NEO4J_server_memory_heap_initial__size=512M
-      - NEO4J_server_memory_heap_max__size=1G
+      NEO4J_AUTH: "${NEO4J_USER}/${NEO4J_PASSWORD}"
     volumes:
       - neo4j_data:/data
       - neo4j_logs:/logs
-      - neo4j_import:/var/lib/neo4j/import
-      - neo4j_plugins:/plugins
     networks:
       - rag-network
     healthcheck:
@@ -26,53 +19,43 @@ services:
       retries: 5
       start_period: 30s
 
-  # RAG Application (untuk ingestion)
-  rag-ingestion:
+  seeder:
     build: .
-    container_name: clash-royale-ingestion
+    container_name: clash-royale-seeder
     depends_on:
       neo4j:
         condition: service_healthy
     environment:
-      - NEO4J_URI=bolt://neo4j:7687
-      - NEO4J_USER=neo4j
-      - NEO4J_PASSWORD=clash_royale_kg_2025
-      - LLM_MODEL=Qwen/Qwen2.5-1.5B-Instruct
-      - LLM_DEVICE=cpu
-      - LLM_MAX_TOKENS=512
-      - LLM_TEMPERATURE=0.1
-      - VERBOSE=false
+      NEO4J_URI: "bolt://neo4j:7687"
+      NEO4J_USER: "${NEO4J_USER}"
+      NEO4J_PASSWORD: "${NEO4J_PASSWORD}"
+      LLM_MODEL: "${LLM_MODEL}"
+      LLM_DEVICE: "${LLM_DEVICE}"
+      LLM_MAX_TOKENS: "${LLM_MAX_TOKENS}"
+      LLM_TEMPERATURE: "${LLM_TEMPERATURE}"
+      VERBOSE: "${VERBOSE}"
     volumes:
       - ./data:/app/data
       - model_cache:/root/.cache/huggingface
     networks:
       - rag-network
-    command: >
-      sh -c "
-        echo '⏳ Menunggu Neo4j siap...' &&
-        sleep 10 &&
-        echo '📊 Memulai ingestion data...' &&
-        python -m src.kg.ingestion &&
-        echo '✅ Ingestion selesai! Database sudah siap.' &&
-        echo '💡 Jalankan: docker-compose run --rm rag-cli' &&
-        echo '   untuk menggunakan sistem RAG.'
-      "
+    command: python -m src.kg.ingestion
+    profiles: [seed]
 
-  # RAG CLI Application
-  rag-cli:
+  cli:
     build: .
-    container_name: clash-royale-rag-cli
+    container_name: clash-royale-cli
     depends_on:
       - neo4j
     environment:
-      - NEO4J_URI=bolt://neo4j:7687
-      - NEO4J_USER=neo4j
-      - NEO4J_PASSWORD=clash_royale_kg_2025
-      - LLM_MODEL=Qwen/Qwen2.5-1.5B-Instruct
-      - LLM_DEVICE=cpu
-      - LLM_MAX_TOKENS=512
-      - LLM_TEMPERATURE=0.1
-      - VERBOSE=false
+      NEO4J_URI: "bolt://neo4j:7687"
+      NEO4J_USER: "${NEO4J_USER}"
+      NEO4J_PASSWORD: "${NEO4J_PASSWORD}"
+      LLM_MODEL: "${LLM_MODEL}"
+      LLM_DEVICE: "${LLM_DEVICE}"
+      LLM_MAX_TOKENS: "${LLM_MAX_TOKENS}"
+      LLM_TEMPERATURE: "${LLM_TEMPERATURE}"
+      VERBOSE: "${VERBOSE}"
     volumes:
       - ./data:/app/data
       - model_cache:/root/.cache/huggingface
@@ -80,22 +63,13 @@ services:
       - rag-network
     stdin_open: true
     tty: true
-    profiles:
-      - cli  # Only start when explicitly requested
+    profiles: [cli]
 
 volumes:
   neo4j_data:
-    name: clash_royale_neo4j_data
   neo4j_logs:
-    name: clash_royale_neo4j_logs
-  neo4j_import:
-    name: clash_royale_neo4j_import
-  neo4j_plugins:
-    name: clash_royale_neo4j_plugins
   model_cache:
-    name: clash_royale_model_cache
 
 networks:
   rag-network:
-    name: clash_royale_network
     driver: bridge

@@ -1,0 +1,28 @@
+[project]
+name = "clash-royale-rag"
+version = "0.1.0"
+description = "RAG System for Clash Royale using Neo4j and LLMs"
+requires-python = ">=3.11"
+dependencies = [
+    "neo4j",
+    "python-dotenv",
+    "langchain",
+    "langchain-huggingface",
+    "langchain-core",
+    "transformers",
+    "accelerate",
+    "anthropic",
+    "rich",
+    "fastapi",
+    "uvicorn",
+    "torch",
+]
+
+# --- CONFIGURATION TO FORCE CPU PYTORCH ---
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
