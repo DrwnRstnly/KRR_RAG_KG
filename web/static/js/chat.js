@@ -160,19 +160,15 @@ async function streamResponse(question) {
         updateStatus(e.data);
     });
 
-    let generationLines = [];
-
     currentEventSource.addEventListener('generation', (e) => {
         if (!hasStartedGeneration) {
             removeTypingIndicator();
             streamingContent = createBotMessageBubble();
             hasStartedGeneration = true;
-            generationLines = [];
         }
 
         if (streamingContent) {
-            generationLines.push(e.data);
-            streamingContent.textContent = generationLines.join('\n');
+            streamingContent.textContent += e.data;
             scrollToBottom();
         }
     });

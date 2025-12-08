@@ -140,13 +140,7 @@ class RAGPipeline:
                 yield ("error", "Failed to generate answer")
                 return
 
-            words = response.answer.split()
-            for i, word in enumerate(words):
-                if i == 0:
-                    yield ("generation", word)
-                else:
-                    yield ("generation", " " + word)
-                time.sleep(0.02)
+            yield ("generation", response.answer)
 
             yield ("done", {
                 "sources": response.sources or [],

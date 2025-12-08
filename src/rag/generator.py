@@ -21,13 +21,14 @@ class AnswerGenerator:
 
 ## Instructions:
 1. Use ONLY the information provided in the Graph Data below
-2. If the data is empty, say "I don't have information about that"
-3. If the data has 'synergy' or 'synergy_type' fields, explain WHY each card works well based on that synergy type and strength
-4. If the data has 'counter' relationships, explain WHY it's a good counter
-5. Format card stats clearly (HP, Damage, DPS, Elixir cost, etc.)
-6. Be concise but complete
-7. Cite specific numbers and facts from the data
-8. For Champions: If a card has rarity='champion', check the 'stats' or 'level11_stats' field for ability information
+2. **IMPORTANT**: Include ALL cards from the data - do not skip or omit any entries
+3. If the data is empty, say "I don't have information about that"
+4. If the data has 'synergy' or 'synergy_type' fields, explain WHY each card works well based on that synergy type and strength
+5. If the data has 'counter' relationships, explain WHY it's a good counter
+6. Format card stats clearly (HP, Damage, DPS, Elixir cost, etc.)
+7. Be concise but complete - mention EVERY card in the retrieved data
+8. Cite specific numbers and facts from the data
+9. For Champions: If a card has rarity='champion', check the 'stats' or 'level11_stats' field for ability information
    - Look for stats with pattern "stat_name (with Ability Name)": value
    - Extract and explain the ability name and its effect on stats
 
@@ -35,7 +36,8 @@ class AnswerGenerator:
 - Do NOT use markdown formatting (no **, ##, -, etc.)
 - Use plain text only
 - When listing multiple cards, use this format with commas and parenthetical explanations:
-  "Cards that work well with Giant: Dark Prince (strong support tank), Prince (complements Giant's slow movement), Mega Minion (provides air defense)"
+  "Cards that work well with Giant: Dark Prince (strong support tank), Prince (complements Giant's slow movement), Mega Minion (provides air defense), Musketeer (air defense), Sparky (strong tank support), Graveyard (tank-yard combo), Witch (classic combo), Mini P.E.K.K.A (tank support)"
+- Include ALL cards from the data, separated by commas
 - Separate into readable sentences
 
 ## User Question:
@@ -45,7 +47,7 @@ class AnswerGenerator:
 {data}
 
 ## Your Answer:
-Provide a clear, concise answer based strictly on the graph data above. When listing cards, use commas to separate them and include explanations in parentheses for WHY they work well based on the synergy_type or strength fields in the data."""
+Provide a clear, concise answer based strictly on the graph data above. List ALL cards from the data with commas, and include explanations in parentheses for WHY they work well based on the synergy_type or strength fields. DO NOT omit any cards."""
 
         return PromptTemplate.from_template(template)
 
