@@ -1,6 +1,4 @@
-"""
-Domain models for Clash Royale cards and related entities
-"""
+
 
 from dataclasses import dataclass, field
 from typing import List, Optional, Dict, Any
@@ -8,14 +6,14 @@ from enum import Enum
 
 
 class CardType(Enum):
-    """Card type enumeration"""
+    
     TROOP = "troop"
     SPELL = "spell"
     BUILDING = "building"
 
 
 class Rarity(Enum):
-    """Card rarity enumeration"""
+    
     COMMON = "common"
     RARE = "rare"
     EPIC = "epic"
@@ -24,20 +22,20 @@ class Rarity(Enum):
 
 
 class TargetType(Enum):
-    """Target type enumeration"""
+    
     GROUND = "ground"
     AIR = "air"
     BUILDINGS = "buildings"
 
 
 class Transport(Enum):
-    """Transport type enumeration"""
+    
     GROUND = "ground"
     AIR = "air"
 
 
 class Archetype(Enum):
-    """Deck archetype enumeration"""
+    
     BEATDOWN = "beatdown"
     CYCLE = "cycle"
     CONTROL = "control"
@@ -48,35 +46,33 @@ class Archetype(Enum):
 
 @dataclass
 class Card:
-    """
-    Represents a Clash Royale card with all its properties
-    """
+    
     name: str
     elixir: int
     card_type: CardType
     rarity: Rarity
     arena: str
 
-    # Combat stats
+    
     hitpoints: Optional[int] = None
     damage: Optional[int] = None
     dps: Optional[int] = None
 
-    # Properties
+    
     transport: Optional[Transport] = None
     targets: List[TargetType] = field(default_factory=list)
     description: Optional[str] = None
 
-    # Additional metadata
+    
     level11_stats: Dict[str, Any] = field(default_factory=dict)
 
     def __post_init__(self):
-        """Validate and process card data"""
+        
         if self.elixir < 0 or self.elixir > 10:
             raise ValueError(f"Invalid elixir cost: {self.elixir}")
 
     def to_dict(self) -> Dict[str, Any]:
-        """Convert card to dictionary representation"""
+        
         return {
             "name": self.name,
             "elixir": self.elixir,
@@ -93,7 +89,7 @@ class Card:
 
     @classmethod
     def from_dict(cls, data: Dict[str, Any]) -> "Card":
-        """Create a Card from dictionary"""
+        
         card_type = CardType(data.get("type", "troop"))
         rarity = Rarity(data.get("rarity", "common"))
 
@@ -129,34 +125,34 @@ class Card:
 
 @dataclass
 class CardRelationship:
-    """Represents a relationship between two cards"""
+    
     from_card: str
     to_card: str
-    relationship_type: str  # COUNTERS, SYNERGIZES_WITH
+    relationship_type: str  
     properties: Dict[str, Any] = field(default_factory=dict)
 
 
 @dataclass
 class Deck:
-    """Represents a Clash Royale deck (8 cards)"""
-    cards: List[str]  # List of card names
+    
+    cards: List[str]  
     name: Optional[str] = None
     archetype: Optional[Archetype] = None
 
     def __post_init__(self):
-        """Validate deck"""
+        
         if len(self.cards) != 8:
             raise ValueError(f"Deck must contain exactly 8 cards, got {len(self.cards)}")
 
     def average_elixir(self, card_elixir_map: Dict[str, int]) -> float:
-        """Calculate average elixir cost"""
+        
         total = sum(card_elixir_map.get(card, 0) for card in self.cards)
         return total / 8.0
 
 
 @dataclass
 class QueryResult:
-    """Represents a result from knowledge graph query"""
+    
     data: List[Dict[str, Any]]
     cypher_query: str
     execution_time: float
@@ -165,7 +161,7 @@ class QueryResult:
 
 @dataclass
 class RAGResponse:
-    """Represents a complete RAG response"""
+    
     question: str
     answer: str
     cypher_query: str
@@ -174,7 +170,7 @@ class RAGResponse:
     confidence: Optional[float] = None
 
     def to_dict(self) -> Dict[str, Any]:
-        """Convert to dictionary for JSON serialization"""
+        
         return {
             "question": self.question,
             "answer": self.answer,

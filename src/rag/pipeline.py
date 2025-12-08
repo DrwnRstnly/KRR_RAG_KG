@@ -3,10 +3,10 @@ import time
 import sys
 
 from src.domain.models import RAGResponse, QueryResult
-from src.rag_v2.translator import QueryTranslator
-from src.rag_v2.retriever import KGRetriever
-from src.rag_v2.generator import AnswerGenerator
-from src.rag_v2.query_preprocessor import QueryPreprocessor, SmartResponseEnhancer
+from src.rag.translator import QueryTranslator
+from src.rag.retriever import KGRetriever
+from src.rag.generator import AnswerGenerator
+from src.rag.query_preprocessor import QueryPreprocessor, SmartResponseEnhancer
 
 
 class RAGPipeline:
@@ -67,23 +67,25 @@ class RAGPipeline:
 
                 if deck:
                     yield ("info", f"Detected deck analysis request for: {', '.join(deck)}")
-                    yield ("generation", "Analyzing deck...")
 
+                    yield ("generation", "Running rule-based analysis...")
                     analysis = self.preprocessor.deck_analyzer.analyze_deck(deck)
-                    formatted_analysis = self.preprocessor.deck_analyzer.format_analysis(analysis)
 
-                    words = formatted_analysis.split()
-                    for i, word in enumerate(words):
-                        if i == 0:
-                            yield ("generation", word)
-                        else:
-                            yield ("generation", " " + word)
-                        time.sleep(0.01)
+                    yield ("generation", "\nQuerying knowledge graph for synergies...")
+                    synergies = self.preprocessor.deck_analyzer.get_deck_synergies(deck)
+
+                    yield ("generation", "\nQuerying knowledge graph for counters...")
+                    counters = self.preprocessor.deck_analyzer.get_deck_counters(deck)
+
+                    yield ("generation", "\nGenerating final analysis...\n\n")
+                    formatted_analysis = self.preprocessor.deck_analyzer.format_analysis(analysis, synergies, counters)
+
+                    yield ("generation", formatted_analysis)
 
                     yield ("done", {
                         "sources": deck,
                         "confidence": 1.0,
-                        "cypher": "DECK_ANALYSIS"
+                        "cypher": "DECK_ANALYSIS_HYBRID"
                     })
                     return
                 else:
@@ -127,8 +129,6 @@ class RAGPipeline:
 
                     query_result.data = alternative['data']
                     query_result.cypher_query = alternative.get('query', cypher_query)
-
-            yield ("generation", "Generating answer...")
 
             try:
                 response = self.generator.generate(question, query_result)

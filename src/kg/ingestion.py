@@ -20,17 +20,17 @@ class KnowledgeGraphIngestion:
         self.driver = GraphDatabase.driver(self.uri, auth=(self.user, self.password))
 
     def close(self):
-        """Close database connection"""
+        
         self.driver.close()
 
     def clear_database(self):
-        """Clear all nodes and relationships - USE WITH CAUTION"""
+        
         with self.driver.session() as session:
             session.run("MATCH (n) DETACH DELETE n")
             print("Database cleared")
 
     def create_constraints(self):
-        """Create uniqueness constraints"""
+        
         constraints = [
             "CREATE CONSTRAINT card_name IF NOT EXISTS FOR (c:Card) REQUIRE c.name IS UNIQUE",
             "CREATE CONSTRAINT rarity_name IF NOT EXISTS FOR (r:Rarity) REQUIRE r.name IS UNIQUE",
@@ -49,7 +49,7 @@ class KnowledgeGraphIngestion:
                     print(f"Constraint may already exist: {e}")
 
     def ingest_card(self, card: Card) -> str:
-        """Ingest a single card with all its properties"""
+        
         cypher = """
         MERGE (c:Card {name: $name})
         SET c.elixir = $elixir,
@@ -63,19 +63,15 @@ class KnowledgeGraphIngestion:
             c.description = $description,
             c.level11_stats = $level11_stats
 
-        // Create Rarity node and relationship
         MERGE (r:Rarity {name: $rarity})
         MERGE (c)-[:HAS_RARITY]->(r)
 
-        // Create Arena node and relationship
         MERGE (a:Arena {name: $arena})
         MERGE (c)-[:UNLOCKS_IN]->(a)
 
-        // Create Type node and relationship
         MERGE (ty:Type {name: $type})
         MERGE (c)-[:HAS_TYPE]->(ty)
 
-        // Create Target relationships
         WITH c, $targets AS target_list
         UNWIND target_list AS target_name
             MERGE (t:Target {name: target_name})
@@ -104,7 +100,7 @@ class KnowledgeGraphIngestion:
             return result.single()["inserted"]
 
     def ingest_counter_relationship(self, from_card: str, to_card: str, properties: Dict):
-        """Create a COUNTERS relationship"""
+        
         cypher = """
         MATCH (from:Card {name: $from_card})
         MATCH (to:Card {name: $to_card})
@@ -130,7 +126,7 @@ class KnowledgeGraphIngestion:
                 return False
 
     def ingest_synergy_relationship(self, card1: str, card2: str, properties: Dict):
-        """Create a SYNERGIZES_WITH relationship"""
+        
         cypher = """
         MATCH (c1:Card {name: $card1})
         MATCH (c2:Card {name: $card2})
@@ -156,7 +152,7 @@ class KnowledgeGraphIngestion:
                 return False
 
     def ingest_archetype_relationship(self, card_name: str, archetype_name: str, role: str):
-        """Create FITS_ARCHETYPE relationship"""
+        
         cypher = """
         MATCH (c:Card {name: $card_name})
         MERGE (a:Archetype {name: $archetype_name})
@@ -180,14 +176,12 @@ class KnowledgeGraphIngestion:
                 return False
 
     def ingest_all_from_json(self, json_path: str):
-        """
-        Ingest all cards from JSON file and create relationships
-        """
+        
         print(f"Loading dataset from {json_path}...")
         with open(json_path, "r", encoding="utf-8") as f:
             data = json.load(f)
 
-        # Phase 1: Ingest all cards
+        
         print("\n=== Phase 1: Ingesting Cards ===")
         all_cards = []
         for arena_key, arena_data in data.items():
@@ -203,40 +197,43 @@ class KnowledgeGraphIngestion:
                 except Exception as e:
                     print(f"  [ERR] Error ingesting {card_data.get('name', 'unknown')}: {e}")
 
-        # Phase 2: Extract and ingest relationships
+        
         print("\n=== Phase 2: Creating Relationships ===")
 
-        # Counter relationships
+        
         print("\n--- Counter Relationships ---")
         counter_rels = RelationshipExtractor.extract_counter_relationships(all_cards)
-        for from_card, to_card, props in counter_rels[:50]:  # Limit to avoid too many
+        for from_card, to_card, props in counter_rels[:50]:  
             if self.ingest_counter_relationship(from_card, to_card, props):
                 print(f"  [OK] {from_card} COUNTERS {to_card} ({props['effectiveness']})")
 
-        # Known counters from meta knowledge
+        
         for counter, target, eff, reason in KNOWN_COUNTERS:
             props = {"effectiveness": eff, "reason": reason}
             if self.ingest_counter_relationship(counter, target, props):
                 print(f"  [OK] {counter} COUNTERS {target} (known)")
 
-        # Synergy relationships
+        
         print("\n--- Synergy Relationships ---")
         synergy_rels = RelationshipExtractor.extract_synergy_relationships(all_cards)
-        for card1, card2, props in synergy_rels[:50]:  # Limit to avoid too many
+        for card1, card2, props in synergy_rels[:50]:  
             if self.ingest_synergy_relationship(card1, card2, props):
                 print(f"  [OK] {card1} SYNERGIZES_WITH {card2} ({props['synergy_type']})")
 
-        # Known synergies from meta decks
+        
         for c1, c2, syn_type, strength in KNOWN_SYNERGIES:
             props = {"synergy_type": syn_type, "strength": strength}
             if self.ingest_synergy_relationship(c1, c2, props):
                 print(f"  [OK] {c1} SYNERGIZES_WITH {c2} (known)")
+            
+            if self.ingest_synergy_relationship(c2, c1, props):
+                print(f"  [OK] {c2} SYNERGIZES_WITH {c1} (known)")
 
-        # Archetype assignments
+        
         print("\n--- Archetype Assignments ---")
         archetype_assignments = RelationshipExtractor.assign_archetypes(all_cards)
         for archetype_name, card_roles in archetype_assignments.items():
-            for card_name, role in card_roles[:10]:  # Limit per archetype
+            for card_name, role in card_roles[:10]:  
                 if self.ingest_archetype_relationship(card_name, archetype_name, role):
                     print(f"  [OK] {card_name} FITS_ARCHETYPE {archetype_name} as {role}")
 
@@ -244,7 +241,7 @@ class KnowledgeGraphIngestion:
         print(f"Total cards ingested: {len(all_cards)}")
 
     def _convert_json_to_card(self, card_data: Dict, arena_name: str) -> Card:
-        """Convert JSON card data to Card domain model"""
+        
         hp, dmg, dps = self._extract_combat_stats(card_data)
 
         targets = self._extract_targets(card_data)
@@ -286,7 +283,7 @@ class KnowledgeGraphIngestion:
 
     @staticmethod
     def _extract_combat_stats(card_data: Dict) -> tuple[Optional[int], Optional[int], Optional[int]]:
-        """Extract HP, damage, DPS from card stats"""
+        
         stats = card_data.get("level_11_stats", {})
         name = card_data.get("name", "")
 
@@ -312,11 +309,11 @@ class KnowledgeGraphIngestion:
                     return v
             return None
 
-        # HP
+        
         hp_val = find_stat(stats, "Hitpoints") or find_stat(stats, f"{name} Hitpoints")
         hp = to_number(hp_val)
 
-        # Damage
+        
         dmg_val = (
             find_stat(stats, "Damage") or
             find_stat(stats, "Area Damage") or
@@ -324,7 +321,7 @@ class KnowledgeGraphIngestion:
         )
         dmg = to_number(dmg_val)
 
-        # DPS
+        
         dps_val = find_stat(stats, "Damage per second") or find_stat(stats, f"{name} Damage per second")
         dps = to_number(dps_val)
 
@@ -332,7 +329,7 @@ class KnowledgeGraphIngestion:
 
     @staticmethod
     def _extract_targets(card_data: Dict) -> List[TargetType]:
-        """Extract target types from card data"""
+        
         attrs = card_data.get("unit_attributes", {})
         target_str = attrs.get("Targets") or attrs.get("Target") or ""
 
@@ -353,21 +350,17 @@ class KnowledgeGraphIngestion:
 
 
 def main():
-    """Main ingestion script"""
+    
     ingestion = KnowledgeGraphIngestion()
 
-    # Create constraints first
+    
     ingestion.create_constraints()
 
-    # Optionally clear database (uncomment if needed)
-    # ingestion.clear_database()
-
-    # Ingest from JSON
     json_path = "data/raw/fandom_arenas_cards.json"
     ingestion.ingest_all_from_json(json_path)
 
     ingestion.close()
-    print("\n✓ Ingestion completed successfully!")
+    print("\nIngestion completed successfully!")
 
 
 if __name__ == "__main__":

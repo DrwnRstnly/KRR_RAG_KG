@@ -6,7 +6,7 @@ from src.kg.schema import KGSchema
 
 
 class QueryTranslator:
-    """Translates natural language questions to Cypher queries"""
+    
 
     def __init__(self, llm):
         self.llm = llm
@@ -14,7 +14,7 @@ class QueryTranslator:
         self.prompt_template = self._build_prompt_template()
 
     def _build_prompt_template(self) -> PromptTemplate:
-        """Build comprehensive prompt template"""
+        
 
         raw_schema_desc = self.schema.get_schema_description()
         schema_desc = raw_schema_desc.replace("{", "{{").replace("}", "}}")
@@ -57,14 +57,14 @@ Cypher:"""
         return PromptTemplate.from_template(template)
 
     def translate(self, question: str) -> str:
-        """Translate natural language question to Cypher query"""
+        
         prompt = self.prompt_template.format(question=question)
         result = self.llm.invoke(prompt)
         clean_result = self._clean_cypher_output(result)
         return clean_result
 
     def _clean_cypher_output(self, raw_output: str) -> str:
-        """Clean LLM output to extract pure Cypher query"""
+        
         if hasattr(raw_output, 'content'):
             text = raw_output.content
         else:
@@ -87,11 +87,11 @@ Cypher:"""
         return " ".join(cypher_lines)
 
     def create_runnable(self):
-        """Create a LangChain runnable"""
+        
         return RunnableLambda(self.translate)
 
 
-# Factory function for easy instantiation
+
 def create_translator(llm) -> QueryTranslator:
-    """Create a query translator instance"""
+    
     return QueryTranslator(llm)

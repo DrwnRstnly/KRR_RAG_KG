@@ -1,6 +1,4 @@
-"""
-Rich CLI display utilities with colored output and formatting
-"""
+
 
 from rich.console import Console
 from rich.panel import Panel
@@ -16,24 +14,24 @@ console = Console()
 
 
 class CLIDisplay:
-    """Handles formatted CLI output"""
+    
 
     @staticmethod
     def print_header(title: str):
-        """Print a header banner"""
+        
         console.print()
         console.print(Panel(f"[bold cyan]{title}[/bold cyan]", style="bold blue"))
         console.print()
 
     @staticmethod
     def print_question(question: str):
-        """Print the user's question"""
+        
         console.print(f"[bold yellow]Question:[/bold yellow] {question}")
         console.print()
 
     @staticmethod
     def print_cypher(cypher: str):
-        """Print Cypher query with syntax highlighting"""
+        
         console.print("[dim]Generated Cypher Query:[/dim]")
         syntax = Syntax(cypher, "cypher", theme="monokai", line_numbers=False)
         console.print(syntax)
@@ -41,20 +39,20 @@ class CLIDisplay:
 
     @staticmethod
     def print_answer(answer: str, sources: List[str] = None, confidence: float = None):
-        """Print the answer with formatting"""
-        # Answer
+        
+        
         console.print("[bold green]Answer:[/bold green]")
         console.print(f"  {answer}")
         console.print()
 
-        # Sources
+        
         if sources:
             console.print("[dim]Sources:[/dim]")
             for source in sources:
                 console.print(f"  • {source}")
             console.print()
 
-        # Confidence
+        
         if confidence is not None:
             confidence_color = "green" if confidence >= 0.8 else "yellow" if confidence >= 0.6 else "red"
             console.print(f"[dim]Confidence:[/dim] [{confidence_color}]{confidence:.0%}[/{confidence_color}]")
@@ -62,23 +60,23 @@ class CLIDisplay:
 
     @staticmethod
     def print_error(error: str):
-        """Print error message"""
+        
         console.print(f"[bold red]Error:[/bold red] {error}")
         console.print()
 
     @staticmethod
     def print_info(message: str):
-        """Print info message"""
+        
         console.print(f"[dim]{message}[/dim]")
 
     @staticmethod
     def print_success(message: str):
-        """Print success message"""
+        
         console.print(f"[bold green][OK][/bold green] {message}")
 
     @staticmethod
     def print_stats(stats: Dict[str, Any]):
-        """Print knowledge graph statistics"""
+        
         table = Table(title="Knowledge Graph Statistics", show_header=True)
         table.add_column("Metric", style="cyan")
         table.add_column("Count", style="magenta", justify="right")
@@ -92,7 +90,7 @@ class CLIDisplay:
 
     @staticmethod
     def print_help():
-        """Print help menu"""
+        
         help_text = """
 # Clash Royale Knowledge Graph RAG System
 
@@ -117,11 +115,11 @@ class CLIDisplay:
 
 ## Features:
 
-- 🎯 Natural language to Cypher query translation
-- 🔍 Retrieval from Neo4j knowledge graph
-- 🤖 AI-generated answers with source grounding
-- ⚡ Streaming output for better UX
-- 📊 Rich formatted display
+- Natural language to Cypher query translation
+- Retrieval from Neo4j knowledge graph
+- AI-generated answers with source grounding
+- Streaming output for better UX
+- Rich formatted display
         """
         md = Markdown(help_text)
         console.print(md)
@@ -129,7 +127,7 @@ class CLIDisplay:
 
     @staticmethod
     def print_examples():
-        """Print example questions"""
+        
         table = Table(title="Example Questions", show_header=True)
         table.add_column("Category", style="cyan")
         table.add_column("Question", style="white")
@@ -154,7 +152,7 @@ class CLIDisplay:
 
     @staticmethod
     def create_progress():
-        """Create a progress indicator"""
+        
         return Progress(
             SpinnerColumn(),
             TextColumn("[progress.description]{task.description}"),
@@ -163,7 +161,7 @@ class CLIDisplay:
 
     @staticmethod
     def stream_text(text_generator):
-        """Stream text output with Live display"""
+        
         with Live("", console=console, refresh_per_second=20) as live:
             accumulated_text = ""
             for chunk in text_generator:
@@ -172,7 +170,7 @@ class CLIDisplay:
 
     @staticmethod
     def clear():
-        """Clear the console"""
+        
         console.clear()
 
 

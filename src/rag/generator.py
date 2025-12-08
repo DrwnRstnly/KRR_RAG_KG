@@ -1,12 +1,4 @@
-"""
-Enhanced Answer Generator with Source Grounding
 
-Improvements:
-- Source citations and grounding
-- Better formatting of stats
-- Confidence scoring
-- Structured output
-"""
 
 import json
 from typing import List, Dict, Any
@@ -17,30 +9,34 @@ from src.domain.models import RAGResponse, QueryResult
 
 
 class AnswerGenerator:
-    """Generates natural language answers from retrieved graph data"""
+    
 
     def __init__(self, llm):
         self.llm = llm
         self.prompt_template = self._build_prompt_template()
 
     def _build_prompt_template(self) -> PromptTemplate:
-        """Build answer generation prompt"""
+        
         template = """You are a helpful Clash Royale assistant providing accurate information from a knowledge graph.
 
 ## Instructions:
 1. Use ONLY the information provided in the Graph Data below
 2. If the data is empty, say "I don't have information about that"
-3. **IMPORTANT**: If the data contains alternative/suggested cards (not exact matches), acknowledge this and present the suggestions helpfully
-   - Example: "While there's no specific synergy data for Giant, here are some cards from the same archetype that work well together: ..."
-   - Be helpful and provide context for why these alternatives are relevant
-4. Format card stats clearly (HP, Damage, DPS, Elixir cost, etc.)
-5. Be concise but complete
-6. If the data includes relationships (counters, synergies), mention them naturally
+3. If the data has 'synergy' or 'synergy_type' fields, explain WHY each card works well based on that synergy type and strength
+4. If the data has 'counter' relationships, explain WHY it's a good counter
+5. Format card stats clearly (HP, Damage, DPS, Elixir cost, etc.)
+6. Be concise but complete
 7. Cite specific numbers and facts from the data
-8. **IMPORTANT for Champions**: If a card has rarity='champion', check the 'stats' or 'level11_stats' field for ability information
+8. For Champions: If a card has rarity='champion', check the 'stats' or 'level11_stats' field for ability information
    - Look for stats with pattern "stat_name (with Ability Name)": value
    - Extract and explain the ability name and its effect on stats
-   - Example: If you see "Damage per second (with Cloaking Cape)": "525", explain that the champion has a "Cloaking Cape" ability that increases DPS to 525
+
+## FORMATTING RULES:
+- Do NOT use markdown formatting (no **, ##, -, etc.)
+- Use plain text only
+- When listing multiple cards, use this format with commas and parenthetical explanations:
+  "Cards that work well with Giant: Dark Prince (strong support tank), Prince (complements Giant's slow movement), Mega Minion (provides air defense)"
+- Separate into readable sentences
 
 ## User Question:
 {question}
@@ -49,22 +45,12 @@ class AnswerGenerator:
 {data}
 
 ## Your Answer:
-Provide a clear, concise answer based strictly on the graph data above. If the data shows alternative suggestions, present them helpfully.
-Do NOT use markdown formatting (no **, ##, -, etc.). Use plain text only."""
+Provide a clear, concise answer based strictly on the graph data above. When listing cards, use commas to separate them and include explanations in parentheses for WHY they work well based on the synergy_type or strength fields in the data."""
 
         return PromptTemplate.from_template(template)
 
     def generate(self, question: str, query_result: QueryResult) -> RAGResponse:
-        """
-        Generate answer from question and retrieved data
-
-        Args:
-            question: Original user question
-            query_result: QueryResult from retriever
-
-        Returns:
-            RAGResponse with answer, sources, and metadata
-        """
+        
         
         if query_result.error:
             return RAGResponse(
@@ -123,7 +109,7 @@ Do NOT use markdown formatting (no **, ##, -, etc.). Use plain text only."""
         )
 
     def _format_data_for_prompt(self, data: List[Dict[str, Any]]) -> str:
-        """Format retrieved data for LLM prompt"""
+        
         if not data:
             return "No data retrieved."
 
@@ -131,7 +117,7 @@ Do NOT use markdown formatting (no **, ##, -, etc.). Use plain text only."""
         return formatted
 
     def _clean_answer(self, raw_answer: str) -> str:
-        """Clean up LLM-generated answer"""
+        
         answer = raw_answer.strip()
 
         prefixes_to_remove = [
@@ -147,7 +133,7 @@ Do NOT use markdown formatting (no **, ##, -, etc.). Use plain text only."""
         return answer
 
     def _extract_sources(self, data: List[Dict[str, Any]]) -> List[str]:
-        """Extract source cards/entities from retrieved data"""
+        
         sources = set()
 
         for record in data:
@@ -160,14 +146,7 @@ Do NOT use markdown formatting (no **, ##, -, etc.). Use plain text only."""
         return sorted(list(sources))
 
     def _estimate_confidence(self, data: List[Dict[str, Any]], answer: str) -> float:
-        """
-        Estimate confidence score based on:
-        - Amount of data retrieved
-        - Completeness of data
-        - Answer length
-
-        Returns: Confidence score between 0.0 and 1.0
-        """
+        
         if not data:
             return 0.0
 
@@ -182,17 +161,17 @@ Do NOT use markdown formatting (no **, ##, -, etc.). Use plain text only."""
         else:
             base_confidence = 0.5
 
-        # Adjust based on answer length (too short might mean incomplete)
+        
         if len(answer) < 20:
             base_confidence *= 0.8
         elif len(answer) > 100:
             base_confidence *= 1.1
 
-        # Cap at 1.0
+        
         return min(base_confidence, 1.0)
 
     def create_runnable(self):
-        """Create a LangChain runnable"""
+        
         def generate_fn(inputs: dict):
             question = inputs.get("question", "")
             query_result = inputs.get("query_result")
@@ -208,5 +187,5 @@ Do NOT use markdown formatting (no **, ##, -, etc.). Use plain text only."""
 
 
 def create_generator(llm) -> AnswerGenerator:
-    """Create an answer generator instance"""
+    
     return AnswerGenerator(llm)

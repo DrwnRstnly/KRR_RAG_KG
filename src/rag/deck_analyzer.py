@@ -1,7 +1,4 @@
-"""
-Deck Analyzer - Validates Clash Royale decks and provides warnings
-Based on the Prolog rules logic
-"""
+
 
 from typing import List, Dict, Tuple, Optional
 from dataclasses import dataclass
@@ -17,18 +14,18 @@ class WarningLevel(Enum):
 class DeckWarning:
     level: WarningLevel
     message: str
-    category: str  # 'general' or archetype name
+    category: str  
 
 
 class DeckAnalyzer:
-    """Analyzes Clash Royale decks for composition issues"""
+    
 
     def __init__(self, retriever):
         self.retriever = retriever
         self._card_cache = {}
 
     def get_card_data(self, card_name: str) -> Optional[Dict]:
-        """Get card data from Neo4j (with caching)"""
+        
         if card_name in self._card_cache:
             return self._card_cache[card_name]
 
@@ -49,32 +46,32 @@ class DeckAnalyzer:
         return None
 
     def is_wincon_card(self, card_name: str, card_data: Dict) -> bool:
-        """Check if card is a win condition"""
+        
         targets = card_data.get('targets', [])
         if 'buildings' in targets:
             return True
 
-        # Special win conditions
+        
         wincon_cards = ['X-Bow', 'Mortar', 'Goblin Drill', 'Rocket', 'Graveyard',
                         'Goblin Barrel', 'Miner', 'Royal Hogs', 'Hog Rider',
                         'Balloon', 'Royal Giant', 'Ram Rider']
         return card_name in wincon_cards
 
     def can_hit_air(self, card_data: Dict) -> bool:
-        """Check if card can hit air units"""
+        
         targets = card_data.get('targets', [])
         return 'air' in targets
 
     def is_spell(self, card_data: Dict) -> bool:
-        """Check if card is a spell"""
+        
         return card_data.get('type') == 'spell'
 
     def is_building(self, card_data: Dict) -> bool:
-        """Check if card is a building"""
+        
         return card_data.get('type') == 'building'
 
     def is_anti_tank(self, card_name: str, card_data: Dict) -> bool:
-        """Check if card is good against tanks"""
+        
         anti_tank_cards = ['Mighty Miner', 'Sparky', 'P.E.K.K.A.', 'Inferno Dragon',
                            'Prince', 'Hunter', 'Three Musketeers', 'Inferno Tower',
                            'Mini P.E.K.K.A.', 'Elite Barbarians', 'Skeleton Army',
@@ -82,44 +79,44 @@ class DeckAnalyzer:
         return card_name in anti_tank_cards
 
     def is_tank_or_mini_tank(self, card_data: Dict) -> bool:
-        """Check if card is a tank (HP > 1000)"""
+        
         hp = card_data.get('hp', 0)
         return hp and hp > 1000
 
     def is_heavy_tank(self, card_data: Dict) -> bool:
-        """Check if card is a heavy tank (HP > 3000)"""
+        
         hp = card_data.get('hp', 0)
         return hp and hp > 3000
 
     def is_reset_card(self, card_name: str) -> bool:
-        """Check if card can reset (stun/freeze)"""
+        
         reset_cards = ['Electro Spirit', 'Electro Wizard', 'Electro Dragon', 'Zap',
                        'Ice Spirit', 'Lightning', 'Freeze', 'Electro Giant']
         return card_name in reset_cards
 
     def is_small_spell(self, card_data: Dict) -> bool:
-        """Check if spell costs <= 3 elixir"""
+        
         return self.is_spell(card_data) and card_data.get('elixir', 99) <= 3
 
     def is_big_spell(self, card_data: Dict) -> bool:
-        """Check if spell costs > 3 elixir"""
+        
         return self.is_spell(card_data) and card_data.get('elixir', 0) > 3
 
     def is_building_killer_spell(self, card_name: str, card_data: Dict) -> bool:
-        """Check if spell can kill buildings"""
+        
         heavy_spells = ['Fireball', 'Poison', 'Lightning', 'Rocket']
         return card_name in heavy_spells or card_name == 'Earthquake'
 
     def is_cycle_card(self, card_data: Dict) -> bool:
-        """Check if card costs <= 2 elixir"""
+        
         return card_data.get('elixir', 99) <= 2
 
     def is_siege_building(self, card_name: str) -> bool:
-        """Check if card is siege building"""
+        
         return card_name in ['X-Bow', 'Mortar']
 
     def has_splash(self, card_name: str) -> bool:
-        """Check if card has splash damage"""
+        
         splash_cards = ['Wizard', 'Baby Dragon', 'Valkyrie', 'Bomber', 'Bowler',
                         'Executioner', 'Mega Knight', 'Dark Prince', 'Fire Spirit',
                         'Fireball', 'Poison', 'Lightning', 'Arrows', 'Rocket',
@@ -127,14 +124,14 @@ class DeckAnalyzer:
         return card_name in splash_cards
 
     def calculate_avg_elixir(self, deck_data: List[Dict]) -> float:
-        """Calculate average elixir cost of deck"""
+        
         if len(deck_data) != 8:
             return 0.0
         total = sum(card.get('elixir', 0) for card in deck_data)
         return total / 8.0
 
     def classify_archetype(self, deck: List[str], deck_data: List[Dict]) -> str:
-        """Classify deck archetype"""
+        
         if any(self.is_siege_building(card) for card in deck):
             return 'siege'
 
@@ -154,15 +151,7 @@ class DeckAnalyzer:
         return 'No Archetype'
 
     def analyze_deck(self, deck: List[str]) -> Dict:
-        """
-        Analyze a deck and return warnings and info
-
-        Args:
-            deck: List of 8 card names
-
-        Returns:
-            Dict with 'archetype', 'avg_elixir', 'general_warnings', 'archetype_warnings'
-        """
+        
         if len(deck) != 8:
             return {
                 'error': 'Deck must contain exactly 8 cards',
@@ -191,10 +180,10 @@ class DeckAnalyzer:
         }
 
     def _check_general_warnings(self, deck: List[str], deck_data: List[Dict]) -> List[DeckWarning]:
-        """Check for general deck composition warnings"""
+        
         warnings = []
 
-        # No win condition
+        
         if not any(self.is_wincon_card(deck[i], deck_data[i]) for i in range(len(deck))):
             warnings.append(DeckWarning(
                 WarningLevel.STRONG,
@@ -202,7 +191,7 @@ class DeckAnalyzer:
                 'general'
             ))
 
-        # No air defense
+        
         if not any(self.can_hit_air(card_data) for card_data in deck_data):
             warnings.append(DeckWarning(
                 WarningLevel.STRONG,
@@ -210,7 +199,7 @@ class DeckAnalyzer:
                 'general'
             ))
 
-        # No spell
+        
         if not any(self.is_spell(card_data) for card_data in deck_data):
             warnings.append(DeckWarning(
                 WarningLevel.STRONG,
@@ -218,7 +207,7 @@ class DeckAnalyzer:
                 'general'
             ))
 
-        # No ground units
+        
         if not any(card_data.get('transport') == 'ground' for card_data in deck_data):
             warnings.append(DeckWarning(
                 WarningLevel.STRONG,
@@ -226,7 +215,7 @@ class DeckAnalyzer:
                 'general'
             ))
 
-        # Too many win conditions
+        
         wincon_count = sum(1 for i in range(len(deck)) if self.is_wincon_card(deck[i], deck_data[i]))
         if wincon_count > 2:
             warnings.append(DeckWarning(
@@ -235,7 +224,7 @@ class DeckAnalyzer:
                 'general'
             ))
 
-        # Too many spells
+        
         spell_count = sum(1 for card_data in deck_data if self.is_spell(card_data))
         if spell_count > 4:
             warnings.append(DeckWarning(
@@ -244,7 +233,7 @@ class DeckAnalyzer:
                 'general'
             ))
 
-        # Too expensive
+        
         avg_elixir = self.calculate_avg_elixir(deck_data)
         if avg_elixir >= 4.8:
             warnings.append(DeckWarning(
@@ -253,7 +242,7 @@ class DeckAnalyzer:
                 'general'
             ))
 
-        # No anti-tank
+        
         if not any(self.is_anti_tank(deck[i], deck_data[i]) for i in range(len(deck))):
             warnings.append(DeckWarning(
                 WarningLevel.STRONG,
@@ -261,7 +250,7 @@ class DeckAnalyzer:
                 'general'
             ))
 
-        # Weak warnings
+        
         if not any(self.is_small_spell(card_data) for card_data in deck_data):
             warnings.append(DeckWarning(
                 WarningLevel.WEAK,
@@ -329,7 +318,7 @@ class DeckAnalyzer:
         return warnings
 
     def _check_archetype_warnings(self, deck: List[str], deck_data: List[Dict], archetype: str) -> List[DeckWarning]:
-        """Check for archetype-specific warnings"""
+        
         if archetype == 'siege':
             return self._check_siege_warnings(deck, deck_data)
         elif archetype == 'cycle':
@@ -341,7 +330,7 @@ class DeckAnalyzer:
         return []
 
     def _check_siege_warnings(self, deck: List[str], deck_data: List[Dict]) -> List[DeckWarning]:
-        """Check siege-specific warnings"""
+        
         warnings = []
 
         if not any(self.is_building_killer_spell(deck[i], deck_data[i]) for i in range(len(deck))):
@@ -385,7 +374,7 @@ class DeckAnalyzer:
         return warnings
 
     def _check_cycle_warnings(self, deck: List[str], deck_data: List[Dict]) -> List[DeckWarning]:
-        """Check cycle-specific warnings"""
+        
         warnings = []
 
         if not any(self.is_building(card_data) for card_data in deck_data):
@@ -414,7 +403,7 @@ class DeckAnalyzer:
         return warnings
 
     def _check_beatdown_warnings(self, deck: List[str], deck_data: List[Dict]) -> List[DeckWarning]:
-        """Check beatdown-specific warnings"""
+        
         warnings = []
 
         avg_elixir = self.calculate_avg_elixir(deck_data)
@@ -444,7 +433,7 @@ class DeckAnalyzer:
         return warnings
 
     def _check_bridge_spam_warnings(self, deck: List[str], deck_data: List[Dict]) -> List[DeckWarning]:
-        """Check bridge spam-specific warnings"""
+        
         warnings = []
 
         avg_elixir = self.calculate_avg_elixir(deck_data)
@@ -473,29 +462,91 @@ class DeckAnalyzer:
 
         return warnings
 
-    def format_analysis(self, analysis: Dict) -> str:
-        """Format analysis results as a readable string"""
+    def get_deck_synergies(self, deck: List[str]) -> Dict:
+
+        synergies = {}
+        for card in deck:
+            query = f"""
+            MATCH (c1:Card {{name: '{card}'}})-[s:SYNERGIZES_WITH]->(c2:Card)
+            WHERE c2.name IN {deck}
+            RETURN c2.name AS card, s.synergy_type AS synergy_type, s.strength AS strength
+            """
+            result = self.retriever.retrieve(query)
+            if result.data:
+                synergies[card] = result.data
+        return synergies
+
+    def get_deck_counters(self, deck: List[str]) -> Dict:
+
+        all_counters = []
+        for card in deck:
+            query = f"""
+            MATCH (c1:Card {{name: '{card}'}})-[ct:COUNTERS]->(c2:Card)
+            RETURN c1.name AS from_card, c2.name AS counters, ct.reason AS reason
+            LIMIT 3
+            """
+            result = self.retriever.retrieve(query)
+            if result.data:
+                all_counters.extend(result.data)
+        return all_counters
+
+    def format_analysis(self, analysis: Dict, synergies: Dict = None, counters: List = None) -> str:
+
         if 'error' in analysis:
             return f"Error: {analysis['error']}"
 
-        result = f"**Deck Analysis**\n\n"
+        result = "Deck Analysis\n"
+        result += "=" * 50 + "\n\n"
         result += f"Cards: {', '.join(analysis['deck'])}\n"
         result += f"Archetype: {analysis['archetype']}\n"
         result += f"Average Elixir: {analysis['avg_elixir']}\n\n"
 
-        if analysis['general_warnings']:
-            result += "**General Warnings:**\n"
-            for warning in analysis['general_warnings']:
-                result += f"- [{warning.level.value}] {warning.message}\n"
+        if synergies:
+            result += "Card Synergies:\n"
+            result += "-" * 50 + "\n"
+            synergy_found = False
+            for card, synergy_list in synergies.items():
+                if synergy_list:
+                    synergy_found = True
+                    result += f"  {card}:\n"
+                    for syn in synergy_list:
+                        result += f"    - {syn['card']} ({syn['synergy_type']}, strength: {syn['strength']})\n"
+            if not synergy_found:
+                result += "  No synergies found in knowledge graph\n"
             result += "\n"
-        else:
-            result += "**General Warnings:** None\n\n"
 
-        if analysis['archetype_warnings']:
-            result += f"**{analysis['archetype'].title()} Archetype Warnings:**\n"
-            for warning in analysis['archetype_warnings']:
-                result += f"- [{warning.level.value}] {warning.message}\n"
+        if counters:
+            result += "What Your Deck Counters:\n"
+            result += "-" * 50 + "\n"
+            if counters:
+                shown = set()
+                for counter in counters[:5]:
+                    key = (counter['from_card'], counter['counters'])
+                    if key not in shown:
+                        result += f"  {counter['from_card']} counters {counter['counters']}"
+                        if counter.get('reason'):
+                            result += f" ({counter['reason']})"
+                        result += "\n"
+                        shown.add(key)
+            else:
+                result += "  No counter data found in knowledge graph\n"
+            result += "\n"
+
+        result += "General Warnings:\n"
+        result += "-" * 50 + "\n"
+        if analysis['general_warnings']:
+            for warning in analysis['general_warnings']:
+                result += f"  [{warning.level.value}] {warning.message}\n"
         else:
-            result += f"**{analysis['archetype'].title()} Archetype Warnings:** None\n"
+            result += "  None\n"
+        result += "\n"
+
+        result += f"{analysis['archetype'].title()} Archetype Warnings:\n"
+        result += "-" * 50 + "\n"
+        if analysis['archetype_warnings']:
+            for warning in analysis['archetype_warnings']:
+                result += f"  [{warning.level.value}] {warning.message}\n"
+        else:
+            result += "  None\n"
 
         return result

@@ -3,39 +3,14 @@ from dataclasses import asdict
 import time
 
 from src.domain.models import RAGResponse
-from src.rag_v2.pipeline import RAGPipeline
+from src.rag.pipeline import RAGPipeline
 class RAGService:
 
     def __init__(self, llm, verbose: bool = False):
         self.pipeline = RAGPipeline(llm, verbose=verbose)
 
     def query(self, request: Dict[str, Any]) -> Dict[str, Any]:
-        """
-        Process a RAG query
-
-        Request format:
-        {
-            "question": str,
-            "options": {
-                "verbose": bool (optional),
-                "include_metadata": bool (optional)
-            }
-        }
-
-        Response format:
-        {
-            "success": bool,
-            "data": {
-                "answer": str,
-                "sources": List[str],
-                "confidence": float,
-                "cypher_query": str (if include_metadata),
-                "retrieved_data": List[Dict] (if include_metadata)
-            },
-            "error": str (if success=False),
-            "timestamp": float
-        }
-        """
+        
         timestamp = time.time()
 
         try:
@@ -93,19 +68,7 @@ class RAGService:
             }
 
     def get_stats(self) -> Dict[str, Any]:
-        """
-        Get knowledge graph statistics
-
-        Response format:
-        {
-            "success": bool,
-            "data": {
-                "cards": int,
-                "rarities": int,
-                ...
-            }
-        }
-        """
+        
         try:
             stats = self.pipeline.get_stats()
             return {
@@ -119,18 +82,7 @@ class RAGService:
             }
 
     def health_check(self) -> Dict[str, Any]:
-        """
-        Check service health
-
-        Response format:
-        {
-            "healthy": bool,
-            "components": {
-                "neo4j": bool,
-                "llm": bool
-            }
-        }
-        """
+        
         neo4j_healthy = False
         llm_healthy = False
 
@@ -154,10 +106,10 @@ class RAGService:
         }
 
     def close(self):
-        """Cleanup resources"""
+        
         self.pipeline.close()
 
 
 def create_rag_service(llm, verbose: bool = False) -> RAGService:
-    """Create a RAG service instance"""
+    
     return RAGService(llm, verbose=verbose)

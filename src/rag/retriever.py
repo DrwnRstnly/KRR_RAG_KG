@@ -1,12 +1,4 @@
-"""
-Enhanced Knowledge Graph Retriever
 
-Improvements:
-- Better error handling
-- Query execution time tracking
-- Result enrichment (fetch related data)
-- Relevance scoring
-"""
 
 import time
 from typing import List, Dict, Any, Optional
@@ -20,7 +12,7 @@ load_dotenv()
 
 
 class KGRetriever:
-    """Retrieves data from Neo4j Knowledge Graph"""
+    
 
     def __init__(self, uri: str = None, user: str = None, password: str = None):
         self.uri = uri or os.getenv("NEO4J_URI", "bolt://localhost:7687")
@@ -29,19 +21,11 @@ class KGRetriever:
         self.driver = GraphDatabase.driver(self.uri, auth=(self.user, self.password))
 
     def close(self):
-        """Close database connection"""
+        
         self.driver.close()
 
     def retrieve(self, cypher_query: str) -> QueryResult:
-        """
-        Execute Cypher query and return results with metadata
-
-        Args:
-            cypher_query: Cypher query string
-
-        Returns:
-            QueryResult with data, query, execution time, and potential errors
-        """
+        
         start_time = time.time()
 
         try:
@@ -69,21 +53,7 @@ class KGRetriever:
             )
 
     def retrieve_with_context(self, cypher_query: str, card_name: Optional[str] = None) -> QueryResult:
-        """
-        Execute query and enrich results with contextual information
-
-        For example, if querying a specific card, also fetch its:
-        - Counters
-        - Synergies
-        - Archetype fits
-
-        Args:
-            cypher_query: Main Cypher query
-            card_name: Optional card name for context enrichment
-
-        Returns:
-            QueryResult with enriched data
-        """
+        
         main_result = self.retrieve(cypher_query)
 
         if main_result.error or not card_name:
@@ -99,7 +69,7 @@ class KGRetriever:
         return main_result
 
     def _fetch_card_context(self, card_name: str) -> Dict[str, Any]:
-        """Fetch contextual information about a card"""
+        
         context_query = """
         MATCH (c:Card {name: $card_name})
 
@@ -135,7 +105,7 @@ class KGRetriever:
         return {}
 
     def test_connection(self) -> bool:
-        """Test if connection to Neo4j is working"""
+        
         try:
             with self.driver.session() as session:
                 result = session.run("RETURN 1 AS test")
@@ -145,7 +115,7 @@ class KGRetriever:
             return False
 
     def get_stats(self) -> Dict[str, int]:
-        """Get database statistics"""
+        
         stats_query = """
         MATCH (c:Card) WITH COUNT(c) AS cards
         MATCH (r:Rarity) WITH cards, COUNT(r) AS rarities
@@ -177,5 +147,5 @@ class KGRetriever:
 
 
 def create_retriever() -> KGRetriever:
-    """Create a KG retriever instance"""
+    
     return KGRetriever()

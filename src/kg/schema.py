@@ -1,26 +1,4 @@
-"""
-Enhanced Knowledge Graph Schema for Clash Royale
 
-This module defines the schema with nodes and relationships
-optimized for RAG queries.
-
-Nodes:
-- Card: Individual cards with stats
-- Rarity: Card rarity (Common, Rare, Epic, Legendary, Champion)
-- Arena: Unlock arenas
-- Target: What the card can hit (ground, air, buildings)
-- Archetype: Deck archetypes (Beatdown, Control, Cycle, etc.)
-- Type: Card types (Troop, Spell, Building)
-
-Relationships:
-- (Card)-[:HAS_RARITY]->(Rarity)
-- (Card)-[:UNLOCKS_IN]->(Arena)
-- (Card)-[:CAN_HIT]->(Target)
-- (Card)-[:HAS_TYPE]->(Type)
-- (Card)-[:COUNTERS]->(Card)  # Strategic counters
-- (Card)-[:SYNERGIZES_WITH]->(Card)  # Works well with
-- (Card)-[:FITS_ARCHETYPE]->(Archetype)  # Deck archetype fit
-"""
 
 from typing import Dict, List, Any
 from dataclasses import dataclass
@@ -28,15 +6,15 @@ from dataclasses import dataclass
 
 @dataclass
 class NodeSchema:
-    """Schema definition for a node type"""
+    
     label: str
-    properties: Dict[str, str]  # property_name -> property_type
+    properties: Dict[str, str]  
     description: str
 
 
 @dataclass
 class RelationshipSchema:
-    """Schema definition for a relationship type"""
+    
     type: str
     from_label: str
     to_label: str
@@ -45,7 +23,7 @@ class RelationshipSchema:
 
 
 class KGSchema:
-    """Clash Royale Knowledge Graph Schema"""
+    
 
     NODES = {
         "Card": NodeSchema(
@@ -56,19 +34,19 @@ class KGSchema:
                 "type": "string",
                 "rarity": "string",
                 "arena": "string",
-                "transport": "string",  # ground, air, or null
+                "transport": "string",  
                 "hitpoints": "integer",
                 "damage": "integer",
                 "dps": "integer",
                 "description": "string",
-                "level11_stats": "string",  # JSON string containing detailed stats. For champions, includes ability information with format "stat_name (with Ability Name)": "value"
+                "level11_stats": "string",  
             },
             description="Individual Clash Royale cards with stats. Champions (rarity='champion') have special abilities that enhance their stats when activated."
         ),
         "Rarity": NodeSchema(
             label="Rarity",
             properties={
-                "name": "string",  # Common, Rare, Epic, Legendary, Champion
+                "name": "string",  
                 "color": "string",
             },
             description="Card rarity levels"
@@ -85,23 +63,23 @@ class KGSchema:
         "Target": NodeSchema(
             label="Target",
             properties={
-                "name": "string",  # ground, air, buildings
+                "name": "string",  
             },
             description="Valid targets for cards"
         ),
         "Archetype": NodeSchema(
             label="Archetype",
             properties={
-                "name": "string",  # Beatdown, Cycle, Bait, Siege, etc.
+                "name": "string",  
                 "description": "string",
-                "avg_elixir_range": "string",  # e.g., "2.8-3.2"
+                "avg_elixir_range": "string",  
             },
             description="Deck archetype classifications"
         ),
         "Type": NodeSchema(
             label="Type",
             properties={
-                "name": "string",  # Troop, Spell, Building
+                "name": "string",  
             },
             description="Card type categories"
         ),
@@ -141,7 +119,7 @@ class KGSchema:
             from_label="Card",
             to_label="Card",
             properties={
-                "effectiveness": "string",  # weak, moderate, strong
+                "effectiveness": "string",  
                 "reason": "string",
             },
             description="Card A is effective against Card B"
@@ -151,8 +129,8 @@ class KGSchema:
             from_label="Card",
             to_label="Card",
             properties={
-                "synergy_type": "string",  # tank-support, spell-bait, etc.
-                "strength": "string",  # weak, moderate, strong
+                "synergy_type": "string",  
+                "strength": "string",  
             },
             description="Card A works well with Card B"
         ),
@@ -161,7 +139,7 @@ class KGSchema:
             from_label="Card",
             to_label="Archetype",
             properties={
-                "role": "string",  # win-condition, support, defense, spell
+                "role": "string",  
             },
             description="Card fits into deck archetype"
         ),
@@ -169,7 +147,7 @@ class KGSchema:
 
     @classmethod
     def get_schema_description(cls) -> str:
-        """Get a formatted schema description for LLM prompts"""
+        
         schema_desc = "# Clash Royale Knowledge Graph Schema\n\n"
 
         schema_desc += "## Node Types\n"
@@ -194,7 +172,7 @@ class KGSchema:
 
     @classmethod
     def get_cypher_examples(cls) -> List[Dict[str, str]]:
-        """Get example Cypher queries for different question types"""
+        
         return [
             {
                 "question": "What is the elixir cost of the Giant?",

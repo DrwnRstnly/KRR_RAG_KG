@@ -1,15 +1,13 @@
-"""
-Query Preprocessor for handling typos, case sensitivity, and query enhancement
-"""
+
 
 from typing import List, Dict, Optional, Tuple
 from difflib import get_close_matches
 import re
-from src.rag_v2.deck_analyzer import DeckAnalyzer
+from src.rag.deck_analyzer import DeckAnalyzer
 
 
 class QueryPreprocessor:
-    """Preprocesses queries to handle typos and improve matching"""
+    
 
     def __init__(self, retriever):
         self.retriever = retriever
@@ -17,7 +15,7 @@ class QueryPreprocessor:
         self.deck_analyzer = DeckAnalyzer(retriever)
 
     def get_all_card_names(self) -> List[str]:
-        """Get all card names from the database (cached)"""
+        
         if self._card_names_cache is None:
             result = self.retriever.retrieve("MATCH (c:Card) RETURN c.name AS name")
             if not result.error and result.data:
@@ -27,16 +25,12 @@ class QueryPreprocessor:
         return self._card_names_cache
 
     def find_similar_card_names(self, query_text: str, threshold: float = 0.7) -> List[Tuple[str, str]]:
-        """
-        Find card names mentioned in query and suggest corrections for typos
-
-        Returns: List of (original_word, suggested_card_name) tuples
-        """
+        
         all_cards = self.get_all_card_names()
         if not all_cards:
             return []
 
-        # Common words to ignore (expanded list)
+        
         common_words = {
             'the', 'what', 'which', 'card', 'cards', 'tell', 'me', 'about', 'is', 'are',
             'my', 'deck', 'with', 'and', 'or', 'can', 'does', 'how', 'why', 'when',
@@ -44,44 +38,74 @@ class QueryPreprocessor:
             'work', 'works', 'good', 'best', 'better', 'for', 'in', 'on', 'at', 'to',
             'cost', 'elixir', 'damage', 'health', 'hit', 'hits', 'attack', 'defense',
             'spell', 'troop', 'building', 'win', 'condition', 'that', 'this', 'have',
-            'has', 'well', 'analyze', 'check', 'validate', 'rate', 'compare'
+            'has', 'well', 'analyze', 'check', 'validate', 'rate', 'compare', 'question'
         }
 
-        # Only look for capitalized words (likely card names)
-        words = re.findall(r'\b[A-Z][a-zA-Z.]*(?:\s+[A-Z][a-zA-Z.]*)*\b', query_text)
+        
+        
+        multi_word_pattern = r'\b[A-Z][a-zA-Z.]*(?:\s+[A-Z][a-zA-Z.]*)+\b'
+        multi_word_matches = re.findall(multi_word_pattern, query_text)
+
+        
+        single_word_pattern = r'\b[A-Z][a-zA-Z.]*\b'
+        capitalized_words = re.findall(single_word_pattern, query_text)
+
+        
+        all_words = query_text.split()
+        potential_cards = set()
+
+        
+        for match in multi_word_matches:
+            potential_cards.add(match)
+
+        
+        used_words = set()
+        for multi_word in multi_word_matches:
+            for word in multi_word.split():
+                used_words.add(word)
+
+        
+        for word in capitalized_words:
+            if word not in used_words:
+                potential_cards.add(word)
+
+        
+        for word in all_words:
+            word_clean = re.sub(r'[^\w\s]', '', word)  
+            if (len(word_clean) >= 4 and
+                word_clean.lower() not in common_words and
+                not word_clean[0].isupper() and
+                word_clean not in used_words):
+                potential_cards.add(word_clean)
 
         suggestions = []
-        for word in words:
-            # Skip common words
+        for word in potential_cards:
+            
             if word.lower() in common_words:
                 continue
 
-            # Skip very short words (less than 3 chars) unless they match exactly
+            
             if len(word) < 3:
                 continue
 
-            # Try exact match (case-insensitive)
+            
             exact_matches = [card for card in all_cards if card.lower() == word.lower()]
             if exact_matches:
-                if exact_matches[0] != word:  # Case mismatch
+                if exact_matches[0] != word:  
                     suggestions.append((word, exact_matches[0]))
                 continue
 
-            # Try fuzzy matching with higher threshold
+            
             matches = get_close_matches(word, all_cards, n=1, cutoff=threshold)
             if matches:
-                # Extra validation: only suggest if similarity is very high OR word is long enough
+                
                 if len(word) >= 4:
                     suggestions.append((word, matches[0]))
 
         return suggestions
 
     def correct_card_names_in_query(self, query: str) -> Tuple[str, List[str]]:
-        """
-        Correct card names in the query
-
-        Returns: (corrected_query, list_of_corrections_made)
-        """
+        
         suggestions = self.find_similar_card_names(query)
 
         if not suggestions:
@@ -103,21 +127,14 @@ class QueryPreprocessor:
         return corrected_query, corrections
 
     def is_deck_analysis_query(self, query: str) -> bool:
-        """Check if query is asking for deck analysis"""
+        
         deck_keywords = ['analyze', 'check', 'validate', 'deck', 'my deck', 'rate']
         query_lower = query.lower()
         return any(keyword in query_lower for keyword in deck_keywords)
 
     def extract_deck_from_query(self, query: str) -> Optional[List[str]]:
-        """
-        Extract deck (list of 8 cards) from query
-
-        Expected formats:
-        - "Analyze my deck: Giant, Witch, Arrows, ..."
-        - "Check deck with Giant Witch Arrows ..."
-        - "Rate my deck [Giant, Witch, Arrows, ...]"
-        """
-        # Try to find cards separated by commas
+        
+        
         if ':' in query:
             deck_part = query.split(':', 1)[1]
         elif 'with' in query.lower():
@@ -131,12 +148,12 @@ class QueryPreprocessor:
         else:
             deck_part = query
 
-        # Split by commas or spaces
+        
         potential_cards = []
         if ',' in deck_part:
             potential_cards = [c.strip() for c in deck_part.split(',')]
         else:
-            # Try to extract capitalized words
+            
             words = deck_part.split()
             current_card = []
             for word in words:
@@ -149,22 +166,52 @@ class QueryPreprocessor:
             if current_card:
                 potential_cards.append(' '.join(current_card))
 
-        # Validate and correct card names
+        
+        card_aliases = {
+            'log': 'The Log',
+            'pekka': 'P.E.K.K.A',
+            'mini pekka': 'Mini P.E.K.K.A',
+            'mk': 'Mega Knight',
+            'ewiz': 'Electro Wizard',
+            'exe': 'Executioner',
+            'xbow': 'X-Bow',
+            'rg': 'Royal Giant',
+            'skeleton': 'Skeletons',
+            'gy': 'Graveyard',
+        }
+
+        
         all_cards = self.get_all_card_names()
         deck = []
 
         for card in potential_cards:
             card = card.strip()
+
+            
+            if card.lower().startswith('and '):
+                card = card[4:].strip()
+
+            
+            
+            for punct in ['.', '?', '!']:
+                if punct in card:
+                    card = card.split(punct)[0].strip()
+
             if not card or len(card) < 2:
                 continue
 
-            # Try exact match
+            
+            if card.lower() in card_aliases:
+                deck.append(card_aliases[card.lower()])
+                continue
+
+            
             exact_matches = [c for c in all_cards if c.lower() == card.lower()]
             if exact_matches:
                 deck.append(exact_matches[0])
                 continue
 
-            # Try fuzzy match
+            
             matches = get_close_matches(card, all_cards, n=1, cutoff=0.6)
             if matches:
                 deck.append(matches[0])
@@ -173,17 +220,13 @@ class QueryPreprocessor:
 
 
 class SmartResponseEnhancer:
-    """Enhances responses when exact data is not available"""
+    
 
     def __init__(self, retriever):
         self.retriever = retriever
 
     def find_alternative_data(self, question: str, original_cypher: str, original_data: List[Dict]) -> Optional[Dict]:
-        """
-        When no data is found, try to find related/helpful information
-
-        Returns: Dict with 'alternative_query', 'data', and 'explanation'
-        """
+        
         question_lower = question.lower()
 
         if 'counter' in question_lower or 'beat' in question_lower or 'defeat' in question_lower:
@@ -198,13 +241,13 @@ class SmartResponseEnhancer:
         return None
 
     def _find_counter_alternatives(self, question: str, original_cypher: str) -> Optional[Dict]:
-        """Find alternative counter suggestions based on card type/cost"""
-        # Extract card name from question
+        
+        
         card_name = self._extract_card_name_from_query(question)
         if not card_name:
             return None
 
-        # Get card info
+        
         card_info_result = self.retriever.retrieve(
             f"MATCH (c:Card {{name: '{card_name}'}}) RETURN c.elixir AS cost, c.type AS type, c.transport AS transport"
         )
@@ -217,7 +260,7 @@ class SmartResponseEnhancer:
         card_type = card_info.get('type', '')
         transport = card_info.get('transport', '')
 
-        # Find cheaper cards that might counter it
+        
         alternative_query = f"""
         MATCH (c:Card)
         WHERE c.elixir <= {elixir_cost}
@@ -238,7 +281,7 @@ class SmartResponseEnhancer:
         return None
 
     def _find_synergy_alternatives(self, question: str, original_cypher: str) -> Optional[Dict]:
-        """Find cards that might synergize based on type/cost"""
+        
         card_name = self._extract_card_name_from_query(question)
         if not card_name:
             return None
@@ -271,13 +314,13 @@ class SmartResponseEnhancer:
         return None
 
     def _find_similar_card_alternatives(self, question: str, original_cypher: str) -> Optional[Dict]:
-        """Find similar cards when specific card query returns nothing"""
-        # This could suggest cards with similar stats/cost
-        # For now, we'll skip this and let the preprocessor handle it
+        
+        
+        
         return None
 
     def _extract_card_name_from_query(self, question: str) -> Optional[str]:
-        """Extract likely card name from natural language question"""
+        
         words = question.split()
 
         quoted = re.findall(r"'([^']+)'", question)
