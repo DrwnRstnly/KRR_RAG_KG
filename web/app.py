@@ -6,7 +6,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 from pathlib import Path
 
-from rag.llm import llm
+from src.rag.llm import llm
 from src.rag.pipeline import RAGPipeline
 
 app = FastAPI(title="Clash Royale KG RAG")

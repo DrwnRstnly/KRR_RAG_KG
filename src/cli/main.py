@@ -7,7 +7,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../.
 
 from src.cli.display import CLIDisplay, console
 from src.rag.pipeline import RAGPipeline
-from rag.llm import llm  
+from src.rag.llm import llm  
 from rich.prompt import Prompt
 
 

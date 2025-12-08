@@ -19,6 +19,7 @@ dependencies = [
     "python-multipart",
     "requests",
     "torch",
+    "google-generativeai",
 ]
 
 # --- CONFIGURATION TO FORCE CPU PYTORCH ---

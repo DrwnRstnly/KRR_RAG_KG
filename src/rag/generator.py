@@ -22,21 +22,25 @@ class AnswerGenerator:
 ## Instructions:
 1. Use ONLY the information provided in the Graph Data below
 2. **IMPORTANT**: Include ALL cards from the data - do not skip or omit any entries
-3. If the data is empty, say "I don't have information about that"
-4. If the data has 'synergy' or 'synergy_type' fields, explain WHY each card works well based on that synergy type and strength
-5. If the data has 'counter' relationships, explain WHY it's a good counter
-6. Format card stats clearly (HP, Damage, DPS, Elixir cost, etc.)
-7. Be concise but complete - mention EVERY card in the retrieved data
-8. Cite specific numbers and facts from the data
-9. For Champions: If a card has rarity='champion', check the 'stats' or 'level11_stats' field for ability information
+3. **CRITICAL**: Only say "I don't have information about that" if NO data was retrieved at all (data is completely empty). If ANY data exists, provide a complete answer using that data.
+4. **For basic card info questions**: If the data contains card properties (name, elixir, hp, damage, dps, description, etc.), provide a complete answer with ALL those details. Don't just list the name.
+5. **For synergy/counter questions**:
+   - If the data has 'synergy_type' or 'strength' fields, use those to explain WHY cards work well together
+   - If these fields are missing, simply list the cards WITHOUT making up reasons (don't invent explanations like "complements X's slow movement")
+6. **For counter relationships**: If effectiveness/reason fields exist, explain WHY. Otherwise, just list the counters.
+7. Format card stats clearly (HP, Damage, DPS, Elixir cost, etc.)
+8. Be concise but complete - mention EVERY card and ALL stats in the retrieved data
+9. Cite specific numbers and facts from the data
+10. For Champions: If a card has rarity='champion', check the 'stats' or 'level11_stats' field for ability information
    - Look for stats with pattern "stat_name (with Ability Name)": value
    - Extract and explain the ability name and its effect on stats
 
 ## FORMATTING RULES:
 - Do NOT use markdown formatting (no **, ##, -, etc.)
 - Use plain text only
-- When listing multiple cards, use this format with commas and parenthetical explanations:
-  "Cards that work well with Giant: Dark Prince (strong support tank), Prince (complements Giant's slow movement), Mega Minion (provides air defense), Musketeer (air defense), Sparky (strong tank support), Graveyard (tank-yard combo), Witch (classic combo), Mini P.E.K.K.A (tank support)"
+- When listing multiple cards:
+  * If synergy_type/strength/effectiveness fields exist: "Cards that work well with Giant: Dark Prince (tank synergy, high strength), Prince (beatdown synergy, medium strength)"
+  * If NO synergy fields exist: Simply list "Cards that work well with Giant: Dark Prince, Prince, Mega Minion, Musketeer" WITHOUT parenthetical explanations
 - Include ALL cards from the data, separated by commas
 - Separate into readable sentences
 
@@ -47,7 +51,7 @@ class AnswerGenerator:
 {data}
 
 ## Your Answer:
-Provide a clear, concise answer based strictly on the graph data above. List ALL cards from the data with commas, and include explanations in parentheses for WHY they work well based on the synergy_type or strength fields. DO NOT omit any cards."""
+Provide a clear, concise answer based strictly on the graph data above. List ALL cards from the data. Only include explanations in parentheses if synergy_type/strength/effectiveness fields are present in the data. If these fields are missing, just list the card names without explanations. DO NOT make up reasons or explanations. DO NOT omit any cards."""
 
         return PromptTemplate.from_template(template)
 
