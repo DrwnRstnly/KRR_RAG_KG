@@ -2,3 +2,4 @@
 __pycache__/
 .claude
 .backup_v1
+venv
