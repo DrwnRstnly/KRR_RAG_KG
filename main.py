@@ -1,12 +1,4 @@
-"""
-Main Entry Point for Clash Royale Knowledge Graph RAG System (v2)
 
-This is the enhanced version with:
-- Better RAG pipeline
-- Rich CLI interface
-- Streaming support
-- Service layer architecture
-"""
 
 import sys
 import argparse
@@ -19,9 +11,9 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python main_v2.py                    # Start interactive CLI
-  python main_v2.py --verbose          # Start CLI with verbose output
-  python main_v2.py --help             # Show this help message
+  python main.py                    # Start interactive CLI
+  python main.py --verbose          # Start CLI with verbose output
+  python main.py --help             # Show this help message
 
 For more information, see README.md
         """

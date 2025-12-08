@@ -15,8 +15,9 @@ ENV PYTHONUNBUFFERED=1
 ENV PYTHONPATH=/app
 ENV UV_SYSTEM_PYTHON=1
 
-COPY pyproject.toml .
-RUN uv pip install --system pyproject.toml
+COPY pyproject.toml ./
+
+RUN uv pip install --system .
 
 COPY . .
 
@@ -27,4 +28,4 @@ EXPOSE 8000
 HEALTHCHECK --interval=30s --timeout=10s --start-period=30s --retries=3 \
     CMD python -c "import sys; sys.exit(0)"
 
-CMD ["python", "main_v2.py"]
+CMD ["python", "run_web.py"]

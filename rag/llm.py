@@ -30,7 +30,7 @@ class OpenRouterLLM:
             data = {
                 "model": self.model,
                 "messages": [{"role": "user", "content": prompt}],
-                "max_tokens": 1024,  # Increased from 512
+                "max_tokens": 1024,  
                 "temperature": 0.1,
             }
 
