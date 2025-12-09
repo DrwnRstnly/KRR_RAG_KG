@@ -191,6 +191,7 @@ body {
     margin: 10px 0;
     overflow-x: auto;
     animation: slideInLeft 0.4s ease-out;
+    overflow: hidden;
 }
 
 .typing-indicator {
