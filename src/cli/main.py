@@ -155,7 +155,7 @@ class ClashRoyaleCLI:
 
     def handle_command(self, command: str):
         
-        cmd = command.lower().strip()
+        cmd = command.lower().strip()   
 
         if cmd in ["/exit", "/quit", "/q"]:
             self.running = False

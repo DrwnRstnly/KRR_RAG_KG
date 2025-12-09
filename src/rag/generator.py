@@ -3,7 +3,6 @@
 import json
 from typing import List, Dict, Any
 from langchain_core.prompts import PromptTemplate
-from langchain_core.runnables import RunnableLambda
 
 from src.domain.models import RAGResponse, QueryResult
 
@@ -156,7 +155,7 @@ Provide a clear, concise answer based strictly on the graph data above. List ALL
         if not data:
             return 0.0
 
-        
+            
         num_results = len(data)
         if num_results >= 5:
             base_confidence = 0.9
@@ -175,21 +174,6 @@ Provide a clear, concise answer based strictly on the graph data above. List ALL
 
         
         return min(base_confidence, 1.0)
-
-    def create_runnable(self):
-        
-        def generate_fn(inputs: dict):
-            question = inputs.get("question", "")
-            query_result = inputs.get("query_result")
-            if not query_result:
-                query_result = QueryResult(
-                    data=inputs.get("data", []),
-                    cypher_query=inputs.get("cypher", ""),
-                    execution_time=0.0
-                )
-            return self.generate(question, query_result)
-
-        return RunnableLambda(generate_fn)
 
 
 def create_generator(llm) -> AnswerGenerator:

@@ -169,8 +169,8 @@ class QueryPreprocessor:
         
         card_aliases = {
             'log': 'The Log',
-            'pekka': 'P.E.K.K.A',
-            'mini pekka': 'Mini P.E.K.K.A',
+            'pekka': 'P.E.K.K.A.',
+            'mini pekka': 'Mini P.E.K.K.A.',
             'mk': 'Mega Knight',
             'ewiz': 'Electro Wizard',
             'exe': 'Executioner',

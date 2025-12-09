@@ -40,8 +40,9 @@ class QueryTranslator:
 7. For multi-hop queries, chain multiple MATCH patterns
 8. Order results when relevant using ORDER BY
 9. Limit results if asking for "top" or "best" using LIMIT
-10. **For Champion cards**: Always include c.level11_stats in RETURN clause to capture ability information
-11. **For Champion queries**: Include c.rarity to identify if card is a champion
+10. **IMPORTANT**: Card names with abbreviations like "P.E.K.K.A" must include the trailing period: 'P.E.K.K.A.' and 'Mini P.E.K.K.A.'
+11. **For Champion cards**: Always include c.level11_stats in RETURN clause to capture ability information
+12. **For Champion queries**: Include c.rarity to identify if card is a champion
 
 
 """ + examples_text + """

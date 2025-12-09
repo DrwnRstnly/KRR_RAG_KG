@@ -187,8 +187,8 @@ class KGSchema:
                 "cypher": "MATCH (c:Card)-[:HAS_RARITY]->(:Rarity {name: 'legendary'}) RETURN c.name AS card ORDER BY c.elixir"
             },
             {
-                "question": "Which cards counter P.E.K.K.A?",
-                "cypher": "MATCH (c:Card)-[r:COUNTERS]->(target:Card {name: 'P.E.K.K.A'}) RETURN c.name AS card, r.effectiveness AS effectiveness, r.reason AS reason"
+                "question": "Which cards counter P.E.K.K.A.?",
+                "cypher": "MATCH (c:Card)-[r:COUNTERS]->(target:Card {name: 'P.E.K.K.A.'}) RETURN c.name AS card, r.effectiveness AS effectiveness, r.reason AS reason"
             },
             {
                 "question": "What cards synergize well with Giant?",
