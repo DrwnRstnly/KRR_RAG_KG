@@ -9,18 +9,13 @@ Sistem tanya-jawab dalam bahasa natural tentang kartu Clash Royale menggunakan N
 #### 1. Jalankan Services
 
 ```bash
-# Jalankan Neo4j database dan Web Interface
 docker-compose up
 ```
 
 #### 2. Seed Database (Pertama Kali Saja)
 
 ```bash
-# Di terminal baru, seed database Neo4j dengan data Clash Royale
 docker-compose --profile seed up seeder
-
-# Tunggu hingga seeding selesai
-# Seeder akan berhenti otomatis ketika selesai
 ```
 
 #### 3. Akses Web Interface
@@ -32,10 +27,8 @@ Buka browser dan akses http://localhost:8000
 #### CLI Interface (Opsional)
 
 ```bash
-# Jalankan CLI interface sebagai alternatif web
 docker-compose --profile cli run --rm cli
 
-# Hentikan semua services
 docker-compose down
 ```
 
@@ -52,53 +45,36 @@ docker-compose down
 **Dengan UV (Direkomendasikan)**
 
 ```bash
-# Install UV package manager jika belum terinstall
 pip install uv
 
-# Sync dependencies dari pyproject.toml
 uv sync
-
-# Perintah ini akan membuat virtual environment dan menginstall semua dependencies
 ```
 
 **Dengan Pip**
 
 ```bash
-# Buat virtual environment
 python -m venv .venv
 
-# Aktifkan virtual environment
-# Windows:
 .venv\Scripts\activate
-# Linux/Mac:
+
 source .venv/bin/activate
 
-# Install dependencies
 pip install .
 ```
 
 #### 2. Konfigurasi Environment
 
 ```bash
-# Copy template environment
 cp .env.example .env
-
-# Edit .env dengan kredensial Neo4j Anda
-# NEO4J_URI=bolt://localhost:7687
-# NEO4J_USER=neo4j
-# NEO4J_PASSWORD=your_password
 ```
 
 #### 3. Jalankan Neo4j Database
 
 ```bash
-# Opsi A: Menggunakan Docker
 docker run --name neo4j \
   -e NEO4J_AUTH=neo4j/your-password \
   -p 7474:7474 -p 7687:7687 \
   neo4j:5.15-community
-
-# Opsi B: Gunakan Neo4j Desktop (download dari neo4j.com)
 ```
 
 #### 4. Seed Database
@@ -113,8 +89,6 @@ python -m src.kg.ingestion
 
 ```bash
 python run_web.py
-
-# Akses di http://localhost:8000
 ```
 
 **CLI Interface**

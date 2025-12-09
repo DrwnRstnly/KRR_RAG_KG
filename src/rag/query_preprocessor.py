@@ -7,7 +7,19 @@ from src.rag.deck_analyzer import DeckAnalyzer
 
 
 class QueryPreprocessor:
-    
+
+    CARD_ALIASES = {
+        'log': 'The Log',
+        'pekka': 'P.E.K.K.A.',
+        'mini pekka': 'Mini P.E.K.K.A.',
+        'mk': 'Mega Knight',
+        'ewiz': 'Electro Wizard',
+        'exe': 'Executioner',
+        'xbow': 'X-Bow',
+        'rg': 'Royal Giant',
+        'skeleton': 'Skeletons',
+        'gy': 'Graveyard',
+    }
 
     def __init__(self, retriever):
         self.retriever = retriever
@@ -64,14 +76,31 @@ class QueryPreprocessor:
             for word in multi_word.split():
                 used_words.add(word)
 
-        
+
         for word in capitalized_words:
             if word not in used_words:
                 potential_cards.add(word)
 
-        
+
+        for i in range(len(all_words)):
+            for j in range(i+1, min(i+4, len(all_words)+1)):
+                phrase = ' '.join(all_words[i:j])
+                phrase_clean = re.sub(r'[^\w\s.]', '', phrase)
+
+                if phrase_clean and phrase_clean.lower() not in common_words:
+                    exact_match = [card for card in all_cards if card.lower() == phrase_clean.lower()]
+                    if exact_match:
+                        potential_cards.add(phrase_clean)
+                        for word in all_words[i:j]:
+                            used_words.add(word)
+                    elif j - i >= 2 and j - i <= 3:
+                        words_in_phrase = all_words[i:j]
+                        if not any(w.lower() in common_words for w in words_in_phrase):
+                            potential_cards.add(phrase_clean)
+
+
         for word in all_words:
-            word_clean = re.sub(r'[^\w\s]', '', word)  
+            word_clean = re.sub(r'[^\w\s]', '', word)
             if (len(word_clean) >= 4 and
                 word_clean.lower() not in common_words and
                 not word_clean[0].isupper() and
@@ -80,25 +109,30 @@ class QueryPreprocessor:
 
         suggestions = []
         for word in potential_cards:
-            
+
             if word.lower() in common_words:
                 continue
 
-            
+
             if len(word) < 3:
                 continue
 
-            
+
+            if word.lower() in self.CARD_ALIASES:
+                suggestions.append((word, self.CARD_ALIASES[word.lower()]))
+                continue
+
+
             exact_matches = [card for card in all_cards if card.lower() == word.lower()]
             if exact_matches:
-                if exact_matches[0] != word:  
+                if exact_matches[0] != word:
                     suggestions.append((word, exact_matches[0]))
                 continue
 
-            
+
             matches = get_close_matches(word, all_cards, n=1, cutoff=threshold)
             if matches:
-                
+
                 if len(word) >= 4:
                     suggestions.append((word, matches[0]))
 
@@ -166,33 +200,19 @@ class QueryPreprocessor:
             if current_card:
                 potential_cards.append(' '.join(current_card))
 
-        
-        card_aliases = {
-            'log': 'The Log',
-            'pekka': 'P.E.K.K.A.',
-            'mini pekka': 'Mini P.E.K.K.A.',
-            'mk': 'Mega Knight',
-            'ewiz': 'Electro Wizard',
-            'exe': 'Executioner',
-            'xbow': 'X-Bow',
-            'rg': 'Royal Giant',
-            'skeleton': 'Skeletons',
-            'gy': 'Graveyard',
-        }
 
-        
         all_cards = self.get_all_card_names()
         deck = []
 
         for card in potential_cards:
             card = card.strip()
 
-            
+
             if card.lower().startswith('and '):
                 card = card[4:].strip()
 
-            
-            
+
+
             for punct in ['.', '?', '!']:
                 if punct in card:
                     card = card.split(punct)[0].strip()
@@ -200,9 +220,9 @@ class QueryPreprocessor:
             if not card or len(card) < 2:
                 continue
 
-            
-            if card.lower() in card_aliases:
-                deck.append(card_aliases[card.lower()])
+
+            if card.lower() in self.CARD_ALIASES:
+                deck.append(self.CARD_ALIASES[card.lower()])
                 continue
 
             
